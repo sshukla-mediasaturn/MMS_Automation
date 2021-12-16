@@ -1,0 +1,12 @@
+<OrderRelease xmlns="http://www.sterlingcommerce.com/documentation/YFS/CHANGE_ORDER" Action="SUCCESS" DocumentType="0001" 
+EnterpriseCode="MSH_NL" OrderNo="${OrderNo}" Override="Y" ReleaseNo="1">
+					<Order>
+						<OrderLines>
+							<OrderLine PrimeLineNo="3" SubLineNo="1">
+								<Extn WarrantyNumber=""/>
+							</OrderLine>
+							
+						</OrderLines>
+					</Order>
+					<Extn SalesDocumentNo="40211141"/>
+				</OrderRelease>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Order AllocationRuleID="PAN_SCH" BillToID="00376003" BuyerUserId="monika123@yopmail.com" BypassPricing="Y" CustomerEMailID="monika123@yopmail.com" EnterpriseCode="NZ" EntryType="WEB" FulfillmentType="PandoraFT" IsPriceLocked="Y" OrderDate="${CurrenttimeStamp}" OrderNo="PANNZ${orderno}" PaymentStatus="PAID" SellerOrganizationCode="NZ">
+    <Extn ExtnCRMCustomerID="b0cfeb4e-ea0c-40c9-aa88-b29787b5ec68" ExtnOrderLang="en" />
+    <OrderLines>
+        <OrderLine CarrierServiceCode="90000007" LineType="REG" OrderedQty="1.0" PrimeLineNo="1" SubLineNo="1">
+            <Extn ExtnColor="Clear" ExtnFinalSale="N" ExtnImage="https://dev-nz.pandora.net/dw/image/v2/AAWM_DEV/on/demandware.static/-/Sites-pandora-master-catalog/default/dw7cdd998f/images/productimages/${item1}.jpg?sw=120&amp;sh=120&amp;sm=fit" ExtnLineNetPrice="137.10" ExtnSize="4800" />
+            <Item ItemID="${item1}" ItemShortDesc="PANDORA Shine Hearts of PANDORA Ring" ProductClass="GOOD" UnitOfMeasure="EACH" />
+            <LinePriceInfo IsPriceLocked="Y" TaxableFlag="N" UnitPrice="169.00" />
+            <LineCharges>
+                <LineCharge ChargeCategory="ITEM_DISCOUNT" ChargeName="itemlevelprmotion" ChargePerLine="0.00" ChargePerUnit="16.90" Reference="OMScampaign" />
+                <LineCharge ChargeCategory="ORDER_DISCOUNT" ChargeName="orderlevelfixedpromotion" ChargePerLine="0.00" ChargePerUnit="15.00" Reference="" />
+            </LineCharges>
+            <LineTaxes>
+                <LineTax ChargeCategory="INFO_TAX" ChargeName="" Reference1="17.88" Reference2="0.15" Tax="17.88" TaxName="GST" />
+            </LineTaxes>
+            <PersonInfoShipTo AddressLine1="445 Mount Eden Road" City="Mount Eden" Country="NZ" DayPhone="9663330092" FirstName="Monika" LastName="R" State="AUK" ZipCode="0600" />
+        </OrderLine>
+    </OrderLines>
+    <PriceInfo Currency="NZD" EnterpriseCurrency="NZD" />
+    <PersonInfoBillTo AddressLine1="445 Mount Eden Road" City="Mount Eden" Country="NZ" DayPhone="9663330092" EMailID="monika123@yopmail.com" FirstName="Monika" LastName="R" State="AUK" ZipCode="0600" />
+    <HeaderCharges />
+    <HeaderTaxes />
+    <PersonInfoShipTo AddressLine1="445 Mount Eden Road" City="Mount Eden" Country="NZ" DayPhone="9663330092" FirstName="Monika" LastName="R" State="AUK" ZipCode="0600" />
+    <PaymentMethods>
+        <PaymentMethod CreditCardExpDate="11/2022" CreditCardNo="XXXX-XXXX-XXXX-1881" CreditCardType="VISA" DisplayCreditCardNo="1881" PaymentType="CREDIT_CARD" UnlimitedCharges="N">
+            <PaymentDetailsList>
+                <PaymentDetails AuthCode="160780" AuthorizationID="5661490331956720703008" ChargeType="CHARGE" ProcessedAmount="137.10" RequestAmount="137.10" RequestId="5661490331956720703008" />
+            </PaymentDetailsList>
+        </PaymentMethod>
+    </PaymentMethods>
+</Order>

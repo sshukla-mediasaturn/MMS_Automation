@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--createOrder Input XML-->
+<Order CustomerEMailID="${EmailAddress}" EnterpriseCode="${EnterpriseCode}" ShipNode="${ShipNode}" CustomerFirstName="${FirstName}" CustomerLastName="${LastName}" CustomerPhoneNo="${PhoneNo}" CustomerZipCode="${ZipCode}" EntryType="${EntryType}" >
+
+<OrderLines>
+        <OrderLine DeliveryMethod="${DeliveryMethod}" OrderedQty="${Quantity}" PrimeLineNo="1" ShipNode = "${ShipNode}" >
+   <LinePriceInfo UnitPrice="8.49" ListPrice="8.49" RetailPrice="8.49" IsLinePriceForInformationOnly="N" PricingQuantityStrategy="FIX" IsPriceLocked="Y">
+         </LinePriceInfo>
+            <Item ItemID="${ItemID}" UnitOfMeasure="${UnitOfMeasure}"/>
+        </OrderLine>
+		
+    </OrderLines>
+
+<PersonInfoBillTo AddressLine1="${AddressLine1}" AddressLine2="${AddressLine2}" City="${City}" Company=""  Country="{Country}" DayPhone="${DayPhone}"
+EMailID="${EmailAddress}" FirstName="${FirstName}" LastName="${LastName}" State="${State}" ZipCode="${ZipCode}"/>
+<PriceInfo Currency="${Currency}" EnterpriseCurrency="${EnterpriseCurrency}"/>
+<PaymentMethods>
+<PaymentMethod CreditCardExpDate="05/2017" PaymentType="CREDIT_CARD" CreditCardNo="1111-****-****-1111" CreditCardType="VISA" DisplayCreditCardNo="6789" PaymentReference1="438628" PaymentReference3="1267" UnlimitedCharges="Y" PaymentReference2="1122">
+<PaymentDetails AuthCode="1111" AuthReturnMessage="" ChargeType="AUTHORIZATION" AuthTime="2013-12-18T15:40:09.309-06:00"  RequestAmount="38.86" AuthorizationID="44523523" AuthReturnFlag="Y" ProcessedAmount="38.86"/>
+<PersonInfoBillTo AddressLine1="${Address1}" City="${City}" Country="${Country}"  DayPhone="${PhoneNo}" FirstName="${FirstName}" LastName="${LastName}" State="${State}" ZipCode="${ZipCode}"/>	
+</PaymentMethod>
+</PaymentMethods>
+</Order>

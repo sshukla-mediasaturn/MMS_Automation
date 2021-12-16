@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Order AllocationRuleID="PAN_SCH" BillToID="SA00403386" BuyerUserId="monika123@yopmail.com" BypassPricing="Y" CustomerEMailID="monika123@yopmail.com" EnterpriseCode="AU" EntryType="WEB" FulfillmentType="PandoraFT" IsPriceLocked="Y" OrderDate="${CurrenttimeStamp}" OrderNo="PANAU${orderno}" PaymentStatus="PAID" SellerOrganizationCode="AU">
+    <Extn ExtnCRMCustomerID="8c5f7a38-045d-4eeb-b500-4f0f031b66c0" ExtnOrderLang="en" />
+    <OrderLines>
+        <OrderLine CarrierServiceCode="90000007" LineType="REG" OrderedQty="3.0" PrimeLineNo="1" SubLineNo="1">
+            <Extn ExtnColor="Clear" ExtnFinalSale="N" ExtnImage="https://dev-au.pandora.net/dw/image/v2/AAWM_DEV/on/demandware.static/-/Sites-pandora-master-catalog/default/dw7cdd998f/images/productimages/${item1}-1.jpg?sw=120&amp;sh=120&amp;sm=fit" ExtnLineNetPrice="387.30" ExtnSize="4800" />
+            <Item ItemID="${item1}" ItemShortDesc="PANDORA Shine Hearts of PANDORA Ring" ProductClass="GOOD" UnitOfMeasure="EACH" />
+            <LinePriceInfo IsPriceLocked="Y" TaxableFlag="N" UnitPrice="149.00" />
+            <LineCharges>
+                <LineCharge ChargeCategory="ITEM_DISCOUNT" ChargeName="itemlevelprmotion" ChargePerLine="0.00" ChargePerUnit="14.90" Reference="OMScampaign" />
+                <LineCharge ChargeCategory="ORDER_DISCOUNT" ChargeName="orderlevelfixedpromotion" ChargePerLine="0.00" ChargePerUnit="5.00" Reference="" />
+            </LineCharges>
+            <LineTaxes>
+                <LineTax ChargeCategory="INFO_TAX" ChargeName="" Reference1="35.21" Reference2="0.1" Tax="35.21" TaxName="GST" />
+            </LineTaxes>
+            <PersonInfoShipTo AddressLine1="Surry Hills" AddressLine2="Company address populated" City="petaluma" Country="AU" DayPhone="5105858974" FirstName="Monika" LastName="R" State="NSW" ZipCode="9495" />
+        </OrderLine>
+    </OrderLines>
+    <PriceInfo Currency="AUD" EnterpriseCurrency="AUD" />
+    <PersonInfoBillTo AddressLine1="Surry Hills" AddressLine2="Company address populated" City="petaluma" Country="AU" DayPhone="5105858974" EMailID="monika123@yopmail.com" FirstName="Monika" LastName="R" State="NSW" ZipCode="9495" />
+    <HeaderCharges />
+    <HeaderTaxes />
+    <PersonInfoShipTo AddressLine1="Surry Hills" AddressLine2="Company address populated" City="petaluma" Country="AU" DayPhone="5105858974" FirstName="Monika" LastName="R" State="NSW" ZipCode="9495" />
+    <PaymentMethods>
+        <PaymentMethod CreditCardNo="4P093543FR964574A" CreditCardType="PAYPAL" PaymentType="PAYPAL" UnlimitedCharges="N">
+            <PaymentDetailsList>
+                <PaymentDetails AuthAvs="3" AuthCode="9PH15893KV322315P" AuthorizationID="5661992827216831703007" ChargeType="CHARGE" HoldAgainstBook="Y" InternalReturnMessage="AhjrrwSTMu/vXdR86+ffS1F5W04MZqLytpwZxCQhLpUgfDJpJlukB2t4STMu/tPeWkiGFBAABgFu" ProcessedAmount="387.30" RequestAmount="387.30" RequestId="5661992902126322903011" />
+            </PaymentDetailsList>
+        </PaymentMethod>
+    </PaymentMethods>
+</Order>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.9" jmeter="3.0 r2016">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Create Order" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Create order" enabled="true"/>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="expicient.extest.jmeter.sampler.ExpStrlngTstClientSamplerGUI" testclass="HTTPSamplerProxy" testname="Create Order" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="expicient.extest.jmeter.sampler.ExpStrlngTstClientSamplerGUI" testclass="Arguments" testname="Create Order" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="IsFlow" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">IsFlow</stringProp>
+                <stringProp name="Argument.value">N</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="InteropApiName" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">InteropApiName</stringProp>
+                <stringProp name="Argument.value">createOrder</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="InteropApiData" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">InteropApiData</stringProp>
+                <stringProp name="Argument.value">${__evalVar(inputCreateOrderXML)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+            <stringProp name="TestPlan.comments">Create Order</stringProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="Load Input XML" enabled="true">
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">${__FileToString(${__eval(${createOrderInputXML})},,inputCreateOrderXML)}</stringProp>
+          </BeanShellPreProcessor>
+          <hashTree/>
+          <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="Get current time" enabled="true">
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+
+Date date = new Date();
+
+		SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&apos;T&apos;HH:mm:ss&quot;);
+
+		String CurrenttimeStamp = sdf.format(date);
+
+		vars.put(&quot;CurrenttimeStamp&quot;,CurrenttimeStamp);</stringProp>
+          </BeanShellPreProcessor>
+          <hashTree/>
+          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="OrderHeaderKey" enabled="true">
+            <stringProp name="XPathExtractor.default">0</stringProp>
+            <stringProp name="XPathExtractor.refname">OrderHeaderKey</stringProp>
+            <stringProp name="XPathExtractor.xpathQuery">/Order/@OrderHeaderKey</stringProp>
+            <boolProp name="XPathExtractor.validate">false</boolProp>
+            <boolProp name="XPathExtractor.tolerant">false</boolProp>
+            <boolProp name="XPathExtractor.namespace">false</boolProp>
+          </XPathExtractor>
+          <hashTree/>
+          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="XPath Extractor - Order Number" enabled="true">
+            <stringProp name="XPathExtractor.default">0</stringProp>
+            <stringProp name="XPathExtractor.refname">OrderNum</stringProp>
+            <stringProp name="XPathExtractor.xpathQuery">/Order/@OrderNo</stringProp>
+            <boolProp name="XPathExtractor.validate">false</boolProp>
+            <boolProp name="XPathExtractor.tolerant">false</boolProp>
+            <boolProp name="XPathExtractor.namespace">false</boolProp>
+          </XPathExtractor>
+          <hashTree/>
+          <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="CurrentTimeStamp1" enabled="true">
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+
+Date date = new Date();
+
+		SimpleDateFormat sdf = new SimpleDateFormat(&quot;HHmmss&quot;);
+
+		String CurrenttimeStamp = sdf.format(date);
+
+		vars.put(&quot;CurrentTimeStamp1&quot;,CurrenttimeStamp);</stringProp>
+          </BeanShellPreProcessor>
+          <hashTree/>
+          <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="Create Order - Validation" enabled="false">
+            <stringProp name="BeanShellAssertion.query">import java.io.IOException;
+import java.io.StringReader;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.xml.sax.InputSource;
+import org.xml.sax.SAXException;
+
+response = prev.getResponseDataAsString();
+if (response.contains(&quot;Error&quot;))
+{
+	DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+	InputSource src = new InputSource();
+	src.setCharacterStream(new StringReader(response));
+	Document doc = builder.parse(src);
+	Node node = doc.getElementsByTagName(&quot;Error&quot;).item(0);
+	Element eElement = (Element)node;
+	String errmsg = eElement.getAttribute(&quot;ErrorDescription&quot;);
+	Failure = true;
+	FailureMessage = errmsg;
+	SampleResult.setResponseMessage(&quot;Order create failed&quot; + &quot; - &quot; + errmsg );
+}
+else
+{
+	SampleResult.setResponseMessage(&quot;Order &quot; + &quot;${OrderNum}&quot; + &quot; has been created successfully&quot;);
+}
+</stringProp>
+            <stringProp name="BeanShellAssertion.filename"></stringProp>
+            <stringProp name="BeanShellAssertion.parameters"></stringProp>
+            <boolProp name="BeanShellAssertion.resetInterpreter">false</boolProp>
+          </BeanShellAssertion>
+          <hashTree/>
+          <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="ResponseSuccessMsg" enabled="false">
+            <stringProp name="BeanShellAssertion.query">
+SampleResult.setResponseMessage(&quot;Order created Successfully  :&quot; +&quot; ${OrderNo}&quot;);
+
+</stringProp>
+            <stringProp name="BeanShellAssertion.filename"></stringProp>
+            <stringProp name="BeanShellAssertion.parameters"></stringProp>
+            <boolProp name="BeanShellAssertion.resetInterpreter">false</boolProp>
+          </BeanShellAssertion>
+          <hashTree/>
+          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="EnterpriseCode" enabled="true">
+            <stringProp name="XPathExtractor.default">0</stringProp>
+            <stringProp name="XPathExtractor.refname">EnterpriseCode</stringProp>
+            <stringProp name="XPathExtractor.xpathQuery">/Order/@EnterpriseCode</stringProp>
+            <boolProp name="XPathExtractor.validate">false</boolProp>
+            <boolProp name="XPathExtractor.tolerant">false</boolProp>
+            <boolProp name="XPathExtractor.namespace">false</boolProp>
+          </XPathExtractor>
+          <hashTree/>
+          <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="BeanShell Assertion" enabled="true">
+            <stringProp name="BeanShellAssertion.query">if (&quot;${EnterpriseCode}&quot; == &quot;MSH_NL&quot;){
+
+	SampleResult.setSuccessful(true);
+	SampleResult.setResponseMessage(&quot;Order created successfully : Order ID :  &quot;  +   &quot;${OrderNo}&quot;);
+}
+
+else{
+
+	SampleResult.setSuccessful(false);
+	SampleResult.setResponseMessage(&quot;Order Failed :&quot; +&quot; ${ErrorMsg}&quot;);
+	SampleResult.setStopTestNow(true);
+}
+</stringProp>
+            <stringProp name="BeanShellAssertion.filename"></stringProp>
+            <stringProp name="BeanShellAssertion.parameters"></stringProp>
+            <boolProp name="BeanShellAssertion.resetInterpreter">false</boolProp>
+          </BeanShellAssertion>
+          <hashTree/>
+          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="OrderNo" enabled="true">
+            <stringProp name="XPathExtractor.default"></stringProp>
+            <stringProp name="XPathExtractor.refname">OrderNo</stringProp>
+            <stringProp name="XPathExtractor.xpathQuery">/Order/@OrderNo</stringProp>
+            <boolProp name="XPathExtractor.validate">false</boolProp>
+            <boolProp name="XPathExtractor.tolerant">false</boolProp>
+            <boolProp name="XPathExtractor.namespace">false</boolProp>
+          </XPathExtractor>
+          <hashTree/>
+          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="ErrorMsg" enabled="true">
+            <stringProp name="XPathExtractor.default">0</stringProp>
+            <stringProp name="XPathExtractor.refname">ErrorMsg</stringProp>
+            <stringProp name="XPathExtractor.xpathQuery">/Errors/Error/@ErrorDescription</stringProp>
+            <boolProp name="XPathExtractor.validate">false</boolProp>
+            <boolProp name="XPathExtractor.tolerant">false</boolProp>
+            <boolProp name="XPathExtractor.namespace">false</boolProp>
+          </XPathExtractor>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell PostProcessor" enabled="true">
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="script">/*String code = prev.getResponseCode(); 
+String message = prev.getResponseMessage();
+log.info(prev.getResponseMessage());*/
+
+vars.put(&quot;response&quot;, new String(data));
+</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+          <DebugPostProcessor guiclass="TestBeanGUI" testclass="DebugPostProcessor" testname="Debug PostProcessor" enabled="true">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySamplerProperties">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugPostProcessor>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

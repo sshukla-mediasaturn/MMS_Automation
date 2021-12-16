@@ -1,0 +1,4 @@
+<Items>
+ <Item AdjustmentType="ADJUSTMENT"  ItemID="${ItemID1}" OrganizationCode="${OrganizationCode}"  Quantity="${Quantity1}"  ShipNode="${ShipNode}" SupplyType="ONHAND"  ProductClass = "${ProductClass1}" UnitOfMeasure = "${UnitOfMeasure1}" />
+  <Item AdjustmentType="ADJUSTMENT"  ItemID="${ItemID2}" OrganizationCode="${OrganizationCode}"  Quantity="${Quantity2}"  ShipNode="${ShipNode}" SupplyType="ONHAND"  ProductClass = "${ProductClass2}" UnitOfMeasure = "${UnitOfMeasure2}" />
+</Items>

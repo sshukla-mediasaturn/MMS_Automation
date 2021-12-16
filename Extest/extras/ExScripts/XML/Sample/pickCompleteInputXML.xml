@@ -1,0 +1,5 @@
+<Shipment BaseDropStatus="1100.70.06.10" 
+SellerOrganizationCode="${EnterpriseCode}" ShipNode="${ShipNode}" 
+ShipmentKey="${ShipmentKey}"   
+TransactionId="YCD_CHECK_FOR_BACKROOM_PICK">
+</Shipment>

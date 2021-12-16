@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Order AllocationRuleID="PAN_SCH" BillToID="00376003" BuyerUserId="pane2epac@gmail.com" CustomerEMailID="pane2epac@gmail.com" EnterpriseCode="NZ" EntryType="WEB" BypassPricing="Y" OrderNo="PANNZ${orderno}" OrderDate="${CurrenttimeStamp}" SellerOrganizationCode="NZ" PaymentStatus="PAID">
+  <Extn ExtnOrderLang="en" ExtnCRMCustomerID="b0cfeb4e-ea0c-40c9-aa88-b29787b5ec68" ExtnCRMGuestCheckout="false"/>
+  <OrderLines>
+    <OrderLine PrimeLineNo="1" OrderedQty="1.0" CarrierServiceCode="Standard" SubLineNo="1" LineType="REG">
+      <Extn ExtnFinalSale="N" ExtnLineNetPrice="219.00" ExtnImage="https://dev-nz.pandora.net/dw/image/v2/AAWM_DEV/on/demandware.static/-/Sites-pandora-master-catalog/en_NZ/v1568793252847/images/productimages/no-image.png?sw=120&amp;sh=120&amp;sm=fit" ExtnColor="No Colour" ExtnSize="7500"/>
+      <Item ItemID="${item1}" ItemShortDesc="Pandora Lockets Logo Necklace" UnitOfMeasure="EACH" ProductClass="GOOD"/>
+      <LinePriceInfo IsPriceLocked="Y" TaxableFlag="N" UnitPrice="219.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeName="" ChargeCategory="INFO_TAX" Tax="28.57" Reference1="28.57" Reference2="0.15" TaxName="GST"/>
+      </LineTaxes>
+      <PersonInfoShipTo FirstName="Ruhi" LastName="Naina" AddressLine1="8 Kent Terrace" City="WGN" State="WGN" Country="NZ" DayPhone="8123938514" ZipCode="6011" EMailID="pane2epac@gmail.com"/>
+    </OrderLine>    
+  </OrderLines>
+  <PriceInfo Currency="NZD" EnterpriseCurrency="NZD"/>
+  <PersonInfoBillTo FirstName="Ruhi" LastName="Naina" AddressLine1="8 Kent Terrace" ZipCode="6011" City="WGN" State="WGN" Country="NZ" DayPhone="8123938514" EMailID="pane2epac@gmail.com"/>
+  <HeaderCharges>
+    <HeaderCharge ChargeAmount="15" ChargeCategory="SHIPPING" ChargeName="SHIPPING"/>
+  </HeaderCharges>
+  <HeaderTaxes>
+    <HeaderTax Tax="1.96" TaxName="GST" Reference1="1.96" Reference2="0.15" ChargeCategory="INFO_TAX" ChargeName="SHIPPING"/>
+  </HeaderTaxes>
+  <PersonInfoShipTo AddressLine1="8 Kent Terrace" City="WGN" State="WGN" Country="NZ" DayPhone="8123938514" FirstName="Ruhi" LastName="Naina" ZipCode="6011" EMailID="pane2epac@gmail.com"/>
+  <PaymentMethods>
+    <PaymentMethod PaymentType="AFTER_PAY" UnlimitedCharges="N" PaymentReference1="DIRECT_CAPTURE" PaymentReference2="6mkjesg2v1et1v5i825n42a05ggmvshj6cth1m08mu6dhnvibhmq" PaymentReference3="24328965">
+      <PaymentDetailsList>
+        <PaymentDetails ChargeType="CHARGE" RequestId="24328965" ProcessedAmount="234.00" RequestAmount="234.00"/>
+      </PaymentDetailsList>
+    </PaymentMethod>
+  </PaymentMethods>
+</Order>

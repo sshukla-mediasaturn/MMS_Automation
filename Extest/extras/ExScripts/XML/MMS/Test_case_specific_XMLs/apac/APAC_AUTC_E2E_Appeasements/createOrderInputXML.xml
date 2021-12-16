@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Order AllocationRuleID="PAN_SCH" BillToID="SA00631888" BuyerUserId="monika123@yopmail.com" BypassPricing="Y" CustomerEMailID="monika123@yopmail.com" EnterpriseCode="AU" EntryType="WEB" FulfillmentType="PandoraFT" IsPriceLocked="Y" OrderDate="${CurrenttimeStamp}" OrderNo="PANAU${orderno}" PaymentStatus="PAID" SellerOrganizationCode="AU">
+    <Extn ExtnCRMCustomerID="8df20dbe-4803-439b-aacd-58a66681d23c" ExtnCRMGuestCheckout="false" ExtnOrderLang="en" />
+    <OrderLines>
+        <OrderLine CarrierServiceCode="Standard" LineType="REG" OrderedQty="2.0" PrimeLineNo="1" SubLineNo="1">
+            <Extn ExtnColor="No Colour" ExtnFinalSale="N" ExtnImage="https://dev-au.pandora.net/dw/image/v2/AAWM_DEV/on/demandware.static/-/Sites-pandora-master-catalog/default/dwea11a513/images/productimages/main/767401_RGB.JPG?sw=120&amp;sh=120&amp;sm=fit&amp;sfrm=png&amp;bgcolor=F5F5F5" ExtnLineNetPrice="79.00" ExtnSize="one size" />
+            <Item ItemID="${item1}" ItemShortDesc="Pandora Crown O Logo Charm" ProductClass="GOOD" UnitOfMeasure="EACH" />
+            <LinePriceInfo IsPriceLocked="Y" TaxableFlag="N" UnitPrice="79.00" />
+            <LineCharges />
+            <LineTaxes>
+                <LineTax ChargeCategory="INFO_TAX" ChargeName="" Reference1="14.36" Reference2="0.1" Tax="14.36" TaxName="GST" />
+            </LineTaxes>
+            <PersonInfoShipTo AddressLine1="Lot 22 Frickers Rd" City="NYMBOIDA" Country="AU" DayPhone="9876568934" EMailID="monika123@yopmail.com" FirstName="Monika" LastName="R" State="NSW" ZipCode="2460" />
+        </OrderLine>
+        <OrderLine CarrierServiceCode="Standard" LineType="REG" OrderedQty="2.0" PrimeLineNo="2" SubLineNo="1">
+            <Extn ExtnColor="No Colour" ExtnFinalSale="N" ExtnImage="https://dev-au.pandora.net/dw/image/v2/AAWM_DEV/on/demandware.static/-/Sites-pandora-master-catalog/default/dw0d7c3a94/images/productimages/main/767236_RGB.JPG?sw=120&amp;sh=120&amp;sm=fit&amp;sfrm=png&amp;bgcolor=F5F5F5" ExtnLineNetPrice="69.00" ExtnSize="one size" />
+            <Item ItemID="${item2}" ItemShortDesc="Theodore Bear Charm" ProductClass="GOOD" UnitOfMeasure="EACH" />
+            <LinePriceInfo IsPriceLocked="Y" TaxableFlag="N" UnitPrice="69.00" />
+            <LineCharges />
+            <LineTaxes>
+                <LineTax ChargeCategory="INFO_TAX" ChargeName="" Reference1="12.55" Reference2="0.1" Tax="12.55" TaxName="GST" />
+            </LineTaxes>
+            <PersonInfoShipTo AddressLine1="Lot 22 Frickers Rd" City="NYMBOIDA" Country="AU" DayPhone="9876568934" EMailID="monika123@yopmail.com" FirstName="Monika" LastName="R" State="NSW" ZipCode="2460" />
+        </OrderLine>
+        <OrderLine CarrierServiceCode="Standard" LineType="REG" OrderedQty="1.0" PrimeLineNo="3" SubLineNo="1">
+            <Extn ExtnColor="Clear" ExtnFinalSale="N" ExtnImage="https://dev-au.pandora.net/dw/image/v2/AAWM_DEV/on/demandware.static/-/Sites-pandora-master-catalog/default/dwa5f94f1d/images/productimages/main/767599CZ_RGB.JPG?sw=120&amp;sh=120&amp;sm=fit&amp;sfrm=png&amp;bgcolor=F5F5F5" ExtnLineNetPrice="59.00" ExtnSize="one size" />
+            <Item ItemID="${item3}" ItemShortDesc="Pandora Reflexions Crown Clip Charm" ProductClass="GOOD" UnitOfMeasure="EACH" />
+            <LinePriceInfo IsPriceLocked="Y" TaxableFlag="N" UnitPrice="59.00" />
+            <LineCharges />
+            <LineTaxes>
+                <LineTax ChargeCategory="INFO_TAX" ChargeName="" Reference1="5.36" Reference2="0.1" Tax="5.36" TaxName="GST" />
+            </LineTaxes>
+            <PersonInfoShipTo AddressLine1="Lot 22 Frickers Rd" City="NYMBOIDA" Country="AU" DayPhone="9876568934" EMailID="monika123@yopmail.com" FirstName="Monika" LastName="R" State="NSW" ZipCode="2460" />
+        </OrderLine>
+        <OrderLine CarrierServiceCode="Standard" LineType="REG" OrderedQty="1.0" PrimeLineNo="4" SubLineNo="1">
+            <Extn ExtnFinalSale="N" ExtnImage="https://dev-au.pandora.net/dw/image/v2/AAWM_DEV/on/demandware.static/-/Sites-pandora-master-catalog/default/dw5a33b090/images/productimages/main/P12001-1.JPG?sw=120&amp;sh=120&amp;sm=fit&amp;sfrm=jpg&amp;bgcolor=F5F5F5" ExtnLineNetPrice="0.00" />
+            <Item ItemID="${item4}" ItemShortDesc="Gift bag" ProductClass="GOOD" UnitOfMeasure="EACH" />
+            <LinePriceInfo IsPriceLocked="Y" TaxableFlag="N" UnitPrice="0.00" />
+            <LineCharges />
+            <LineTaxes>
+                <LineTax ChargeCategory="INFO_TAX" ChargeName="" Reference1="0.00" Reference2="0.1" Tax="0.00" TaxName="GST" />
+            </LineTaxes>
+            <PersonInfoShipTo AddressLine1="Lot 22 Frickers Rd" City="NYMBOIDA" Country="AU" DayPhone="9876568934" EMailID="monika123@yopmail.com" FirstName="Monika" LastName="R" State="NSW" ZipCode="2460" />
+        </OrderLine>
+    </OrderLines>
+    <PriceInfo Currency="AUD" EnterpriseCurrency="AUD" />
+    <PersonInfoBillTo AddressLine1="Lot 22 Frickers Rd" City="NYMBOIDA" Country="AU" DayPhone="9876568934" EMailID="monika123@yopmail.com" FirstName="Gowtham" LastName="Srinivasan" State="NSW" ZipCode="2460" />
+    <HeaderCharges>
+        <HeaderCharge ChargeAmount="8.95" ChargeCategory="SHIPPING" ChargeName="SHIPPING" />
+    </HeaderCharges>
+    <HeaderTaxes>
+        <HeaderTax ChargeCategory="INFO_TAX" ChargeName="SHIPPING" Reference1="0.81" Reference2="0.1" Tax="0.81" TaxName="GST" />
+    </HeaderTaxes>
+    <PersonInfoShipTo AddressLine1="Lot 22 Frickers Rd" City="NYMBOIDA" Country="AU" DayPhone="9876568934" EMailID="monika123@yopmail.com" FirstName="Monika" LastName="R" State="NSW" ZipCode="2460" />
+    <PaymentMethods>
+        <PaymentMethod CreditCardExpDate="10/2020" CreditCardNo="XXXX-XXXX-XXXX-4444" CreditCardType="MASTER" DisplayCreditCardNo="4444" PaymentType="CREDIT_CARD" UnlimitedCharges="N">
+            <PaymentDetailsList>
+                <PaymentDetails AuthCode="${AuthCode}" AuthorizationID="${RequestId}" ChargeType="CHARGE" ProcessedAmount="${TotalAmount}" RequestAmount="${TotalAmount}" RequestId="5742453126136146203009" />
+            </PaymentDetailsList>
+        </PaymentMethod>
+    </PaymentMethods>
+</Order> 

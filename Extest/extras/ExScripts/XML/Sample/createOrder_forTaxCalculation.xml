@@ -1,0 +1,33 @@
+<Order EnterpriseCode="${EnterpriseCode}" SellerOrganizationCode="${SellerOrganizationCode}" TaxExemptFlag="${IsTaxExempt}">
+<HeaderCharges>
+<HeaderCharge ChargeAmount="${ChargeAmount}" ChargeCategory="${ChargeCategory}" ChargeName="${ChargeName}" />
+</HeaderCharges>
+	<OrderLines>
+
+		<OrderLine OrderedQty="${Quantity1}" >
+			<Item ItemID="${ItemID1}" UnitOfMeasure="${UnitOfMeasure1}" ProductClass="${ProductClass1}" />
+			<LinePriceInfo UnitPrice="${UnitPrice1}" IsPriceLocked="${IsPriceLocked1}"/>
+			
+		</OrderLine>
+	</OrderLines>
+<PriceInfo Currency="${Currency}" />
+<PersonInfoBillTo AddressLine1="${AddressLine1}" AddressLine2="${AddressLine2}" City="${City}" Company=""  Country="${Country}" DayPhone="${DayPhone}"
+EMailID="${EMailID}" FirstName="${FirstName}" LastName="${LastName}" State="${State}" ZipCode="${ZipCode}"/>
+<PersonInfoShipTo AddressLine1="${AddressLine1}" AddressLine2="${AddressLine2}" City="${City}" Company=""  Country="${Country}" DayPhone="${DayPhone}"
+EMailID="${EMailID}" FirstName="${FirstName}" LastName="${LastName}" State="${State}" ZipCode="${ZipCode}"/>
+
+	<PaymentMethods>
+		<PaymentMethod PaymentType="${PaymentType}" CreditCardNo="${CreditCardNo}" PaymentReference1="${PaymentReference1}" CreditCardType="${CreditCardType}" DisplayCreditCardNo="${DisplayCreditCardNo}" FirstName="${FirstName}" LastName="${LastName}">
+				<PaymentDetails ChargeType="${ChargeType}" RequestAmount="${RequestAmount}" ProcessedAmount="${ProcessedAmount}"/>	
+		</PaymentMethod>
+	</PaymentMethods>
+</Order>
+
+
+
+
+
+
+
+
+

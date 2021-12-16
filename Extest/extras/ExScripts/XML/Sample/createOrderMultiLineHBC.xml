@@ -1,0 +1,48 @@
+<Order xmlns="${xmlns1}" OrderNo="" DocumentType="${DocumentType1}" EnteredBy="${EnteredBy1}" EnterpriseCode="${EnterpriseCode}" SellerOrganizationCode="${SellerOrganizationCode}" EntryType="${EntryType}" OrderDate="${OrderDate1}" OrderType=""
+       BillToID="${BillToID1}" CustomerContactID="${CustomerContactID1}" AllocationRuleID="${AllocationRuleID1}" AuthorizedClient="${AuthorizedClient1}" >
+	<OrderLines>
+		<OrderLine PrimeLineNo="${PrimeLineNo1}" SubLineNo="${SubLineNo1}" OrderedQty="${OrderedQty1}" CarrierServiceCode="${CarrierServiceCode1}" ShipNode="" ReqDeliveryDate="" DeliveryMethod="${DeliveryMethod1}" FulfillmentType="${FulfillmentType1}" SCAC="${SCAC1}" >
+			<Item ItemID="${ItemID1}" ProductLine="${ProductLine1}" UnitOfMeasure="${UnitOfMeasure1}"/>
+			<PersonInfoShipTo Title="${Title1}" FirstName="${FirstName1}" MidleName="${MidleName1}" LastName="${LastName1}" PersonID="" AddressLine1="${AddressLine11}" AddressLine2="${AddressLine21}" AddressLine3="" AddressID="" City="${City1}" State="${State1}" Country="${Country1}" ZipCode="${ZipCode1}" EMailID="${EMailID1}" DayPhone="${DayPhone1}"/>
+			<LinePriceInfo UnitPrice="${UnitPrice1}" ListPrice="${ListPrice1}" RetailPrice="${RetailPrice1}" IsLinePriceForInformationOnly="${IsLinePriceForInformationOnly1}" PricingQuantityStrategy="${PricingQuantityStrategy1}" IsPriceLocked="${IsPriceLocked1}"/>
+			<LineCharges>
+				<LineCharge ChargePerLine="${ChargePerLine1}" ChargeCategory="${ChargeCategory1}" ChargeName="${ChargeName1}" Reference="" IsDiscount="${IsDiscount1}"/>
+			</LineCharges>
+			<Extn ExtnPackSlpPrcSuppress="${ExtnPackSlpPrcSuppress1}" ExtnRegistrantAddrsIndictr="" ExtnRegistrantStore="" ExtnIsReturnable="${ExtnIsReturnable1}" ExtnShipZone="" ExtnWebLineNumber="${ExtnWebLineNumber1}"/>
+			<OrderDates>
+				<OrderDate ActualDate="${ActualDate1}" DateTypeId="${DateTypeId1}"/>
+			</OrderDates>
+		</OrderLine>   
+		<OrderLine PrimeLineNo="${PrimeLineNo2}" SubLineNo="${SubLineNo2}" OrderedQty="${OrderedQty2}" CarrierServiceCode="${CarrierServiceCode2}" ShipNode="" ReqDeliveryDate="" DeliveryMethod="${DeliveryMethod2}" FulfillmentType="${FulfillmentType2}" SCAC="${SCAC2}" >
+			<Item ItemID="${ItemID2}" ProductLine="${ProductLine2}" UnitOfMeasure="${UnitOfMeasure2}"/>
+			<PersonInfoShipTo Title="${Title2}" FirstName="${FirstName2}" MidleName="${MidleName2}" LastName="${LastName2}" PersonID="" AddressLine1="${AddressLine12}" AddressLine2="${AddressLine22}" AddressLine3="" AddressID="" City="${City2}" State="${State2}" Country="${Country2}" ZipCode="${ZipCode2}" EMailID="${EMailID2}" DayPhone="${DayPhone2}"/>
+			<LinePriceInfo UnitPrice="${UnitPrice2}" ListPrice="${ListPrice2}" RetailPrice="${RetailPrice2}" IsLinePriceForInformationOnly="${IsLinePriceForInformationOnly2}" PricingQuantityStrategy="${PricingQuantityStrategy2}" IsPriceLocked="${IsPriceLocked2}"/>
+			<LineCharges>
+				<LineCharge ChargePerLine="${ChargePerLine2}" ChargeCategory="${ChargeCategory2}" ChargeName="${ChargeName2}" Reference="" IsDiscount="${IsDiscount2}"/>
+			</LineCharges>
+			<Extn ExtnPackSlpPrcSuppress="${ExtnPackSlpPrcSuppress2}" ExtnRegistrantAddrsIndictr="" ExtnRegistrantStore="" ExtnIsReturnable="${ExtnIsReturnable2}" ExtnShipZone="" ExtnWebLineNumber="${ExtnWebLineNumber2}"/>
+			<OrderDates>
+				<OrderDate ActualDate="${ActualDate2}" DateTypeId="${DateTypeId2}"/>
+			</OrderDates>
+		</OrderLine>                                                                                   
+	</OrderLines>
+	<PersonInfoBillTo Title="${Title1}" FirstName="${FirstName1}" MidleName="${MidleName1}" LastName="${LastName1}" PersonID="" AddressLine1="${AddressLine11}" AddressLine2="${AddressLine21}" AddressLine3="" AddressID="" City="${City1}" State="${State1}" Country="${Country1}" ZipCode="${ZipCode1}"
+                                  EMailID="${EMailID1}" DayPhone="${DayPhone1}"/>
+	<PersonInfoShipTo Title="${Title1}" FirstName="${FirstName1}" MidleName="${MidleName1}" LastName="${LastName1}" PersonID="" AddressLine1="${AddressLine11}" AddressLine2="${AddressLine21}" AddressLine3="" AddressID="" City="${City1}" State="${State1}" Country="${Country1}" ZipCode="${ZipCode1}"
+                                  EMailID="${EMailID1}" DayPhone="${DayPhone1}"/>
+	<PaymentMethods>
+		<PaymentMethod CreditCardExpDate="" CreditCardNo="" CreditCardType="" MaxChargeLimit="${MaxChargeLimit1}" PaymentReference1="${PaymentReference11}" PaymentReference3="" PaymentType="${PaymentType1}" SvcNo="" UnlimitedCharges="${UnlimitedCharges1}">
+			<PaymentDetails AuthAvs="${AuthAvs1}" AuthReturnCode="" AuthReturnMessage="" AuthorizationExpirationDate="${AuthorizationExpirationDate1}" AuthorizationID="${AuthorizationID1}" CVVAuthCode="${CVVAuthCode1}" ChargeType="${ChargeType1}" ProcessedAmount="${ProcessedAmount1}" RequestAmount="${RequestAmount1}">     
+				<PersonInfoBillTo AddressLine1="${AddressLine11}" AddressLine2="" City="${City1}" Country="${Country1}" DayPhone="${DayPhone1}" EMailID="${EMailID1}" FirstName="${FirstName1}" LastName="${LastName1}" State="${State1}" ZipCode="${ZipCode1}"/>     
+			</PaymentDetails>
+		</PaymentMethod>
+	</PaymentMethods>
+	<HeaderCharges>
+		<HeaderCharge ChargePerLine="${ChargePerLine1}" ChargeCategory="${ChargeCategory1}" ChargeName="${ChargeName1}" Reference="" IsDiscount="${IsDiscount1}"/>
+	</HeaderCharges>
+	<Promotions>
+		<Promotion PromotionId="${PromotionId1}"/>
+		<Promotion PromotionId="${PromotionId2}"/>
+	</Promotions>
+	<Extn ExtnLoyaltyNo="${ExtnLoyaltyNo1}" ExtnCommLang="${ExtnCommLang1}" ExtnShopRnrAuthTok="" ExtnCustomerId="${ExtnCustomerId1}" ExtnRegistryID="" ExtnRegistrantName="" ExtnIsFiftyOne="${ExtnIsFiftyOne1}" ExtnFiftyOneOrderNo="" ExtnCurrencyCode="" ExtnCurrencyExchangeRate=""  ExtnReference1="${ExtnReference11}"/>
+</Order>

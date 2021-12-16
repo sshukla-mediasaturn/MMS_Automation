@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Order AllocationRuleID="PAN_SCH" BillToID="APAC${billtoid}" BuyerUserId="testpan@yopmail.com" BypassPricing="Y" CustomerEMailID="testpan@yopmail.com" EnterpriseCode="AU" EntryType="WEB" FulfillmentType="PandoraFT" IsPriceLocked="Y" OrderDate="${CurrenttimeStamp}" OrderNo="PANAU${orderno}" PaymentStatus="PAID" SellerOrganizationCode="AU">
+    <Extn ExtnCRMCustomerID="5187182d-b6cb-41a5-9fc6-7e4c12620db7" ExtnOrderLang="en" />
+    <OrderLines>
+        <OrderLine CarrierServiceCode="90000007" LineType="REG" OrderedQty="1.0" PrimeLineNo="1" SubLineNo="1">
+            <Extn ExtnColor="No Colour" ExtnFinalSale="N" ExtnImage="https://dev-au.pandora.net/dw/image/v2/AAWM_DEV/on/demandware.static/-/Sites-pandora-master-catalog/default/dwa894a7eb/images/productimages/767249-1.jpg?sw=120&amp;sh=120&amp;sm=fit" ExtnLineNetPrice="101.10" ExtnSize="one size" />
+            <Item ItemID="${item1}" ItemShortDesc="PANDORA Shine Floating Locket Hanging Charm" ProductClass="GOOD" UnitOfMeasure="EACH" />
+            <LinePriceInfo IsPriceLocked="Y" TaxableFlag="N" UnitPrice="129.00" />
+            <LineCharges>
+                <LineCharge ChargeCategory="ITEM_DISCOUNT" ChargeName="itemlevelprmotion" ChargePerLine="0.00" ChargePerUnit="12.90" Reference="OMScampaign" />
+                <LineCharge ChargeCategory="ORDER_DISCOUNT" ChargeName="orderlevelfixedpromotion" ChargePerLine="0.00" ChargePerUnit="15.00" Reference="" />
+            </LineCharges>
+            <LineTaxes>
+                <LineTax ChargeCategory="INFO_TAX" ChargeName="" Reference1="9.19" Reference2="0.1" Tax="9.19" TaxName="GST" />
+            </LineTaxes>
+            <PersonInfoShipTo AddressLine1="Hillcrest Reserve" AddressLine2="Lower Coode St" City="Bayswater" Country="AU" DayPhone="9884498418" FirstName="Ambika" LastName="J" State="WA" ZipCode="6053" />
+        </OrderLine>
+        <OrderLine CarrierServiceCode="90000007" LineType="GWP" OrderedQty="1.0" PrimeLineNo="2" SubLineNo="1">
+            <Extn ExtnColor="Clear" ExtnFinalSale="N" ExtnImage="https://dev-au.pandora.net/dw/image/v2/AAWM_DEV/on/demandware.static/-/Sites-pandora-master-catalog/default/dw71a042c6/images/productimages/167158CZ-1.jpg?sw=120&amp;sh=120&amp;sm=fit" ExtnLineNetPrice="0" ExtnSize="5000" />
+            <Item ItemID="${item2}" ItemShortDesc="PANDORA Shine My Princess Tiara Ring" ProductClass="GOOD" UnitOfMeasure="EACH" />
+            <LinePriceInfo IsPriceLocked="Y" TaxableFlag="N" UnitPrice="129.00" />
+            <LineCharges>
+                <LineCharge ChargeCategory="ITEM_DISCOUNT" ChargeName="freebonuspdt" ChargePerLine="0.00" ChargePerUnit="129.00" Reference="OMScampaign" />
+            </LineCharges>
+            <LineTaxes>
+                <LineTax ChargeCategory="INFO_TAX" ChargeName="" Reference1="0.00" Reference2="0.1" Tax="0.00" TaxName="GST" />
+            </LineTaxes>
+            <PersonInfoShipTo AddressLine1="Hillcrest Reserve" AddressLine2="Lower Coode St" City="Bayswater" Country="AU" DayPhone="9884498418" FirstName="Ambika" LastName="J" State="WA" ZipCode="6053" />
+        </OrderLine>
+        <OrderLine CarrierServiceCode="90000007" LineType="PGC" OrderedQty="1.0" PrimeLineNo="3" SubLineNo="1">
+            <Extn ExtnFinalSale="N" ExtnLineNetPrice="500.00" />
+            <Item ItemID="${item3}" ItemShortDesc="Physical Gift Card" ProductClass="GOOD" UnitOfMeasure="EACH" />
+            <LinePriceInfo IsPriceLocked="Y" TaxableFlag="N" UnitPrice="500.00" />
+            <LineCharges />
+            <LineTaxes>
+                <LineTax ChargeCategory="INFO_TAX" ChargeName="" Reference1="0.00" Tax="0.00" TaxName="GST" />
+            </LineTaxes>
+            <Instructions>
+                <Instruction InstructionText="Congrats" InstructionType="GIFTMSG" />
+                <Instruction InstructionText="Jayanth" InstructionType="GIFTSENDER" />
+                <Instruction InstructionText="testpan@yopmail.com" InstructionType="GIFTREMAIL" />
+            </Instructions>
+            <PersonInfoShipTo AddressLine1="Hillcrest Reserve" AddressLine2="Lower Coode St" City="Bayswater" Country="AU" DayPhone="9884498418" FirstName="Ambika" LastName="J" State="WA" ZipCode="6053" />
+        </OrderLine>
+    </OrderLines>
+    <PriceInfo Currency="AUD" EnterpriseCurrency="AUD" />
+    <PersonInfoBillTo AddressLine1="Hillcrest Reserve" AddressLine2="Lower Coode St" City="Bayswater" Country="AU" DayPhone="9884498418" EMailID="testpan@yopmail.com" FirstName="Ambika" LastName="J" State="WA" ZipCode="6053" />
+    <HeaderCharges>
+        <HeaderCharge ChargeAmount="8.95" ChargeCategory="SHIPPING" ChargeName="SHIPPING" />
+        <HeaderCharge ChargeAmount="8.95" ChargeCategory="SHIPPING_DISCOUNT" ChargeName="FreeShipping" />
+    </HeaderCharges>
+    <HeaderTaxes>
+        <HeaderTax ChargeCategory="INFO_TAX" ChargeName="SHIPPING" Reference1="0.00" Tax="0.00" TaxName="GST" />
+    </HeaderTaxes>
+    <PersonInfoShipTo AddressLine1="Hillcrest Reserve" AddressLine2="Lower Coode St" City="Bayswater" Country="AU" DayPhone="9884498418" FirstName="Ambika" LastName="J" State="WA" ZipCode="6053" />
+    <PaymentMethods>
+        <PaymentMethod CreditCardExpDate="02/2022" CreditCardNo="XXXX-XXXX-XXXX-4444" CreditCardType="MASTER" DisplayCreditCardNo="4444" PaymentType="CREDIT_CARD" UnlimitedCharges="N">
+            <PaymentDetailsList>
+                <PaymentDetails AuthCode="831000" AuthorizationID="5659385460326989703011" ChargeType="CHARGE" ProcessedAmount="601.10" RequestAmount="601.10" RequestId="5659385434966109803009" />
+            </PaymentDetailsList>
+        </PaymentMethod>
+    </PaymentMethods>
+</Order>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Order AllocationRuleID="PAN_SCH" BillToID="SA00623395" BuyerUserId="monika123@yopmail.com" BypassPricing="Y" CustomerEMailID="monika123@yopmail.com" EnterpriseCode="AU" EntryType="WEB" FulfillmentType="PandoraFT" IsPriceLocked="Y" OrderDate="${CurrenttimeStamp}" OrderNo="PANAU${orderno}" PaymentStatus="PAID" SellerOrganizationCode="AU">
+    <Extn ExtnCRMCustomerID="c5b89aa6-a9bb-4547-991d-09a3d8858c5f" ExtnCRMGuestCheckout="true" ExtnOrderLang="en" />
+    <OrderLines>
+        <OrderLine CarrierServiceCode="Standard" LineType="REG" OrderedQty="1.0" PrimeLineNo="1" SubLineNo="1">
+            <Extn ExtnColor="No Colour" ExtnFinalSale="N" ExtnImage="https://dev-au.pandora.net/dw/image/v2/AAWM_DEV/on/demandware.static/-/Sites-pandora-master-catalog/default/dw2e87a26d/images/productimages/main/${item1}_RGB.JPG?sw=120&amp;sh=120&amp;sm=fit&amp;sfrm=png&amp;bgcolor=F5F5F5" ExtnLineNetPrice="129.00" ExtnSize="one size" />
+            <Item ItemID="${item1}" ItemShortDesc="Pandora Lockets Logo Hanging Charm" ProductClass="GOOD" UnitOfMeasure="EACH" />
+            <LinePriceInfo IsPriceLocked="Y" TaxableFlag="N" UnitPrice="129.00" />
+            <LineCharges />
+            <LineTaxes>
+                <LineTax ChargeCategory="INFO_TAX" ChargeName="" Reference1="11.73" Reference2="0.1" Tax="11.73" TaxName="GST" />
+            </LineTaxes>
+            <PersonInfoShipTo AddressLine1="Unit 1 128 Shepherds Hill Rd" City="BELLEVUE HEIGHTS" Country="AU" DayPhone="9867884567" FirstName="Monika" LastName="R" State="SA" ZipCode="5050" />
+        </OrderLine>
+        <OrderLine CarrierServiceCode="Standard" LineType="REG" OrderedQty="1.0" PrimeLineNo="2" SubLineNo="1">
+            <Extn ExtnColor="No Colour" ExtnFinalSale="N" ExtnImage="https://dev-au.pandora.net/dw/image/v2/AAWM_DEV/on/demandware.static/-/Sites-pandora-master-catalog/default/dw4372bdf8/images/productimages/main/${item2}_RGB.JPG?sw=120&amp;sh=120&amp;sm=fit&amp;sfrm=png&amp;bgcolor=F5F5F5" ExtnLineNetPrice="79.00" ExtnSize="4800" />
+            <Item ItemID="${item2}" ItemShortDesc="Band of Hearts Ring" ProductClass="GOOD" UnitOfMeasure="EACH" />
+            <LinePriceInfo IsPriceLocked="Y" TaxableFlag="N" UnitPrice="79.00" />
+            <LineCharges />
+            <LineTaxes>
+                <LineTax ChargeCategory="INFO_TAX" ChargeName="" Reference1="7.18" Reference2="0.1" Tax="7.18" TaxName="GST" />
+            </LineTaxes>
+            <PersonInfoShipTo AddressLine1="Unit 1 128 Shepherds Hill Rd" City="BELLEVUE HEIGHTS" Country="AU" DayPhone="9867884567" FirstName="Monika" LastName="R" State="SA" ZipCode="5050" />
+        </OrderLine>
+    </OrderLines>
+    <PriceInfo Currency="AUD" EnterpriseCurrency="AUD" />
+    <PersonInfoBillTo AddressLine1="Unit 1 128 Shepherds Hill Rd" City="BELLEVUE HEIGHTS" Country="AU" DayPhone="9867884567" EMailID="monika123@yopmail.com" FirstName="Monika" LastName="R" State="SA" ZipCode="5050" />
+    <HeaderCharges>
+        <HeaderCharge ChargeAmount="8.95" ChargeCategory="SHIPPING" ChargeName="SHIPPING" />
+    </HeaderCharges>
+    <HeaderTaxes>
+        <HeaderTax ChargeCategory="INFO_TAX" ChargeName="SHIPPING" Reference1="0.81" Tax="0.81" TaxName="GST" />
+    </HeaderTaxes>
+    <PersonInfoShipTo AddressLine1="Unit 1 128 Shepherds Hill Rd" City="BELLEVUE HEIGHTS" Country="AU" DayPhone="9867884567" FirstName="Monika" LastName="R" State="SA" ZipCode="5050" />
+    <PaymentMethods>
+        <PaymentMethod PaymentReference4="3511" PaymentType="GIFT_CARD" SvcNo="502904100000214007" UnlimitedCharges="N">
+            <PaymentDetailsList>
+                <PaymentDetails ChargeType="CHARGE" HoldAgainstBook="Y" ProcessedAmount="50.00" RequestAmount="50.00" />
+            </PaymentDetailsList>
+        </PaymentMethod>
+        <PaymentMethod CreditCardExpDate="10/2020" CreditCardNo="XXXX-XXXX-XXXX-1111" CreditCardType="VISA" DisplayCreditCardNo="1111" PaymentType="CREDIT_CARD" UnlimitedCharges="N">
+            <PaymentDetailsList>
+                <PaymentDetails AuthCode="831000" AuthorizationID="5707676144716504703012" ChargeType="CHARGE" ProcessedAmount="166.95" RequestAmount="166.95" RequestId="5707676157446484203007" />
+            </PaymentDetailsList>
+        </PaymentMethod>
+    </PaymentMethods>
+</Order>

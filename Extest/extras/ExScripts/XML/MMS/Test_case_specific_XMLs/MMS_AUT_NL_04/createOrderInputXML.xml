@@ -1,0 +1,107 @@
+<Order BypassPricing="Y" CustomerEMailID="Test@test.com"
+    DocumentType="0001" EnterpriseCode="MSH_NL" EntryType="DESKTOP"
+    OrderDate="${CurrenttimeStamp}" OrderNo="${OrderNo}"
+    OrderType="B2C_SALE" PaymentStatus="PAID" SearchCriteria1="Y"
+    SellerOrganizationCode="MM_NL" TaxPayerId="" xmlns="http://www.sterlingcommerce.com/documentation/YFS/createOrder/input">
+    <HeaderCharges>
+        <HeaderCharge ChargeAmount="0"
+            ChargeCategory="HOMEDEL_SHIPPING_FEE" ChargeName="126606" Reference="126606"/>
+        <HeaderCharge ChargeAmount="2.99"
+            ChargeCategory="HOMEDEL_SHIPPING_FEE" ChargeName="733797" Reference="733797"/>
+    </HeaderCharges>
+    <OrderLineRelationships/>
+    <OrderLines>
+        <OrderLine DeliveryMethod="SHP" FulfillmentType="MSH_HOMEDEL"
+            ItemGroupCode="PROD" LevelOfService="MSH_HOME_DEL"
+            LineType="STOCKED" OrderedQty="${QtyToBeReserved}" ShipNode="${ShipNode}" PrimeLineNo="1" SubLineNo="1">
+            <LineCharges/>
+            <LineTaxes>
+                <LineTax ChargeCategory="LINE_TAX" ChargeName="LineTax"
+                    Reference1="1" Reference2="13.33" Tax="13.33"
+                    TaxName="VAT" TaxPercentage="20.0" TaxableFlag="N"/>
+            </LineTaxes>
+             <OrderLineReservations>
+     <OrderLineReservation ExternalNode="Y" Quantity="${QtyToBeReserved}" IsProcured="N" IsSubstituted="N" ItemID="${item1}" ReservationID="${ReservationID}"/>
+       </OrderLineReservations>
+            <Extn Brand="SONY I.E."
+                DeliveryTimeFrame="Lieferung bis  Samstag, 09.10.2021"
+                LineItemNumber="126606" LogisticsClass="1"
+                ReleaseDate="" ShippingCostRefID="126606" SplitCriteria1="STD">
+                <MSHWarrantyExtensionsList/>
+                <MSHOrderlineFeatureList>
+                    <MSHOrderlineFeature FeatureID="PRODFEAT12854"
+                        FeatureValue="Sony " Label="Sony "/>
+                    <MSHOrderlineFeature FeatureID="PRODFEAT12855"
+                        FeatureValue="Marvel's Spider-Man: Miles Morales Ultimate Edition " Label="Marvel's Spider-Man: Miles Morales Ultimate Edition "/>
+                    <MSHOrderlineFeature FeatureID="PRODFEAT10988"
+                        FeatureValue="Action " Label="Action "/>
+                    <MSHOrderlineFeature FeatureID="PRODFEAT12884"
+                        FeatureValue="Ab 16 Jahren " Label="Ab 16 Jahren "/>
+                    <MSHOrderlineFeature FeatureID="PRODFEAT12000"
+                        FeatureValue="PlayStation 5 " Label="PlayStation 5 "/>
+                    <MSHOrderlineFeature FeatureID="PRODFEAT11560"
+                        FeatureValue="Blu-ray " Label="Blu-ray "/>
+                    <MSHOrderlineFeature FeatureID="PRODFEAT12964"
+                        FeatureValue="1 " Label="1 "/>
+                    <MSHOrderlineFeature FeatureID="PRODFEAT10900"
+                        FeatureValue="Ultimate Edition " Label="Ultimate Edition "/>
+                    <MSHOrderlineFeature FeatureID="PRODFEAT13366"
+                        FeatureValue="Spieler lokal: 1 " Label="Spieler lokal: 1 "/>
+                    <MSHOrderlineFeature FeatureID="PRODFEAT16490"
+                        FeatureValue="Ja " Label="Ja "/>
+                </MSHOrderlineFeatureList>
+            </Extn>
+            <Item CostCurrency="EUR"
+                ItemDesc="Marvel's Spider-Man: Miles Morales Ultimate Edition - [PlayStation 5]"
+                ItemID="${item1}"
+                ItemShortDesc="Marvel's Spider-Man: Miles Morales Ultimate Edition - [PlayStation 5]"
+                UPCCode="${item1}" UnitCost="5.00" UnitOfMeasure="EACH"/>
+            <LinePriceInfo IsPriceLocked="Y" ListPrice="5.00" UnitPrice="5.00"/>
+        </OrderLine>
+    </OrderLines>
+    <Extn AlternativeUserID="197216174" Language="es" LoyaltyId=""
+        OutletID="742" PickupLocation="0" RetailPriceInclDuties="N"
+        UCMUserID="197216174" WCSUserID="197216174">
+        <MSHB2bCustomerDtlList/>
+        <MSHLegalAgreementDtlList/>
+        <MSHLoyaltyDtlList>
+            <MSHLoyaltyDtl IsLoyaltyMember="N" WinAmount="" WinFlag="N" WinType=""/>
+        </MSHLoyaltyDtlList>
+    </Extn>
+    <PaymentMethods>
+        <PaymentMethod
+            PaymentReference1="aa644e2992244f3c8a5fe9ba79ccdf5a"
+            PaymentReference2="" PaymentReference9="" PaymentType="CRECA">
+            <PaymentDetailsList>
+                <PaymentDetails ChargeType="CHARGE"
+                    ProcessedAmount="52.99" RequestAmount="52.99"/>
+            </PaymentDetailsList>
+        </PaymentMethod>
+		    </PaymentMethods>
+    <PriceInfo Currency="EUR"/>
+    <PersonInfoBillTo AddressID=""
+        AddressLine1="dsagfqe" AddressLine2=""
+        City="Wien" Company="" Country="NL" DayPhone="422464214"
+        EMailID="Test@test.com" FirstName="hth"
+        JobTitle="" LastName="yjr" MobilePhone="422464214" Title="" ZipCode="1120">
+        <Extn Unknown=""/>
+    </PersonInfoBillTo>
+    <HeaderTaxes>
+        <HeaderTax ChargeCategory="HOMEDEL_SHIPPING_TAX"
+            ChargeName="126606" Reference1="1" Reference2="126606"
+            Tax="0" TaxName="VAT" TaxPercentage="20.0" TaxableFlag="N"/>
+        <HeaderTax ChargeCategory="HOMEDEL_SHIPPING_TAX"
+            ChargeName="733797" Reference1="2" Reference2="733797"
+            Tax="0.5" TaxName="VAT" TaxPercentage="20.0" TaxableFlag="N"/>
+    </HeaderTaxes>
+    <PersonInfoShipTo AddressID=""
+        AddressLine1="dsagfqe" AddressLine2=""
+        City="Wien" Company="" Country="NL" DayPhone="422464214"
+        EMailID="Test@test.com" FirstName="hth"
+        JobTitle="" LastName="yjr" MobilePhone="422464214" Title="" ZipCode="112a0">
+        <Extn Unknown=""/>
+    </PersonInfoShipTo>
+    <Notes>
+        <Note NoteText="Order created successfully" Priority="1" ReasonCode="ORDER_CREATE"/>
+    </Notes>
+</Order>

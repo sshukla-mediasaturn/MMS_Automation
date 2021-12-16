@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Order AllocationRuleID="PAN_SCH" BillToID="00376003" BuyerUserId="monika123@yopmail.com" BypassPricing="Y" CustomerEMailID="monika123@yopmail.com" EnterpriseCode="NZ" EntryType="WEB" FulfillmentType="PandoraFT" IsPriceLocked="Y" OrderDate="${CurrenttimeStamp}" OrderNo="PANNZ${orderno}" PaymentStatus="PAID" SellerOrganizationCode="NZ">
+    <Extn ExtnCRMCustomerID="b0cfeb4e-ea0c-40c9-aa88-b29787b5ec68" ExtnCRMGuestCheckout="false" ExtnOrderLang="en" />
+    <OrderLines>
+        <OrderLine CarrierServiceCode="Standard" LineType="REG" OrderedQty="1.0" PrimeLineNo="1" SubLineNo="1">
+            <Extn ExtnColor="Clear" ExtnFinalSale="N" ExtnImage="https://dev-nz.pandora.net/dw/image/v2/AAWM_DEV/on/demandware.static/-/Sites-pandora-master-catalog/default/dw7cdd998f/images/productimages/${item1}-1.jpg?sw=120&amp;sh=120&amp;sm=fit" ExtnLineNetPrice="159.17" ExtnSize="4800" />
+            <Item ItemID="${item1}" ItemShortDesc="PANDORA Shine Hearts of PANDORA Ring" ProductClass="GOOD" UnitOfMeasure="EACH" />
+            <LinePriceInfo IsPriceLocked="Y" TaxableFlag="N" UnitPrice="169.00" />
+            <LineCharges>
+                <LineCharge ChargeCategory="ORDER_DISCOUNT" ChargeName="orderlevelfixedpromotion" ChargePerLine="0" ChargePerUnit="9.83" Reference="" />
+            </LineCharges>
+            <LineTaxes>
+                <LineTax ChargeCategory="INFO_TAX" ChargeName="" Reference1="20.76" Reference2="0.15" Tax="20.76" TaxName="GST" />
+            </LineTaxes>
+            <PersonInfoShipTo AddressLine1="54 Sydney St" City="AUK" Country="NZ" DayPhone="9663330092" FirstName="Monika" LastName="R" State="AUK" ZipCode="3020" />
+        </OrderLine>
+        <OrderLine CarrierServiceCode="Standard" LineType="REG" OrderedQty="1.0" PrimeLineNo="2" SubLineNo="1">
+            <Extn ExtnColor="No Colour" ExtnFinalSale="N" ExtnImage="https://dev-nz.pandora.net/dw/image/v2/AAWM_DEV/on/demandware.static/-/Sites-pandora-master-catalog/default/dwe19c5ec3/images/productimages/${item2}-1.jpg?sw=120&amp;sh=120&amp;sm=fit" ExtnLineNetPrice="83.83" ExtnSize="4800" />
+            <Item ItemID="${item2}" ItemShortDesc="PANDORA Shine Linked Love Ring" ProductClass="GOOD" UnitOfMeasure="EACH" />
+            <LinePriceInfo IsPriceLocked="Y" TaxableFlag="N" UnitPrice="89.00" />
+            <LineCharges>
+                <LineCharge ChargeCategory="ORDER_DISCOUNT" ChargeName="orderlevelfixedpromotion" ChargePerLine="0" ChargePerUnit="5.17" Reference="" />
+            </LineCharges>
+            <LineTaxes>
+                <LineTax ChargeCategory="INFO_TAX" ChargeName="" Reference1="10.93" Reference2="0.15" Tax="10.93" TaxName="GST" />
+            </LineTaxes>
+            <PersonInfoShipTo AddressLine1="54 Sydney St" City="AUK" Country="NZ" DayPhone="9663330092" FirstName="Monika" LastName="R" State="AUK" ZipCode="3020" />
+        </OrderLine>
+    </OrderLines>
+    <PriceInfo Currency="NZD" EnterpriseCurrency="NZD" />
+    <PersonInfoBillTo AddressLine1="54 Sydney St" City="AUK" Country="NZ" DayPhone="9663330092" EMailID="monika123@yopmail.com" FirstName="Monika" LastName="R" State="AUK" ZipCode="3020" />
+    <HeaderCharges>
+        <HeaderCharge ChargeAmount="15" ChargeCategory="SHIPPING" ChargeName="SHIPPING" />
+    </HeaderCharges>
+    <HeaderTaxes>
+        <HeaderTax ChargeCategory="INFO_TAX" ChargeName="SHIPPING" Reference1="1.96" Tax="1.96" TaxName="GST" />
+    </HeaderTaxes>
+    <PersonInfoShipTo AddressLine1="54 Sydney St" City="AUK" Country="NZ" DayPhone="9663330092" FirstName="Monika" LastName="R" State="AUK" ZipCode="3020" />
+    <PaymentMethods>
+        <PaymentMethod PaymentReference4="8110" PaymentType="GIFT_CARD" SvcNo="502904120000032308" UnlimitedCharges="N">
+            <PaymentDetailsList>
+                <PaymentDetails ChargeType="CHARGE" HoldAgainstBook="Y" ProcessedAmount="30.00" RequestAmount="30.00" />
+            </PaymentDetailsList>
+        </PaymentMethod>
+        <PaymentMethod CreditCardExpDate="11/2022" CreditCardNo="XXXX-XXXX-XXXX-1111" CreditCardType="VISA" DisplayCreditCardNo="1111" PaymentType="CREDIT_CARD" UnlimitedCharges="N">
+            <PaymentDetailsList>
+                <PaymentDetails AuthCode="160780" AuthorizationID="5670092347016608503007" ChargeType="CHARGE" ProcessedAmount="228.00" RequestAmount="228.00" RequestId="5670359719226963303007" />
+            </PaymentDetailsList>
+        </PaymentMethod>
+    </PaymentMethods>
+</Order>

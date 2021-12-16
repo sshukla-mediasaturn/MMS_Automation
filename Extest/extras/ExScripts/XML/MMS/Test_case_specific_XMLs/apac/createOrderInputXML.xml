@@ -1,0 +1,45 @@
+<Order AllocationRuleID="PAN_SCH" BillToID="SA00609392" BuyerUserId="moniraja@yopmail.com" BypassPricing="Y" CustomerEMailID="moniraja@yopmail.com" EnterpriseCode="AU" EntryType="WEB" FulfillmentType="PandoraFT" IsPriceLocked="Y" OrderDate="${CurrenttimeStamp}" OrderNo="PANAU${orderno}" PaymentStatus="PAID" SellerOrganizationCode="AU">
+    <Extn ExtnCRMCustomerID="3879558a-6d47-4bc1-b170-792653f93b7a" ExtnCRMGuestCheckout="true" ExtnOrderLang="en" />
+    <OrderLines>
+        <OrderLine CarrierServiceCode="Standard" LineType="REG" OrderedQty="2.0" PrimeLineNo="1" SubLineNo="1">
+            <Extn ExtnColor="Clear" ExtnFinalSale="N" ExtnImage="https://dev-au.pandora.net/dw/image/v2/AAWM_DEV/on/demandware.static/-/Sites-pandora-master-catalog/default/dw789bdb4d/images/productimages/767599CZ-1.jpg?sw=120&amp;sh=120&amp;sm=fit" ExtnLineNetPrice="106.20" ExtnSize="one size" />
+            <Item ItemID="${item1}" ItemShortDesc="PANDORA Shine Reflexions Crown Clip Charm" ProductClass="GOOD" UnitOfMeasure="EACH" />
+            <LinePriceInfo IsPriceLocked="Y" TaxableFlag="N" UnitPrice="59.00" />
+            <LineCharges>
+                <LineCharge ChargeCategory="ITEM_DISCOUNT" ChargeName="itemlevelprmotion" ChargePerLine="0.00" ChargePerUnit="5.90" Reference="OMScampaign" />
+            </LineCharges>
+            <LineTaxes>
+                <LineTax ChargeCategory="INFO_TAX" ChargeName="" Reference1="9.65" Reference2="0.1" Tax="9.65" TaxName="GST" />
+            </LineTaxes>
+            <PersonInfoShipTo AddressLine1="Shop 1 1020 Mt Alexander Rd" City="ESSENDON" Country="AU" DayPhone="9876456789" FirstName="Monika" LastName="R" State="VIC" ZipCode="3040" />
+        </OrderLine>
+        <OrderLine CarrierServiceCode="Standard" LineType="REG" OrderedQty="2.0" PrimeLineNo="2" SubLineNo="1">
+            <Extn ExtnColor="No Colour" ExtnFinalSale="N" ExtnImage="https://dev-au.pandora.net/dw/image/v2/AAWM_DEV/on/demandware.static/-/Sites-pandora-master-catalog/default/dwe1d6bc62/images/productimages/767155-1.jpg?sw=120&amp;sh=120&amp;sm=fit" ExtnLineNetPrice="106.20" ExtnSize="one size" />
+            <Item ItemID="${item2}" ItemShortDesc="PANDORA Shine Filled With Romance Heart Charm" ProductClass="GOOD" UnitOfMeasure="EACH" />
+            <LinePriceInfo IsPriceLocked="Y" TaxableFlag="N" UnitPrice="59.00" />
+            <LineCharges>
+                <LineCharge ChargeCategory="ITEM_DISCOUNT" ChargeName="itemlevelprmotion" ChargePerLine="0.00" ChargePerUnit="5.90" Reference="OMScampaign" />
+            </LineCharges>
+            <LineTaxes>
+                <LineTax ChargeCategory="INFO_TAX" ChargeName="" Reference1="9.65" Reference2="0.1" Tax="9.65" TaxName="GST" />
+            </LineTaxes>
+            <PersonInfoShipTo AddressLine1="Shop 1 1020 Mt Alexander Rd" City="ESSENDON" Country="AU" DayPhone="9876456789" FirstName="Monika" LastName="R" State="VIC" ZipCode="3040" />
+        </OrderLine>
+    </OrderLines>
+    <PriceInfo Currency="AUD" EnterpriseCurrency="AUD" />
+    <PersonInfoBillTo AddressLine1="Shop 1 1020 Mt Alexander Rd" City="ESSENDON" Country="AU" DayPhone="9876456789" EMailID="moniraja@yopmail.com" FirstName="Monika" LastName="R" State="VIC" ZipCode="3040" />
+    <HeaderCharges>
+        <HeaderCharge ChargeAmount="8.95" ChargeCategory="SHIPPING" ChargeName="SHIPPING" />
+    </HeaderCharges>
+    <HeaderTaxes>
+        <HeaderTax ChargeCategory="INFO_TAX" ChargeName="SHIPPING" Reference1="0.81" Tax="0.81" TaxName="GST" />
+    </HeaderTaxes>
+    <PersonInfoShipTo AddressLine1="Shop 1 1020 Mt Alexander Rd" City="ESSENDON" Country="AU" DayPhone="9876456789" FirstName="Monika" LastName="R" State="VIC" ZipCode="3040" />
+    <PaymentMethods>
+        <PaymentMethod CreditCardExpDate="10/2020" CreditCardNo="XXXX-XXXX-XXXX-1111" CreditCardType="VISA" DisplayCreditCardNo="1111" PaymentType="CREDIT_CARD" UnlimitedCharges="N">
+            <PaymentDetailsList>
+                <PaymentDetails AuthCode="831000" AuthorizationID="5668816636566078003012" ChargeType="CHARGE" ProcessedAmount="221.35" RequestAmount="221.35" RequestId="5668816648616432603007" />
+            </PaymentDetailsList>
+        </PaymentMethod>
+    </PaymentMethods>
+</Order>

@@ -1,0 +1,490 @@
+<Order
+	xmlns="http://www.sterlingcommerce.com/documentation/YFS/createOrder/input"
+	BypassPricing="Y"
+	CustomerEMailID="Test@test.com"
+	DocumentType="0001"
+	EnterpriseCode="MSH_NL"
+	EntryType="DESKTOP"
+	OrderDate="${CurrenttimeStamp}"
+	OrderNo="${OrderNo}${CurrentTimeStamp1}"
+	OrderType="B2C_SALE"
+	PaymentStatus="PAID"
+	SearchCriteria1="Y"
+	SellerOrganizationCode="MM_NL"
+	TaxPayerId="">
+	<HeaderCharges>
+		<HeaderCharge
+			ChargeAmount="0"
+			ChargeCategory="HOMEDEL_SHIPPING_FEE"
+			ChargeName="126606"
+			Reference="126606">
+		</HeaderCharge>
+		<HeaderCharge
+			ChargeAmount="2.99"
+			ChargeCategory="HOMEDEL_SHIPPING_FEE"
+			ChargeName="733797"
+			Reference="733797">
+		</HeaderCharge>
+	</HeaderCharges>
+	<OrderLineRelationships>
+	</OrderLineRelationships>
+	<OrderLines>
+		<OrderLine
+			DeliveryMethod="SHP"
+			FulfillmentType="MSH_HOMEDEL"
+			ItemGroupCode="PROD"
+			LevelOfService="MSH_HOME_DEL"
+			LineType="STOCKED"
+			OrderedQty="${QtyToBeReserved}"
+			ShipNode="${ShipNode}"
+			PrimeLineNo="1"
+			SubLineNo="1">
+			<LineCharges>
+			</LineCharges>
+			<LineTaxes>
+				<LineTax
+					ChargeCategory="LINE_TAX"
+					ChargeName="LineTax"
+					Reference1="1"
+					Reference2="13.33"
+					Tax="13.33"
+					TaxName="VAT"
+					TaxPercentage="20.0"
+					TaxableFlag="N">
+				</LineTax>
+			</LineTaxes>
+			<OrderLineReservations>
+				<OrderLineReservation
+					ExternalNode="Y"
+					Quantity="${QtyToBeReserved}"
+					IsProcured="N"
+					IsSubstituted="N"
+					ItemID="${item1}"
+					ReservationID="${OrderNo}f8-72eb-4272-9fd9-40bfb1d96beb">
+				</OrderLineReservation>
+			</OrderLineReservations>
+			<Extn
+				Brand="SONY I.E."
+				DeliveryTimeFrame="Lieferung bis  Samstag, 09.10.2021"
+				LineItemNumber="126606"
+				LogisticsClass="1"
+				ReleaseDate=""
+				ShippingCostRefID="126606"
+				SplitCriteria1="STD">
+				<MSHWarrantyExtensionsList>
+				</MSHWarrantyExtensionsList>
+				<MSHOrderlineFeatureList>
+					<MSHOrderlineFeature
+						FeatureID="PRODFEAT12854"
+						FeatureValue="Sony "
+						Label="Sony ">
+					</MSHOrderlineFeature>
+					<MSHOrderlineFeature
+						FeatureID="PRODFEAT12855"
+						FeatureValue="Marvel's Spider-Man: Miles Morales Ultimate Edition "
+						Label="Marvel's Spider-Man: Miles Morales Ultimate Edition ">
+					</MSHOrderlineFeature>
+					<MSHOrderlineFeature
+						FeatureID="PRODFEAT10988"
+						FeatureValue="Action "
+						Label="Action ">
+					</MSHOrderlineFeature>
+					<MSHOrderlineFeature
+						FeatureID="PRODFEAT12884"
+						FeatureValue="Ab 16 Jahren "
+						Label="Ab 16 Jahren ">
+					</MSHOrderlineFeature>
+					<MSHOrderlineFeature
+						FeatureID="PRODFEAT12000"
+						FeatureValue="PlayStation 5 "
+						Label="PlayStation 5 ">
+					</MSHOrderlineFeature>
+					<MSHOrderlineFeature
+						FeatureID="PRODFEAT11560"
+						FeatureValue="Blu-ray "
+						Label="Blu-ray ">
+					</MSHOrderlineFeature>
+					<MSHOrderlineFeature
+						FeatureID="PRODFEAT12964"
+						FeatureValue="1 "
+						Label="1 ">
+					</MSHOrderlineFeature>
+					<MSHOrderlineFeature
+						FeatureID="PRODFEAT10900"
+						FeatureValue="Ultimate Edition "
+						Label="Ultimate Edition ">
+					</MSHOrderlineFeature>
+					<MSHOrderlineFeature
+						FeatureID="PRODFEAT13366"
+						FeatureValue="Spieler lokal: 1 "
+						Label="Spieler lokal: 1 ">
+					</MSHOrderlineFeature>
+					<MSHOrderlineFeature
+						FeatureID="PRODFEAT16490"
+						FeatureValue="Ja "
+						Label="Ja ">
+					</MSHOrderlineFeature>
+				</MSHOrderlineFeatureList>
+			</Extn>
+			<Item
+				CostCurrency="EUR"
+				ItemDesc="Marvel's Spider-Man: Miles Morales Ultimate Edition - [PlayStation 5]"
+				ItemID="${item1}"
+				ItemShortDesc="Marvel's Spider-Man: Miles Morales Ultimate Edition - [PlayStation 5]"
+				UPCCode="${item1}"
+				UnitCost="5.00"
+				UnitOfMeasure="EACH">
+			</Item>
+			<LinePriceInfo
+				IsPriceLocked="Y"
+				ListPrice="10.00"
+				UnitPrice="10.00">
+			</LinePriceInfo>
+		</OrderLine>
+		<OrderLine
+			DeliveryMethod="SHP"
+			FulfillmentType="MSH_HOMEDEL"
+			ItemGroupCode="PROD"
+			LevelOfService="MSH_HOME_DEL"
+			LineType="STOCKED"
+			OrderedQty="${QtyToBeReserved}"
+			ShipNode="${ShipNode}"
+			PrimeLineNo="2"
+			SubLineNo="1">
+			<LineCharges>
+			</LineCharges>
+			<LineTaxes>
+				<LineTax
+					ChargeCategory="LINE_TAX"
+					ChargeName="LineTax"
+					Reference1="1"
+					Reference2="13.33"
+					Tax="13.33"
+					TaxName="VAT"
+					TaxPercentage="20.0"
+					TaxableFlag="N">
+				</LineTax>
+			</LineTaxes>
+			<OrderLineReservations>
+				<OrderLineReservation
+					ExternalNode="Y"
+					Quantity="${QtyToBeReserved}"
+					IsProcured="N"
+					IsSubstituted="N"
+					ItemID="${item2}"
+					ReservationID="${OrderNo}f8-72eb-4272-9fd9-40bfb1d96beb">
+				</OrderLineReservation>
+			</OrderLineReservations>
+			<Extn
+				Brand="SONY I.E."
+				DeliveryTimeFrame="Lieferung bis  Samstag, 09.10.2021"
+				LineItemNumber="126607"
+				LogisticsClass="1"
+				ReleaseDate=""
+				ShippingCostRefID="126607"
+				SplitCriteria1="STD">
+				<MSHWarrantyExtensionsList>
+				</MSHWarrantyExtensionsList>
+				<MSHOrderlineFeatureList>
+					<MSHOrderlineFeature
+						FeatureID="PRODFEAT12854"
+						FeatureValue="Sony "
+						Label="Sony ">
+					</MSHOrderlineFeature>
+					<MSHOrderlineFeature
+						FeatureID="PRODFEAT12855"
+						FeatureValue="Marvel's Spider-Man: Miles Morales Ultimate Edition "
+						Label="Marvel's Spider-Man: Miles Morales Ultimate Edition ">
+					</MSHOrderlineFeature>
+					<MSHOrderlineFeature
+						FeatureID="PRODFEAT10988"
+						FeatureValue="Action "
+						Label="Action ">
+					</MSHOrderlineFeature>
+					<MSHOrderlineFeature
+						FeatureID="PRODFEAT12884"
+						FeatureValue="Ab 16 Jahren "
+						Label="Ab 16 Jahren ">
+					</MSHOrderlineFeature>
+					<MSHOrderlineFeature
+						FeatureID="PRODFEAT12000"
+						FeatureValue="PlayStation 5 "
+						Label="PlayStation 5 ">
+					</MSHOrderlineFeature>
+					<MSHOrderlineFeature
+						FeatureID="PRODFEAT11560"
+						FeatureValue="Blu-ray "
+						Label="Blu-ray ">
+					</MSHOrderlineFeature>
+					<MSHOrderlineFeature
+						FeatureID="PRODFEAT12964"
+						FeatureValue="1 "
+						Label="1 ">
+					</MSHOrderlineFeature>
+					<MSHOrderlineFeature
+						FeatureID="PRODFEAT10900"
+						FeatureValue="Ultimate Edition "
+						Label="Ultimate Edition ">
+					</MSHOrderlineFeature>
+					<MSHOrderlineFeature
+						FeatureID="PRODFEAT13366"
+						FeatureValue="Spieler lokal: 1 "
+						Label="Spieler lokal: 1 ">
+					</MSHOrderlineFeature>
+					<MSHOrderlineFeature
+						FeatureID="PRODFEAT16490"
+						FeatureValue="Ja "
+						Label="Ja ">
+					</MSHOrderlineFeature>
+				</MSHOrderlineFeatureList>
+			</Extn>
+			<Item
+				CostCurrency="EUR"
+				ItemDesc="Marvel's Spider-Man: Miles Morales Ultimate Edition - [PlayStation 5]"
+				ItemID="${item2}"
+				ItemShortDesc="Marvel's Spider-Man: Miles Morales Ultimate Edition - [PlayStation 5]"
+				UPCCode="1382610"
+				UnitCost="5.00"
+				UnitOfMeasure="EACH">
+			</Item>
+			<LinePriceInfo
+				IsPriceLocked="Y"
+				ListPrice="10.00"
+				UnitPrice="10.00">
+			</LinePriceInfo>
+		</OrderLine>
+	</OrderLines>
+	<Extn
+		Brand="SONY I.E."
+		DeliveryTimeFrame="Lieferung bis  Samstag, 09.10.2021"
+		LineItemNumber="126606"
+		LogisticsClass="1"
+		ReleaseDate=""
+		ShippingCostRefID="126606"
+		SplitCriteria1="STD">
+		<MSHWarrantyExtensionsList>
+		</MSHWarrantyExtensionsList>
+		<MSHOrderlineFeatureList>
+			<MSHOrderlineFeature
+				FeatureID="PRODFEAT12854"
+				FeatureValue="Sony "
+				Label="Sony ">
+			</MSHOrderlineFeature>
+			<MSHOrderlineFeature
+				FeatureID="PRODFEAT12855"
+				FeatureValue="Marvel's Spider-Man: Miles Morales Ultimate Edition "
+				Label="Marvel's Spider-Man: Miles Morales Ultimate Edition ">
+			</MSHOrderlineFeature>
+			<MSHOrderlineFeature
+				FeatureID="PRODFEAT10988"
+				FeatureValue="Action "
+				Label="Action ">
+			</MSHOrderlineFeature>
+			<MSHOrderlineFeature
+				FeatureID="PRODFEAT12884"
+				FeatureValue="Ab 16 Jahren "
+				Label="Ab 16 Jahren ">
+			</MSHOrderlineFeature>
+			<MSHOrderlineFeature
+				FeatureID="PRODFEAT12000"
+				FeatureValue="PlayStation 5 "
+				Label="PlayStation 5 ">
+			</MSHOrderlineFeature>
+			<MSHOrderlineFeature
+				FeatureID="PRODFEAT11560"
+				FeatureValue="Blu-ray "
+				Label="Blu-ray ">
+			</MSHOrderlineFeature>
+			<MSHOrderlineFeature
+				FeatureID="PRODFEAT12964"
+				FeatureValue="1 "
+				Label="1 ">
+			</MSHOrderlineFeature>
+			<MSHOrderlineFeature
+				FeatureID="PRODFEAT10900"
+				FeatureValue="Ultimate Edition "
+				Label="Ultimate Edition ">
+			</MSHOrderlineFeature>
+			<MSHOrderlineFeature
+				FeatureID="PRODFEAT13366"
+				FeatureValue="Spieler lokal: 1 "
+				Label="Spieler lokal: 1 ">
+			</MSHOrderlineFeature>
+			<MSHOrderlineFeature
+				FeatureID="PRODFEAT16490"
+				FeatureValue="Ja "
+				Label="Ja ">
+			</MSHOrderlineFeature>
+		</MSHOrderlineFeatureList>
+	</Extn>
+	<Extn
+		Brand="SONY I.E."
+		DeliveryTimeFrame="Lieferung bis  Samstag, 09.10.2021"
+		LineItemNumber="126607"
+		LogisticsClass="1"
+		ReleaseDate=""
+		ShippingCostRefID="126607"
+		SplitCriteria1="STD">
+		<MSHWarrantyExtensionsList>
+		</MSHWarrantyExtensionsList>
+		<MSHOrderlineFeatureList>
+			<MSHOrderlineFeature
+				FeatureID="PRODFEAT12854"
+				FeatureValue="Sony "
+				Label="Sony ">
+			</MSHOrderlineFeature>
+			<MSHOrderlineFeature
+				FeatureID="PRODFEAT12855"
+				FeatureValue="Marvel's Spider-Man: Miles Morales Ultimate Edition "
+				Label="Marvel's Spider-Man: Miles Morales Ultimate Edition ">
+			</MSHOrderlineFeature>
+			<MSHOrderlineFeature
+				FeatureID="PRODFEAT10988"
+				FeatureValue="Action "
+				Label="Action ">
+			</MSHOrderlineFeature>
+			<MSHOrderlineFeature
+				FeatureID="PRODFEAT12884"
+				FeatureValue="Ab 16 Jahren "
+				Label="Ab 16 Jahren ">
+			</MSHOrderlineFeature>
+			<MSHOrderlineFeature
+				FeatureID="PRODFEAT12000"
+				FeatureValue="PlayStation 5 "
+				Label="PlayStation 5 ">
+			</MSHOrderlineFeature>
+			<MSHOrderlineFeature
+				FeatureID="PRODFEAT11560"
+				FeatureValue="Blu-ray "
+				Label="Blu-ray ">
+			</MSHOrderlineFeature>
+			<MSHOrderlineFeature
+				FeatureID="PRODFEAT12964"
+				FeatureValue="1 "
+				Label="1 ">
+			</MSHOrderlineFeature>
+			<MSHOrderlineFeature
+				FeatureID="PRODFEAT10900"
+				FeatureValue="Ultimate Edition "
+				Label="Ultimate Edition ">
+			</MSHOrderlineFeature>
+			<MSHOrderlineFeature
+				FeatureID="PRODFEAT13366"
+				FeatureValue="Spieler lokal: 1 "
+				Label="Spieler lokal: 1 ">
+			</MSHOrderlineFeature>
+			<MSHOrderlineFeature
+				FeatureID="PRODFEAT16490"
+				FeatureValue="Ja "
+				Label="Ja ">
+			</MSHOrderlineFeature>
+		</MSHOrderlineFeatureList>
+	</Extn>
+	<Extn
+		AlternativeUserID="197216174"
+		Language="es"
+		LoyaltyId=""
+		OutletID="${ShipNode}"
+		PickupLocation="0"
+		RetailPriceInclDuties="N"
+		UCMUserID="197216174"
+		WCSUserID="197216174">
+		<MSHB2bCustomerDtlList>
+		</MSHB2bCustomerDtlList>
+		<MSHLegalAgreementDtlList>
+		</MSHLegalAgreementDtlList>
+		<MSHLoyaltyDtlList>
+			<MSHLoyaltyDtl
+				IsLoyaltyMember="N"
+				WinAmount=""
+				WinFlag="N"
+				WinType="">
+			</MSHLoyaltyDtl>
+		</MSHLoyaltyDtlList>
+	</Extn>
+	<Extn
+		Unknown="">
+	</Extn>
+	<Extn
+		Unknown="">
+	</Extn>
+	<PaymentMethods>
+	<PaymentMethod PaymentReference1="74220048004"
+	PaymentReference2="" PaymentReference9="PAYPAL" PaymentType="PAYPAL">
+	<PaymentDetailsList>
+	<PaymentDetails ChargeType="CHARGE"
+	ProcessedAmount="42.99" RequestAmount="42.99"/>
+	</PaymentDetailsList>
+	</PaymentMethod>
+	</PaymentMethods>
+	<PriceInfo
+		Currency="EUR">
+	</PriceInfo>
+	<PersonInfoBillTo
+		AddressID=""
+		AddressLine1="dsagfqe"
+		AddressLine2=""
+		City="Wien"
+		Company=""
+		Country="NL"
+		DayPhone="422464214"
+		EMailID="Test@test.com"
+		FirstName="hth"
+		JobTitle=""
+		LastName="yjr"
+		MobilePhone="422464214"
+		Title=""
+		ZipCode="1120">
+		<Extn
+			Unknown="">
+		</Extn>
+	</PersonInfoBillTo>
+	<HeaderTaxes>
+		<HeaderTax
+			ChargeCategory="HOMEDEL_SHIPPING_TAX"
+			ChargeName="126606"
+			Reference1="1"
+			Reference2="126606"
+			Tax="0"
+			TaxName="VAT"
+			TaxPercentage="20.0"
+			TaxableFlag="N">
+		</HeaderTax>
+		<HeaderTax
+			ChargeCategory="HOMEDEL_SHIPPING_TAX"
+			ChargeName="733797"
+			Reference1="2"
+			Reference2="733797"
+			Tax="0.5"
+			TaxName="VAT"
+			TaxPercentage="20.0"
+			TaxableFlag="N">
+		</HeaderTax>
+	</HeaderTaxes>
+	<PersonInfoShipTo
+		AddressID=""
+		AddressLine1="dsagfqe"
+		AddressLine2=""
+		City="Wien"
+		Company=""
+		Country="NL"
+		DayPhone="422464214"
+		EMailID="Test@test.com"
+		FirstName="hth"
+		JobTitle=""
+		LastName="yjr"
+		MobilePhone="422464214"
+		Title=""
+		ZipCode="112a0">
+		<Extn
+			Unknown="">
+		</Extn>
+	</PersonInfoShipTo>
+	<Notes>
+		<Note
+			NoteText="Order created successfully"
+			Priority="1"
+			ReasonCode="ORDER_CREATE">
+		</Note>
+	</Notes>
+</Order>

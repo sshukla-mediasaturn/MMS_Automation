@@ -1,0 +1,12 @@
+<OrderStatusChange BaseDropStatus="3900" DocumentType="0003" EnterpriseCode="NZ" OrderNo="${returnorder}" ReleaseNo="1" TransactionId="RECEIVE_ORDER.0003">
+	<OrderLines>
+		<OrderLine PrimeLineNo="1" Quantity="1" ReleaseNo="1" SubLineNo="1">
+			<Item ItemID="${item1}" ItemShortDesc="PANDORA Shine Hearts of PANDORA Ring" ItemWeight="0.00" ItemWeightUOM="LBS" ProductClass="GOOD" UnitCost="0.00" UnitOfMeasure="EACH"/>
+		</OrderLine>
+		<OrderLine PrimeLineNo="2" Quantity="1" ReleaseNo="1" SubLineNo="1">
+			<Item ItemID="${item2}" ItemShortDesc="PANDORA Shine Linked Love Ring" ItemWeight="0.00" ItemWeightUOM="LBS" ProductClass="GOOD" UnitCost="0.00" UnitOfMeasure="EACH"/>
+		</OrderLine>
+	</OrderLines>
+</OrderStatusChange> 
+  
+ 

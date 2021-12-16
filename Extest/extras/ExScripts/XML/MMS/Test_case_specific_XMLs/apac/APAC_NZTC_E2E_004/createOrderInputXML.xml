@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Order AllocationRuleID="PAN_SCH" BillToID="00376003" BuyerUserId="monika123@yopmail.com" BypassPricing="Y" CustomerEMailID="monika123@yopmail.com" EnterpriseCode="NZ" EntryType="WEB" FulfillmentType="PandoraFT" IsPriceLocked="Y" OrderDate="${CurrenttimeStamp}" OrderNo="PANNZ${orderno}" PaymentStatus="PAID" SellerOrganizationCode="NZ">
+    <Extn ExtnCRMCustomerID="b0cfeb4e-ea0c-40c9-aa88-b29787b5ec68" ExtnOrderLang="en" />
+    <OrderLines>
+        <OrderLine CarrierServiceCode="" LineType="EGC" OrderedQty="1.0" PrimeLineNo="1" SubLineNo="1">
+            <Extn ExtnFinalSale="N" ExtnLineNetPrice="500.00" />
+            <Item ItemID="${item1}" ItemShortDesc="eGift Card" ProductClass="GOOD" UnitOfMeasure="EACH" />
+            <LinePriceInfo IsPriceLocked="Y" TaxableFlag="N" UnitPrice="500.00" />
+            <LineCharges />
+            <LineTaxes>
+                <LineTax ChargeCategory="INFO_TAX" ChargeName="" Reference1="0.00" Tax="0.00" TaxName="GST" />
+            </LineTaxes>
+            <Instructions>
+                <Instruction InstructionText="Happy Day" InstructionType="GIFTMSG" />
+                <Instruction InstructionText="Monika" InstructionType="GIFTSENDER" />
+                <Instruction InstructionText="monika123@yopmail.com" InstructionType="GIFTREMAIL" />
+            </Instructions>
+            <PersonInfoShipTo EMailID="monika123@yopmail.com" FirstName="Monika" />
+        </OrderLine>
+        <OrderLine CarrierServiceCode="" LineType="PGC" OrderedQty="1.0" PrimeLineNo="2" SubLineNo="1">
+            <Extn ExtnFinalSale="N" ExtnLineNetPrice="300.00" />
+            <Item ItemID="${item2}" ItemShortDesc="Physical Gift Card" ProductClass="GOOD" UnitOfMeasure="EACH" />
+            <LinePriceInfo IsPriceLocked="Y" TaxableFlag="N" UnitPrice="300.00" />
+            <LineCharges />
+            <LineTaxes>
+                <LineTax ChargeCategory="INFO_TAX" ChargeName="" Reference1="0.00" Tax="0.00" TaxName="GST" />
+            </LineTaxes>
+            <Instructions>
+                <Instruction InstructionText="Congrats" InstructionType="GIFTMSG" />
+                <Instruction InstructionText="Monika" InstructionType="GIFTSENDER" />
+                <Instruction InstructionText="monika123@yopmail.com" InstructionType="GIFTREMAIL" />
+            </Instructions>
+            <PersonInfoShipTo AddressLine1="54 Sydney St" City="ALBION" Country="NZ" DayPhone="9663330092" FirstName="Monika" LastName="R" State="AUK" ZipCode="3020" />
+        </OrderLine>
+    </OrderLines>
+    <PriceInfo Currency="NZD" EnterpriseCurrency="NZD" />
+    <PersonInfoBillTo AddressLine1="54 Sydney St" City="ALBION" Country="NZ" DayPhone="9663330092" EMailID="monika123@yopmail.com" FirstName="Monika" LastName="R" State="AUK" ZipCode="3020" />
+    <HeaderCharges />
+    <HeaderTaxes />
+    <PersonInfoShipTo AddressLine1="54 Sydney St" City="ALBION" Country="NZ" DayPhone="9663330092" FirstName="Monika" LastName="R" State="AUK" ZipCode="3020" />
+    <PaymentMethods>
+        <PaymentMethod CreditCardExpDate="02/2022" CreditCardNo="XXXX-XXXX-XXXX-0005" CreditCardType="AMEX" DisplayCreditCardNo="0005" PaymentType="CREDIT_CARD" UnlimitedCharges="N">
+            <PaymentDetailsList>
+                <PaymentDetails AuthCode="160780" AuthorizationID="5661794661316066003010" ChargeType="CHARGE" ProcessedAmount="800.00" RequestAmount="800.00" RequestId="5661794661316066003010" />
+            </PaymentDetailsList>
+        </PaymentMethod>
+    </PaymentMethods>
+</Order>

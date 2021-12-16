@@ -1,0 +1,7 @@
+<Promise OrganizationCode="${OrganizationCode}">
+ <PromiseLines>
+  <PromiseLine FulfillmentType="${FulfillmentType}" ItemID="${ItemID1}"
+            ProductClass="${ProductClass1}" RequiredQty="${RequiredQty1}" UnitOfMeasure="${UnitOfMeasure1}">
+  </PromiseLine>
+ </PromiseLines>
+</Promise>

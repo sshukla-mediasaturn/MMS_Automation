@@ -1,0 +1,8 @@
+<ItemList>
+	<Item ItemID="${ItemID1}" OrganizationCode="${OrganizationCode}" UnitOfMeasure="${UnitOfMeasure1}">
+		<PrimaryInformation DefaultProductClass="${DefaultProductClass1}" Description="${Description1}" ExtendedDisplayDescription="${ExtendedDisplayDescription1}" ShortDescription="${ShortDescription1}" SizeCode="${SizeCode1}" Status="${Status1}"/>
+		<ItemAliasList>
+			<ItemAlias AliasName="${AliasName1}" AliasValue="${AliasValue1}"/>
+		</ItemAliasList>
+	</Item>
+</ItemList>

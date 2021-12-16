@@ -1,0 +1,5 @@
+<Shipment EnterpriseCode="${EnterpriseCode}" >
+ <ShipmentLines>
+  <ShipmentLine PrimeLineNo="${PrimeLineNo}" SubLineNo="${SubLineNo}" OrderNo="${OrderNo}" ReleaseNo="${releaseNo}" Quantity="${Quantity}"/>
+ </ShipmentLines>
+</Shipment>

@@ -1,0 +1,20 @@
+﻿SNo,ScenarioId,ToBeExecuted,item1,item2,item3,item4,RequiredQty,EnterpriseCode,SellerOrganizationCode,AddressLine1,City,Country,ZipCode
+1,MMS_AUT_NL_001,Y,1775438,,,,1,MSH_NL,MM_NL,Kardinaal van Rossumplein 75,Maastricht,NL,6221 SZ
+2,MMS_AUT_NL_002,N,1775438,456,,,2,MSH_NL,MM_NL,Kardinaal van Rossumplein 75,Maastricht,NL,6221 SZ
+3,MMS_AUT_NL_003,N,1477879,1775438,,2,MSH_NL,MM_NL,Kardinaal van Rossumplein 75,Maastricht,NL,6221 SZ
+4,MMS_AUT_NL_004,N,1775438,,,,1,MSH_NL,MM_NL,Kardinaal van Rossumplein 75,Maastricht,NL,6221 SZ
+5,MMS_AUT_NL_005,N,1775438,1064962,,,2,MSH_NL,MM_NL,Kardinaal van Rossumplein 75,Maastricht,NL,6221 SZ
+6,MMS_AUT_NL_006,N,1775438,1064962,,,2,MSH_NL,MM_NL,Kardinaal van Rossumplein 75,Maastricht,NL,6221 SZ
+7,MMS_AUT_NL_007,N,1775438,1232090,1191731,,2,MSH_NL,MM_NL,Kardinaal van Rossumplein 75,Maastricht,NL,6221 SZ
+8,MMS_AUT_NL_008,N,1775438,1232090,1191731,1360502,2,MSH_NL,MM_NL,Kardinaal van Rossumplein 75,Maastricht,NL,6221 SZ
+9,MMS_AUT_NL_009,N,1775438,1232090,1191731,,2,MSH_NL,MM_NL,Kardinaal van Rossumplein 75,Maastricht,NL,6221 SZ
+10,MMS_AUT_NL_010,N,1775438,1064962,,,2,MSH_NL,MM_NL,Kardinaal van Rossumplein 75,Maastricht,NL,6221 SZ
+11,MMS_AUT_NL_011,N,1775438,1064962,1191731,1360502,2,MSH_NL,MM_NL,Kardinaal van Rossumplein 75,Maastricht,NL,6221 SZ
+12,MMS_AUT_NL_012,N,1775438,,,,1,MSH_NL,MM_NL,Kardinaal van Rossumplein 75,Maastricht,NL,6221 SZ
+13,MMS_AUT_NL_013,N,1775438,1064962,,,2,MSH_NL,MM_NL,Kardinaal van Rossumplein 75,Maastricht,NL,6221 SZ
+14,MMS_AUT_NL_014,N,1775438,1232090,1232090,1360502,2,MSH_NL,MM_NL,Kardinaal van Rossumplein 75,Maastricht,NL,6221 SZ
+15,MMS_AUT_NL_015,N,1775438,1064962,,,2,MSH_NL,MM_NL,Kardinaal van Rossumplein 75,Maastricht,NL,6221 SZ
+16,MMS_AUT_NL_016,N,1775438,1232090,1191731,,2,MSH_NL,MM_NL,Kardinaal van Rossumplein 75,Maastricht,NL,6221 SZ
+17,MMS_AUT_NL_017,N,520188,1487896,,,20,MSH_NL,MM_NL,Kardinaal van Rossumplein 75,Maastricht,NL,6221 SZ
+18,MMS_AUT_NL_018,N,520188,1511072,1487896,,10,MSH_NL,MM_NL,Kardinaal van Rossumplein 75,Maastricht,NL,6221 SZ
+19,MMS_AUT_NL_019,Y,520188,1511072,1487896,1487896,10,MSH_NL,MM_NL,Kardinaal van Rossumplein 75,Maastricht,NL,6221 SZ

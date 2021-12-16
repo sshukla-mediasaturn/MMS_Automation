@@ -1,0 +1,17 @@
+<Shipment ActualShipmentDate="${CurrenttimeStamp}" DocumentType="0001" EnterpriseCode="MSH_NL" LevelOfService="MSH_HOME_DEL" OrderNo="${OrderNo}" ReleaseNo="1" SellerOrganizationCode="MM_NL" ShipNode="${ShipNode}" ShipmentNo="${OrderNo}_1" xmlns="">
+					<Containers>
+						<Container SCAC="DHL" TrackingNo="${orderno}_1">
+							<ContainerDetails>
+								<ContainerDetail>
+									<ShipmentLine ItemID="${item3}" OrderNo="${OrderNo}" PrimeLineNo="3" Quantity="${QtyToBeReserved}" ReleaseNo="1" SubLineNo="1" UnitOfMeasure="EACH"/>
+									
+								</ContainerDetail>
+							</ContainerDetails>
+						</Container>
+					</Containers>
+					<ShipmentLines>
+						<ShipmentLine DeliveryStatus="SHP" ItemID="${item3}" OrderNo="${OrderNo}" PrimeLineNo="3" Quantity="${QtyToBeReserved}" ReleaseNo="1" SubLineNo="1" UnitOfMeasure="EACH"/>
+
+						
+					</ShipmentLines>
+				</Shipment>

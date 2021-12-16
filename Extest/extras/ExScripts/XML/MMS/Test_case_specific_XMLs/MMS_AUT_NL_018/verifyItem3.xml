@@ -1,0 +1,9 @@
+<Order CheckInventory="Y" EnterpriseCode="${EnterpriseCode}" Language="nl" SellerOrganizationCode="${SellerOrganizationCode}">
+<NewItemDetail>
+<Item ItemID="${item3}"/>
+</NewItemDetail>
+<OrderLines>
+<OrderLine DeliveryMethod="SHP" FulfillmentType="MSH_HOMEDEL"
+LevelOfService="MSH_HOME_DEL" OrderedQty="${OrderedQty}" ShipNode="${ShipNode}"/>
+</OrderLines>
+</Order>

@@ -1,0 +1,17 @@
+<Order EnterpriseCode="${EnterpriseCode}" EntryType="${EntryType}" SellerOrganizationCode="${SellerOrganizationCode}" BuyerUserId="${BuyerUserId}" AuthorizedClient="${AuthorizedClient}" ValidatePromotionAward="{ValidatePromotionAward}" BypassPricing="{BypassPricing}" PaymentStatus="NOT_APPLICABLE">
+
+	<OrderLines>
+
+		<OrderLine OrderedQty="${Quantity1}" >
+			<Item ItemID="${ItemID1}" UnitOfMeasure="${UnitOfMeasure1}" ProductClass="${ProductClass1}" />
+			<LinePriceInfo UnitPrice="${UnitPrice1}" RetailPrice="${RetailPrice1}" ListPrice="${ListPrice1}" IsLinePriceForInformationOnly="${IsLinePriceForInformationOnly1}" PricingQuantityStrategy="${PricingQuantityStrategy1}" IsPriceLocked="${IsPriceLocked1}"/>
+		</OrderLine>
+	</OrderLines>
+
+	<PersonInfoBillTo AddressLine1="${AddressLine11}" AddressLine2="${AddressLine21}" City="${City1}" Company=""  Country="${Country1}" DayPhone="${DayPhone1}"
+EMailID="${EMailID}" FirstName="${FirstName1}" LastName="${LastName1}" State="${State1}" ZipCode="${ZipCode1}"/>
+<PersonInfoShipTo AddressLine1="${AddressLine12}" AddressLine2="${AddressLine22}" City="${City2}" Company=""  Country="${Country2}" DayPhone="${DayPhone2}"
+EMailID="${EMailID2}" FirstName="${FirstName2}" LastName="${LastName2}" State="${State2}" ZipCode="${ZipCode2}"/>
+
+	
+</Order>

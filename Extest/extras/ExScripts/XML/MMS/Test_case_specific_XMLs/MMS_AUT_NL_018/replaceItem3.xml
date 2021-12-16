@@ -1,0 +1,61 @@
+<Order CancelService="Y" CheckInventory="Y" DocumentType="0001"
+EnterpriseCode="${EnterpriseCode}" IgnoreOrdering="Y" Language="nl"
+OrderHeaderKey="${OrderHeaderKey}" OrderNo="${OrderNo}" SellerOrganizationCode="${SellerOrganizationCode}">
+<NewItemDetail>
+<Item DisplayUnitOfMeasure="Each" ItemGroupCode="PROD"
+ItemID="${item3}" ItemKey="${ItemKey}"
+ItemSalesLine="MM_NL" LocaleCode="nl_NL"
+OrganizationCode="${EnterpriseCode}" UOMDisplayFormat="formattedQty" UnitOfMeasure="EACH">
+<InventoryParameters ATPRule="MSH_NL_ATP_RULE"
+InventoryMonitorRule="MSH_NL_ATP_MONITOR_RULE"
+LeadTime="0"
+NodeLevelInventoryMonitorRule="MSH_NL_ATP_MONITOR_RULE" UseUnplannedInventory="N"/>
+<PrimaryInformation AllowGiftWrap="N" CostCurrency="EUR"
+Description="PHILIPS TEST DESCRIPTION UPBEAT SHE4205 ZWART ProdID: 1487896"
+IsDeliveryAllowed="N" IsPickupAllowed="Y"
+IsReturnable="Y" IsShippingAllowed="Y" ItemType=""
+ReturnWindow="28"
+ShortDescription="PHILIPS TEST DESCRIPTION UPBEAT SHE4205 ZWART ProdID: 1487896"
+Status="3000" UnitCost="0.0"/>
+<MSHOrderlineFeatureList>
+<MSHOrderlineFeature FeatureID="PROD_FEAT_00002"
+FeatureValue="SHE4205BK" Label="Manufacturer Part Number (MPN)"/>
+</MSHOrderlineFeatureList>
+</Item>
+</NewItemDetail>
+<OrderLines>
+<OrderLine DeliveryMethod="SHP" DeliveryMethodName="Shipping"
+DisplayStatus="Backordered" FulfillmentType="MSH_HOMEDEL"
+HoldFlag="Y" ItemGroupCode="PROD"
+LevelOfService="MSH_HOME_DEL" LineType="STOCKED"
+MaxLineStatus="1300" MaxLineStatusDesc="Backordered"
+MinLineStatus="1300" MinLineStatusDesc="Backordered"
+OrderHeaderKey="${OrderHeaderKey}"
+OrderLineKey="${OrderLineKey}" OrderedQty="${OrderedQty}"
+PrimeLineNo="1" ShipNode="${ShipNode}"
+ShipnodeDescription="ID LOGISTICS BENELUX"
+ShipnodeFullDescription="ID LOGISTICS BENELUX,ETTEN LEUR"
+Status="Backordered" SubLineNo="1">
+<Item DisplayUnitOfMeasure="Each"
+ItemDesc="LG ELECTRONICS 123456789 PG_19 LC_5 LT_0 FIEGE NON-URA"
+ItemID="${item1}" UOMDisplayFormat="formattedQty" UnitOfMeasure="EACH"/>
+<LinePriceInfo IsPriceLocked="N" ListPrice="116.20" UnitPrice="116.20"/>
+<ItemDetails DisplayItemId="${item1}" ItemGroupCode="PROD"
+ItemID="${item1}" ItemKey="202101141727245420214"
+Lockid="51" OrganizationCode="MSH_NL" UnitOfMeasure="EACH">
+<InventoryParameters UseUnplannedInventory="N"/>
+<PrimaryInformation/>
+</ItemDetails>
+<LineOverallTotals Charges="0.00" Discount="0.00"
+DisplayUnitPrice="116.20" ExtendedPrice="116.20"
+LineAdjustments="0.00" LineTotal="116.20"
+LineTotalWithoutTaxes="116.20" OptionPrice="0.00"
+PricingQty="10.00" Tax="0.00" UnitPrice="116.20"/>
+<Extn Brand="MM" LineItemNumber="20001"
+ShippingCostRefID="20001"
+WDDFromDeliveryTime="${CurrenttimeStamp}-05:00" WDDToDeliveryTime="${CurrenttimeStamp}">
+<MSHOrderlineFeatureList/>
+</Extn>
+</OrderLine>
+</OrderLines>
+</Order>

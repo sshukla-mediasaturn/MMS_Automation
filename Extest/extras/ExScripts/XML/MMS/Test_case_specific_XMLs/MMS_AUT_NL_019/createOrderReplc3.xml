@@ -1,0 +1,53 @@
+<Order BypassPricing="Y" CustomerEMailID="TestingBBB001@gmail.com" DocumentType="0001" EnterpriseCode="${EnterpriseCode}" EntryType="DESKTOP" OrderDate="${CurrenttimeStamp}" OrderNo="${OrderNo}${CurrentTimeStamp1}" OrderType="B2C_SALE" PaymentStatus="PAID" SearchCriteria1="Y" SellerOrganizationCode="${SellerOrganizationCode}">
+<PriceInfo Currency="EUR" />
+
+<PaymentMethods>
+<PaymentMethod PaymentReference1="aa644e2992244f3c8a5fe9ba79ccdf5a"
+PaymentReference2="" PaymentReference9="" PaymentType="GICA">
+<PaymentDetailsList>
+<PaymentDetails ChargeType="CHARGE"
+ProcessedAmount="234.4" RequestAmount="234.4"/>
+</PaymentDetailsList>
+</PaymentMethod>
+</PaymentMethods>
+<OrderLines>
+<OrderLine DeliveryMethod="SHP" FulfillmentType="MSH_HOMEDEL" ItemGroupCode="PROD" LevelOfService="MSH_HOME_DEL" LineType="STOCKED" OrderedQty="${RequiredQty}" PrimeLineNo="1" ReqShipDate="${CurrenttimeStamp}" SubLineNo="1" SCAC="TNT">
+<Extn QtyFromUnplannedInventory="" ShippingCostRefID="20001" ReservationNodeShipDate="" DeliveryTimeFrame="" LogisticsClass="" LineItemNumber="20001" Brand="MM" ReleaseDate="" ReleaseText="" SplitCriteria1="" LocationProviderID="loc-nlj-93" PUDOID="810028" WDDFromDeliveryTime="${CurrenttimeStamp}-05:00" WDDToDeliveryTime="${CurrenttimeStamp}" DeliveryOrchestor="MP" />
+<Item CostCurrency="EUR" ItemID="${item1}" ItemShortDesc="LG ELECTRONICS 123456789 PG_19 LC_5 LT_0 FIEGE NON-URA" ItemDesc="LG ELECTRONICS 123456789 PG_19 LC_5 LT_0 FIEGE NON-URALG ELECTRONICS 123456789 PG_19 LC_5 LT_0 FIEGE NON-URALG" UPCCode=" " UnitCost="" UnitOfMeasure="EACH" />
+<LineOverallTotals ExtendedPrice="19.99" />
+<LinePriceInfo ListPrice="11.62" UnitPrice="11.62" />
+<LineTaxes>
+<LineTax ChargeCategory="LINE_TAX" ChargeName="LineTax" ChargeNameKey="" InvoicedTax="0.0" Reference1="1" Reference2="1" Reference3=" " RemainingTax="" Tax="1" TaxName="VAT" TaxPercentage="5.0" />
+<TaxSummary>
+<TaxSummaryDetail InvoicedTax="0.0" OverallTax="1" RemainingTax="1" TaxName="VAT" />
+</TaxSummary>
+</LineTaxes>
+</OrderLine>
+<OrderLine DeliveryMethod="SHP" FulfillmentType="MSH_HOMEDEL" ItemGroupCode="PROD" LevelOfService="MSH_HOME_DEL" LineType="STOCKED" OrderedQty="10" PrimeLineNo="2" ReqShipDate="${${CurrenttimeStamp}" SubLineNo="1" SCAC="TNT">
+<Extn QtyFromUnplannedInventory="" ShippingCostRefID="20001" ReservationNodeShipDate="" DeliveryTimeFrame="" LogisticsClass="" LineItemNumber="20001" Brand="MM" ReleaseDate="" ReleaseText="" SplitCriteria1="" LocationProviderID="loc-nlj-93" PUDOID="810028" WDDFromDeliveryTime="${CurrenttimeStamp}-05:00" WDDToDeliveryTime="${CurrenttimeStamp}" DeliveryOrchestor="MP" />
+<Item CostCurrency="EUR" ItemID="${item2}" ItemShortDesc="LG ELECTRONICS 123456789 PG_19 LC_5 LT_0 FIEGE NON-URA" ItemDesc="LG ELECTRONICS 123456789 PG_19 LC_5 LT_0 FIEGE NON-URALG ELECTRONICS 123456789 PG_19 LC_5 LT_0 FIEGE NON-URALG" UPCCode=" " UnitCost="" UnitOfMeasure="EACH" />
+<LineOverallTotals ExtendedPrice="19.99" />
+<LinePriceInfo ListPrice="11.62" UnitPrice="11.62" />
+<LineTaxes>
+<LineTax ChargeCategory="LINE_TAX" ChargeName="LineTax" ChargeNameKey="" InvoicedTax="0.0" Reference1="1" Reference2="1" Reference3=" " RemainingTax="" Tax="1" TaxName="VAT" TaxPercentage="5.0" />
+<TaxSummary>
+<TaxSummaryDetail InvoicedTax="0.0" OverallTax="1" RemainingTax="1" TaxName="VAT" />
+</TaxSummary>
+</LineTaxes>
+</OrderLine>
+</OrderLines>
+<PersonInfoShipTo AddressID="2022412" AddressLine1="${AddressLine1}" City="${City}" Country="${Country}" DayPhone="42141241" EMailID="TestingBBB001@gmail" FirstName="Tester" LastName="Kat" MobilePhone="4214214141" Title="UNKNOWN" ZipCode="${ZipCode}" />
+<PersonInfoBillTo AddressID="2022412" AddressLine1="${AddressLine1}" City="${City}" Country="${Country}" DayPhone="42141241" EMailID="TestingBBB001@gmail" FirstName="Tester" LastName="Kat" MobilePhone="4214214141" Title="UNKNOWN" ZipCode="${ZipCode}" />
+<OrderLineRelationships />
+<Notes>
+<Note NoteText="Order created successfully" Priority="1" ReasonCode="ORDER_CREATE" />
+</Notes>
+<OrderHoldTypes />
+<Extn OutletID="718" RetailPriceInclDuties="N" WCSUserID="3884966">
+<MSHLoyaltyDtlList />
+<MSHLegalAgreementDtlList />
+<MSHB2bCustomerDtlList>
+<MSHB2bCustomerDtl />
+</MSHB2bCustomerDtlList>
+</Extn>
+</Order>

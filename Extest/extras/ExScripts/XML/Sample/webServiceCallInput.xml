@@ -1,0 +1,42 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:vertexinc:o-series:tps:7:0">
+<soap:Header/>
+<soap:Body>
+<urn:VertexEnvelope>
+<urn:Login>
+<urn:UserName>user03.Demo55@vertexinc.com</urn:UserName>
+<urn:Password>lDAt,A~vQ_a1</urn:Password>
+<urn:TrustedId>T8qz|:l#J}jq</urn:TrustedId>
+</urn:Login>
+<urn:QuotationRequest documentDate="2015-09-09T20:06:08-04:00" documentNumber="Y100001207" transactionId="2015090920060754089" transactionType="SALE">
+<urn:Seller>
+<urn:Company>Matrix</urn:Company>
+<urn:Division>Matrix</urn:Division>
+</urn:Seller>
+<urn:Customer isTaxExempt="false">
+<urn:Destination>
+<StreetAddress1>26 Chestnut Street,Ste 1D</StreetAddress1>
+<City>Andover</City>
+<MainDivision>MA</MainDivision>
+<PostalCode>01810</PostalCode>
+<Country>US</Country>
+</urn:Destination>
+<urn:ExemptionCertificate exemptionCertificateNumber=""/>
+</urn:Customer>
+<urn:LineItem isMulticomponent="false" lineItemId="2015090920060854090_Shipping_Shipping" taxDate="2015-09-09">
+<urn:Product productClass="">100002</urn:Product>
+<urn:Quantity>10.0</urn:Quantity>
+<urn:UnitPrice>10.00</urn:UnitPrice>
+<urn:ExtendedPrice>100.0</urn:ExtendedPrice>
+<urn:Customer isTaxExempt="false"/>
+</urn:LineItem>
+<urn:LineItem isMulticomponent="false" lineItemId="2015090920060854090" taxDate="2015-09-09">
+<urn:Product productClass="">100002</urn:Product>
+<urn:Quantity>10.0</urn:Quantity>
+<urn:UnitPrice>100.0</urn:UnitPrice>
+<urn:ExtendedPrice>1000.0</urn:ExtendedPrice>
+<urn:Customer isTaxExempt="false"/>
+</urn:LineItem>
+</urn:QuotationRequest>
+</urn:VertexEnvelope>
+</soap:Body>
+</soap:Envelope>

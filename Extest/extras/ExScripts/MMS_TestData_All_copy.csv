@@ -1,0 +1,2 @@
+﻿SNo,ScenarioId,ToBeExecuted,item1,item2,item3,item4,RequiredQty,EnterpriseCode,SellerOrganizationCode,AddressLine1,City,Country,ZipCode
+1,MMS_AUT_NL_001,Y,1775438,,,,1,MSH_NL,MM_NL,Kardinaal van Rossumplein 75,Maastricht,NL,6221 SZ

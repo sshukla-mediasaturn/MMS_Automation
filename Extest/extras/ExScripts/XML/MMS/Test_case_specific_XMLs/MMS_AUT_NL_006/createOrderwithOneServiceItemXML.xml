@@ -1,0 +1,132 @@
+<Order CustomerEMailID="abc@gmail.com" DocumentType="0001" EnterpriseCode="MSH_NL" OrderDate="${CurrenttimeStamp}" OrderName="" 
+SellerOrganizationCode="MM_NL" BypassPricing="Y" SearchCriteria1="Y" PaymentStatus="PAID" ConditionVariable1 ="N" 
+OrderNo="${OrderNo}${CurrentTimeStamp1}" EntryType="DESKTOP" OrderType="B2C_SALE" OrderPurpose="">
+
+<Extn RetailPriceInclDuties="Y" AlternativeUserID="123" WCSUserId="76779" UCMUserID="ewewe" LoyaltyId="23323" OutletID="${ShipNode}" Language="en" >
+
+<MSHLoyaltyDtlList>
+<MSHLoyaltyDtl IsLoyaltyMember="Y" WinFlag="Y" WinType="String 20" WinAmount="14" />
+</MSHLoyaltyDtlList>
+
+<MSHLegalAgreementDtlList>
+<MSHLegalAgreementDtl AgreementType="Type" AgreementDate="20160222T00:00:00" AgreementVersion="String 255" 
+AgreementVersionDate="20160222T00:00:00" Brand="SATURN" />
+</MSHLegalAgreementDtlList>
+
+<MSHB2bCustomerDtlList>
+<MSHB2bCustomerDtl BusinessScope="Global" CompanyName="" CompanyWebsite="www.google.com" ContactPerson="" Department="" 
+JobTitle="Manager" LegalStructure="" TaxOffice=" " VATRegNo="" />
+</MSHB2bCustomerDtlList>
+
+</Extn>
+
+<HeaderCharges>
+<HeaderCharge ChargeAmount="20" ChargeCategory="HOMEDEL_SHIPPING_FEE" ChargeName="HOMEDEL_SHIPPING_FEE" IsManual="" Reference="20001" />
+</HeaderCharges>
+
+<HeaderTaxes>
+<!-- Charge Name in haeder tax is related to Charge name of Header Charge name field-->
+<HeaderTax ChargeCategory="HOMEDEL_SHIPPING_TAX" ChargeName="HOMEDEL_SHIPPING_TAX" Reference1="VATKEY=2" Reference2="20001" 
+Tax="4" TaxName="VAT" TaxPercentage="20.00" TaxableFlag="N" />
+</HeaderTaxes>
+
+<OrderLines>
+<!-- 1 or more order line. Optional for Draft order -->
+<OrderLine DeliveryMethod="SHP" FulfillmentType="MSH_HOMEDEL" LevelOfService="MSH_HOME_DEL" OrderedQty="${QtyToBeReserved}" PrimeLineNo="1" SubLineNo="1" 
+LineType="STOCKED">
+
+<Extn WDDFromDeliveryTime="${CurrenttimeStamp}" WDDToDeliveryTime="${CurrenttimeStamp}" 
+QtyFromUnplannedInventory="" ShippingCostRefID="${OrderNo}20002" ReservationNodeShipDate="" DeliveryTimeFrame="" LogisticsClass="" 
+LineItemNumber="20001" Brand="MM" ReleaseDate="" ReleaseText="" SplitCriteria1="1">
+
+<MSHOrderlineFeatureList>
+<MSHOrderlineFeature FeatureID="Betriebssystem des Gerätes" Label="Betriebssystem des Gerätes" FeatureValue="MAC OS" />
+<MSHOrderlineFeature FeatureID="Prozessor" Label="Prozessor" FeatureValue="Intel® Core™ i7-4870HQ Prozessor (6M Cache, bis zu 3.70 GHz)" />
+<MSHOrderlineFeature FeatureID="Größe je Platte (GB)" Label="Größe je Platte (GB)" FeatureValue="1000 GB SSD" />
+</MSHOrderlineFeatureList>
+
+<!-- Applicable when customer purchase warranty-->
+<MSHWarrantyExtensionList>
+<MSHWarrantyExtensions CertificateNumber="234.5566.66" ContractPeriod="" EANSetNumber="" GoodwillPeriod="" InsuranceTaxAmount="" 
+InsuranceTaxId="" InsuranceTaxRate="" ContractPeriodEndDate="" ExternalFlag="" GeneralTermsAndConditions="" GoodwillPeriodEndDate="" />
+</MSHWarrantyExtensionList>
+
+</Extn>
+
+<Item ItemDesc="APPLE MacBook Pro Retina 15.4 Zoll (MJLQ2D/A)" ItemID="${item1}" ItemShortDesc="APPLE MacBook Pro Retina 15.4 Zoll (MJLQ2D/A)" 
+TaxProductCode="" UPCCode="" UnitOfMeasure="EACH" />
+
+<LineCharges>
+<LineCharge ChargeCategory="PROMOTION" ChargeName="ID" ChargePerUnit="10" IsManual="" Reference="23213">
+<Extn ChargeDescription="´Festival promotion" DiscountType='ID' CostCenter="${shipNode}" DiscountQualifier='OrderTotal' />
+</LineCharge>
+</LineCharges>
+
+<LinePriceInfo IsPriceLocked="Y" ListPrice="1999" UnitPrice="1999"/>
+<LineTaxes>
+<LineTax ChargeCategory="LINE_TAX" ChargeName="" Reference1="0" Reference2="" Reference3="EUR" Tax="334" TaxName="VAT" TaxPercentage="20"
+ TaxableFlag="Y"/>
+</LineTaxes>
+
+<OrderLineReservations>
+<OrderLineReservation RequestedReservationDate="${CurrenttimeStamp}" ItemID="${item1}" Node="${ShipNode}" Quantity="${QtyToBeReserved}" ReservationID="${item1}_1"
+UnitOfMeasure="EACH" />
+</OrderLineReservations>
+</OrderLine>
+
+
+
+<OrderLine DeliveryMethod="SHP" FulfillmentType="MSH_HOMEDEL" ItemGroupCode="PROD" LevelOfService="MSH_HOME_DEL" LineType="INTANGIBLE" 
+OrderedQty="${QtyToBeReserved}" PrimeLineNo="2" ReqShipDate="${CurrenttimeStamp}" SubLineNo="1">
+<Item CostCurrency="EUR" ItemDesc="ALTCOM13" ItemID="${item2}" 
+ItemShortDesc="Anschluss inkl. Altgerätabtransport JB SAT CAT hallo sat - (Test for Mladen) V6" 
+UPCCode="2000011917319" UnitCost="39.9" UnitOfMeasure="EACH"/>
+<LinePriceInfo IsPriceLocked="Y" ListPrice="39.9" UnitPrice="39.9"/>
+<LineCharges/>
+
+<LineTaxes>
+<LineTax ChargeCategory="LINE_TAX" ChargeName="LineTax" Reference1="1" Reference2="6.65" Tax="6.65" 
+TaxName="VAT" TaxPercentage="20" TaxableFlag="N"/>
+</LineTaxes>
+
+<Extn Brand="TECTRAXX" DeliveryOrchestor="metapackorder" LineItemNumber="34405011" LocationProviderID="locationproviderid" 
+LogisticsClass="0" PUDOID="pudoid" SplitCriteria1="2PRS" WDDFromDeliveryTime="${CurrenttimeStamp}-05:00"
+WDDToDeliveryTime="${CurrenttimeStamp}" >
+<MSHOrderlineFeatureList/>
+</Extn>
+
+</OrderLine>
+
+</OrderLines>
+
+<OrderLineRelationships>
+<OrderLineRelationship RelationshipType="SERVICE">
+<ParentLine PrimeLineNo="1" SubLineNo="1"/>
+<ChildLine PrimeLineNo="2" SubLineNo="1"/>
+</OrderLineRelationship>
+</OrderLineRelationships>
+
+<Notes>
+<Note NoteText="Order created successfully" ReasonCode="ORDER_CREATE" />
+</Notes>
+
+<PersonInfoShipTo AddressLine1="Neubaugasse 4" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" 
+AlternateEmailID="" Beeper="" City="Wien" Company="" Country="NL" DayFaxNo="" DayPhone="+43 1 3366332507" Department="" 
+EMailID="Mark@yahoo.com" EveningFaxNo="" EveningPhone="" FirstName="Mark" IsCommercialAddress="" JobTitle="" LastName="Jr."
+ MiddleName="" MobilePhone="" OtherPhone="" PersonID="" State="" Suffix="" TaxGeoCode="" Title="Frau" ZipCode="112a0"/>
+<PersonInfoBillTo AddressLine1="Neubaugasse 4" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" 
+AddressLine6="" AlternateEmailID="" Beeper="" City="Wien" Company="" Country="NL" DayFaxNo="" DayPhone="+43 1 3366332507" 
+Department="" EMailID="Mark@yahoo.com" EveningFaxNo="" EveningPhone="" FirstName="Mark" IsCommercialAddress="" JobTitle="" 
+LastName="Jr." MiddleName="" MobilePhone="" OtherPhone="" PersonID="" State="" Suffix="" TaxGeoCode="" Title="Frau" ZipCode="1120"/>
+
+<PriceInfo Currency="EUR" />
+
+<PaymentMethods>
+<PaymentMethod PaymentReference1="XPayId" PaymentType="COP">
+<PaymentDetailsList>
+<PaymentDetails ChargeType="CHARGE" ProcessedAmount="5987" RequestAmount="5987" />
+</PaymentDetailsList>
+</PaymentMethod>
+</PaymentMethods>
+
+</Order>

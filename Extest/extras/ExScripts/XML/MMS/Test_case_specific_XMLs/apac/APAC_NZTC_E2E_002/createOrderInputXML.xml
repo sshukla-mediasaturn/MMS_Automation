@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Order AllocationRuleID="PAN_SCH" BillToID="APAC${billtoid}" BuyerUserId="monika123@yopmail.com" BypassPricing="Y" CustomerEMailID="monika123@yopmail.com" EnterpriseCode="NZ" EntryType="WEB" FulfillmentType="PandoraFT" IsPriceLocked="Y" OrderDate="${CurrenttimeStamp}" OrderNo="PANNZ${orderno}" PaymentStatus="PAID" SellerOrganizationCode="NZ">
+    <Extn ExtnCRMCustomerID="0b5e888c-923c-4396-9020-683f566f08da" ExtnOrderLang="en" />
+    <OrderLines>
+        <OrderLine CarrierServiceCode="90000007" LineType="REG" OrderedQty="1.0" PrimeLineNo="1" SubLineNo="1">
+            <Extn ExtnColor="No Colour" ExtnFinalSale="N" ExtnImage="https://dev-nz.pandora.net/dw/image/v2/AAWM_DEV/on/demandware.static/-/Sites-pandora-master-catalog/default/dwa894a7eb/images/productimages/${item1}-1.jpg?sw=120&amp;sh=120&amp;sm=fit" ExtnLineNetPrice="119.10" ExtnSize="one size" />
+            <Item ItemID="${item1}" ItemShortDesc="PANDORA Shine Floating Locket Hanging Charm" ProductClass="GOOD" UnitOfMeasure="EACH" />
+            <LinePriceInfo IsPriceLocked="Y" TaxableFlag="N" UnitPrice="149.00" />
+            <LineCharges>
+                <LineCharge ChargeCategory="ITEM_DISCOUNT" ChargeName="itemlevelprmotion" ChargePerLine="0.00" ChargePerUnit="14.90" Reference="OMScampaign" />
+                <LineCharge ChargeCategory="ORDER_DISCOUNT" ChargeName="orderlevelfixedpromotion" ChargePerLine="0.00" ChargePerUnit="15.00" Reference="" />
+            </LineCharges>
+            <LineTaxes>
+                <LineTax ChargeCategory="INFO_TAX" ChargeName="" Reference1="15.53" Reference2="0.15" Tax="15.53" TaxName="GST" />
+            </LineTaxes>
+            <PersonInfoShipTo AddressLine1="445 Mount Eden Road" City="Mount Eden" Country="NZ" DayPhone="5105858974" FirstName="Monika" LastName="R" State="AUK" ZipCode="2010" />
+        </OrderLine>
+        <OrderLine CarrierServiceCode="90000007" LineType="PGC" OrderedQty="1.0" PrimeLineNo="2" SubLineNo="1">
+            <Extn ExtnFinalSale="N" ExtnLineNetPrice="30.00" />
+            <Item ItemID="${item2}" ItemShortDesc="Physical Gift Card" ProductClass="GOOD" UnitOfMeasure="EACH" />
+            <LinePriceInfo IsPriceLocked="Y" TaxableFlag="N" UnitPrice="30.00" />
+            <LineCharges />
+            <LineTaxes>
+                <LineTax ChargeCategory="INFO_TAX" ChargeName="" Reference1="0.00" Tax="0.00" TaxName="GST" />
+            </LineTaxes>
+            <Instructions>
+                <Instruction InstructionText="Monika R" InstructionType="GIFTSENDER" />
+                <Instruction InstructionText="monika123@yopmail.com" InstructionType="GIFTREMAIL" />
+            </Instructions>
+            <PersonInfoShipTo AddressLine1="445 Mount Eden Road" City="Mount Eden" Country="NZ" DayPhone="5105858974" FirstName="Monika" LastName="R" State="AUK" ZipCode="2010" />
+        </OrderLine>
+    </OrderLines>
+    <PriceInfo Currency="NZD" EnterpriseCurrency="NZD" />
+    <PersonInfoBillTo AddressLine1="5100 monterro way" City="hopyard road" Country="NZ" DayPhone="5105858974" EMailID="monika123@yopmail.com" FirstName="Monika" LastName="R" State="WKO" ZipCode="9495" />
+    <HeaderCharges>
+        <HeaderCharge ChargeAmount="7" ChargeCategory="GC_SHIPPING" ChargeName="SHIPPING" />
+    </HeaderCharges>
+    <HeaderTaxes>
+        <HeaderTax ChargeCategory="INFO_TAX" ChargeName="SHIPPING" Reference1="0.00" Tax="0.00" TaxName="GST" />
+    </HeaderTaxes>
+    <PersonInfoShipTo AddressLine1="445 Mount Eden Road" City="Mount Eden" Country="NZ" DayPhone="5105858974" FirstName="Monika" LastName="R" State="AUK" ZipCode="2010" />
+    <PaymentMethods>
+        <PaymentMethod CreditCardExpDate="11/2022" CreditCardNo="XXXX-XXXX-XXXX-4444" CreditCardType="MASTER" DisplayCreditCardNo="4444" PaymentType="CREDIT_CARD" UnlimitedCharges="N">
+            <PaymentDetailsList>
+                <PaymentDetails AuthCode="160780" AuthorizationID="5661531840456524603007" ChargeType="CHARGE" ProcessedAmount="156.10" RequestAmount="156.10" RequestId="5661531840456524603007" />
+            </PaymentDetailsList>
+        </PaymentMethod>
+    </PaymentMethods>
+</Order>

@@ -1,0 +1,27 @@
+<Order EnterpriseCode="${EnterpriseCode}" EntryType="${EntryType}" SellerOrganizationCode="${SellerOrganizationCode}" BuyerUserId="" AuthorizedClient="" ValidatePromotionAward="" BypassPricing="">
+
+	<OrderLines>
+
+		<OrderLine OrderedQty="${Quantity1}" >
+			<Item ItemID="${ItemID1}" UnitOfMeasure="${UnitOfMeasure1}" ProductClass="${ProductClass1}" />
+			<LinePriceInfo UnitPrice="${UnitPrice1}" RetailPrice="${RetailPrice1}" ListPrice="${ListPrice1}" IsLinePriceForInformationOnly="${IsLinePriceForInformationOnly1}" PricingQuantityStrategy="${PricingQuantityStrategy1}" IsPriceLocked="${IsPriceLocked1}"/>
+		</OrderLine>
+		<OrderLine OrderedQty="${Quantity2}" >
+			<Item ItemID="${ItemID2}" UnitOfMeasure="${UnitOfMeasure2}" ProductClass="${ProductClass2}" />
+			<LinePriceInfo UnitPrice="${UnitPrice2}" RetailPrice="${RetailPrice2}" ListPrice="${ListPrice2}" IsLinePriceForInformationOnly="${IsLinePriceForInformationOnly2}" PricingQuantityStrategy="${PricingQuantityStrategy2}" IsPriceLocked="${IsPriceLocked2}"/>
+		</OrderLine>
+	</OrderLines>
+
+	<PersonInfoBillTo AddressLine1="${AddressLine11}" AddressLine2="${AddressLine21}" City="${City1}" Country="${Country1}" DayPhone="${DayPhone1}"
+EMailID="${EMailID1}" FirstName="${FirstName1}" LastName="${LastName1}" State="${State1}" ZipCode="${ZipCode1}"/>
+<PersonInfoShipTo AddressLine1="${AddressLine12}" AddressLine2="${AddressLine22}" City="${City2}" Country="${Country2}" DayPhone="${DayPhone2}"
+EMailID="${EMailID2}" FirstName="${FirstName2}" LastName="${LastName2}" State="${State2}" ZipCode="${ZipCode2}"/>
+
+	<PaymentMethods>
+		<PaymentMethod CreditCardExpDate="${CreditCardExpDate1}" PaymentType="${PaymentType1}" CreditCardNo="${CreditCardNo1}" CreditCardType="${CreditCardType1}" DisplayCreditCardNo="${DisplayCreditCardNo1}" PaymentReference1="${PaymentReference11}" UnlimitedCharges="${UnlimitedCharges1}" PaymentReference2="${PaymentReference21}" ChargeSequence="${ChargeSequence1}" CreditCardName="${CreditCardName1}" FirstName="${CCFirstName1}" LastName="${CCLastName1}" MaxChargeLimit="${MaxChargeLimit1}">
+			<PaymentDetailsList>
+				<PaymentDetails ChargeType="${ChargeType1}" RequestAmount="${RequestAmount1}" AuthorizationExpirationDate="${AuthorizationExpirationDate1}" ProcessedAmount="${ProcessedAmount1}"/>
+			</PaymentDetailsList>	
+		</PaymentMethod>
+	</PaymentMethods>
+</Order>

@@ -1,0 +1,10 @@
+<Order DisplayLocalizedFieldInLocale="en_US_EST" IgnoreOrdering="Y" OrderHeaderKey="${OrderHeaderKey}">
+    <OrderLines>
+        <OrderLine Action="MODIFY" OrderLineKey="${OrderLineKey}">
+            <Notes>
+                <Note
+                    NoteText="Shortage occurred while picking from backroom. The shortage resolution was recorded as: Inventory shortage" ReasonCode="YCD_BACKROOM_PICK_SHORTAGE"/>
+            </Notes>
+        </OrderLine>
+    </OrderLines>
+</Order>

@@ -1,0 +1,7 @@
+<Promise CheckInventory="Y" OrganizationCode="NZ">
+  <PromiseLines>
+    <PromiseLine LineId="1" ItemID="${item1}" ProductClass="GOOD" UnitOfMeasure="EACH"/>
+	<PromiseLine LineId="2" ItemID="${item2}" ProductClass="GOOD" UnitOfMeasure="EACH"/>
+  </PromiseLines>
+</Promise>  
+ 

@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<_ord:ProcessOrder releaseID="9.0" versionID="7.0.0.6"
+    xmlns:_ord="http://www.ibm.com/xmlns/prod/commerce/9/order"
+    xmlns:_wcf="http://www.ibm.com/xmlns/prod/commerce/9/foundation"
+    xmlns:oa="http://www.openapplications.org/oagis/9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <oa:ApplicationArea xsi:type="_wcf:ApplicationAreaType">
+        <oa:CreationDateTime>2018-12-10T10:20:05.158Z</oa:CreationDateTime>
+        <oa:BODID>29163da0-fc65-11e8-89db-864c5c0dfe8d</oa:BODID>
+        <_wcf:BusinessContext/>
+    </oa:ApplicationArea>
+    <_ord:DataArea>
+        <oa:Process>
+            <oa:ActionCriteria>
+                <oa:ActionExpression actionCode="TransferOrder" expressionLanguage="_wcf:XPath">/Order</oa:ActionExpression>
+            </oa:ActionCriteria>
+        </oa:Process>
+        <_ord:Order shipAsComplete="true">
+            <_ord:OrderIdentifier>
+                <_wcf:UniqueID>${OrderNo}</_wcf:UniqueID>
+            </_ord:OrderIdentifier>
+            <_ord:StoreIdentifier>
+                <_wcf:UniqueID>10153</_wcf:UniqueID>
+                <_wcf:ExternalIdentifier>
+                    <_wcf:NameIdentifier>${Brand}</_wcf:NameIdentifier>
+                </_wcf:ExternalIdentifier>
+            </_ord:StoreIdentifier>
+            <_ord:Channel>
+                <_ord:ChannelIdentifer>
+                    <_ord:UniqueID>-1</_ord:UniqueID>
+                    <_ord:ChannelName>${Channel}</_ord:ChannelName>
+                </_ord:ChannelIdentifer>
+                <_ord:Description language="-1">Used when operations performed from a desktop browser.</_ord:Description>
+            </_ord:Channel>
+            <_ord:BuyerIdentifier>
+                <_wcf:UniqueID>1344531</_wcf:UniqueID>
+                <_wcf:DistinguishedName>uid=vanitha.oms@gmail.com,o=default organization,o=root organization</_wcf:DistinguishedName>
+                <_wcf:ExternalIdentifier>
+                    <_wcf:Identifier>vanitha.oms@gmail.com</_wcf:Identifier>
+                </_wcf:ExternalIdentifier>
+            </_ord:BuyerIdentifier>
+            <_ord:BuyerBillInfo>
+                <_wcf:ContactName>
+                    <_wcf:PersonTitle/>
+                    <_wcf:LastName>vani</_wcf:LastName>
+                    <_wcf:FirstName>Vani</_wcf:FirstName>
+                    <_wcf:MiddleName/>
+                </_wcf:ContactName>
+                <_wcf:Address>
+                    <_wcf:AddressLine>233 stonewood street</_wcf:AddressLine>
+                    <_wcf:AddressLine/>
+                    <_wcf:AddressLine/>
+                    <_wcf:City>Downey</_wcf:City>
+                    <_wcf:StateOrProvinceName>CA</_wcf:StateOrProvinceName>
+                    <_wcf:Country>US</_wcf:Country>
+                    <_wcf:PostalCode>90241</_wcf:PostalCode>
+                    <_wcf:UserData>
+                        <_wcf:UserDataField name="orgName"/>
+                    </_wcf:UserData>
+                </_wcf:Address>
+                <_wcf:Telephone1>
+                    <_wcf:Value>1111111111</_wcf:Value>
+                </_wcf:Telephone1>
+                <_wcf:EmailAddress1>
+                    <_wcf:Value>vanitha.oms@gmail.com</_wcf:Value>
+                </_wcf:EmailAddress1>
+            </_ord:BuyerBillInfo>
+            <_ord:OrderAmount>
+                <_wcf:GrandTotal currency="${Currency}">54.63000</_wcf:GrandTotal>
+                <_wcf:TotalProductPrice currency="${Currency}">35.00000</_wcf:TotalProductPrice>
+                <_wcf:TotalAdjustment currency="${Currency}">0.00000</_wcf:TotalAdjustment>
+                <_wcf:TotalShippingCharge currency="${Currency}">14.95000</_wcf:TotalShippingCharge>
+                <_wcf:TotalSalesTax currency="${Currency}">3.28000</_wcf:TotalSalesTax>
+                <_wcf:TotalShippingTax currency="${Currency}">1.40000</_wcf:TotalShippingTax>
+                <_wcf:TotalTaxByTaxCategory currency="${Currency}" taxCategoryCode="Sales">3.28000</_wcf:TotalTaxByTaxCategory>
+                <_wcf:TotalTaxByTaxCategory currency="${Currency}" taxCategoryCode="Shipping">1.40000</_wcf:TotalTaxByTaxCategory>
+            </_ord:OrderAmount>
+            <_ord:OrderPaymentInfo>
+                <_ord:PaymentInstruction>
+                    <_ord:UniqueID>334010</_ord:UniqueID>
+                    <_ord:BillingAddress>
+                        <_wcf:ContactInfoIdentifier>
+                            <_wcf:UniqueID>4000000000015487059</_wcf:UniqueID>
+                            <_wcf:ExternalIdentifier>
+                                <_wcf:ContactInfoNickName>1544001700402</_wcf:ContactInfoNickName>
+                            </_wcf:ExternalIdentifier>
+                        </_wcf:ContactInfoIdentifier>
+                        <_wcf:ContactName>
+                            <_wcf:PersonTitle/>
+                            <_wcf:LastName>vani</_wcf:LastName>
+                            <_wcf:FirstName>Vani</_wcf:FirstName>
+                            <_wcf:MiddleName/>
+                        </_wcf:ContactName>
+                        <_wcf:Address>
+                            <_wcf:AddressLine>233 stonewood street</_wcf:AddressLine>
+                            <_wcf:AddressLine/>
+                            <_wcf:AddressLine/>
+                            <_wcf:City>Downey</_wcf:City>
+                            <_wcf:StateOrProvinceName>CA</_wcf:StateOrProvinceName>
+                            <_wcf:Country>US</_wcf:Country>
+                            <_wcf:PostalCode>90241</_wcf:PostalCode>
+                            <_wcf:UserData>
+                                <_wcf:UserDataField name="orgName"/>
+                            </_wcf:UserData>
+                        </_wcf:Address>
+                        <_wcf:Telephone1 publish="true">
+                            <_wcf:Value>1111111111</_wcf:Value>
+                        </_wcf:Telephone1>
+                        <_wcf:Telephone2 publish="true">
+                            <_wcf:Value>1111111111</_wcf:Value>
+                        </_wcf:Telephone2>
+                        <_wcf:EmailAddress1>
+                            <_wcf:Value>vanitha.oms@gmail.com</_wcf:Value>
+                        </_wcf:EmailAddress1>
+                        <_wcf:EmailAddress2>
+                            <_wcf:Value/>
+                        </_wcf:EmailAddress2>
+                        <_wcf:Fax1>
+                            <_wcf:Value/>
+                        </_wcf:Fax1>
+                        <_wcf:Fax2>
+                            <_wcf:Value/>
+                        </_wcf:Fax2>
+                    </_ord:BillingAddress>
+                    <_ord:Amount currency="${Currency}">54.63000</_ord:Amount>
+                    <_ord:PaymentMethod>
+                        <_ord:PaymentMethodName>VISA</_ord:PaymentMethodName>
+                        <_ord:Description language="-1">VISA Credit Card</_ord:Description>
+                        <_wcf:UserData>
+                            <_wcf:UserDataField name="policyId">10965</_wcf:UserDataField>
+                        </_wcf:UserData>
+                    </_ord:PaymentMethod>
+                    <_ord:SequenceNumber>0</_ord:SequenceNumber>
+                    <_ord:Priority>5</_ord:Priority>
+                    <_ord:MaxAmount currency="${Currency}">-1.00000</_ord:MaxAmount>
+                    <_ord:MinAmount currency="${Currency}">0.00000</_ord:MinAmount>
+                    <_ord:RefundAllowed>true</_ord:RefundAllowed>
+                    <_ord:PaymentRule>Early Approval</_ord:PaymentRule>
+                    <_ord:ProtocolData name="expire_month">02</_ord:ProtocolData>
+                    <_ord:ProtocolData name="pay_type">VISA</_ord:ProtocolData>
+                    <_ord:ProtocolData name="authorization_code">831000</_ord:ProtocolData>
+                    <_ord:ProtocolData name="account_suffix">1111</_ord:ProtocolData>
+                    <_ord:ProtocolData name="session_id">8tXr/LKA1uIsk/lxNPwKgPV8O0M=</_ord:ProtocolData>
+                    <_ord:ProtocolData name="payment_method">VISA</_ord:ProtocolData>
+                    <_ord:ProtocolData name="billing_address_id">4000000000015487059</_ord:ProtocolData>
+                    <_ord:ProtocolData name="expire_year">2019</_ord:ProtocolData>
+                    <_ord:ProtocolData name="decisionParameter">MjAzLjkxLjIwMC45</_ord:ProtocolData>
+                    <_ord:ProtocolData name="subscription_id">9909000231757876</_ord:ProtocolData>
+                    <_ord:ProtocolData name="billto_firstname">Vani</_ord:ProtocolData>
+                    <_ord:ProtocolData name="billto_lastname">vani</_ord:ProtocolData>
+                    <_ord:ProtocolData name="billto_address1">233 stonewood street</_ord:ProtocolData>
+                    <_ord:ProtocolData name="billto_address2"/>
+                    <_ord:ProtocolData name="billto_city">Downey</_ord:ProtocolData>
+                    <_ord:ProtocolData name="billto_stateprovince">CA</_ord:ProtocolData>
+                    <_ord:ProtocolData name="billto_country">US</_ord:ProtocolData>
+                    <_ord:ProtocolData name="billto_zipcode">90241</_ord:ProtocolData>
+                    <_ord:ProtocolData name="authorizeRequestID">5444369919916260704009</_ord:ProtocolData>
+                    <_ord:ProtocolData name="authorizeRequestToken">Ahj/7wSTJyPPfKfen78JGxkahLmUp7STNrs5yjT7Ss+QwFRp9pWfIekDaq8ExDJpJlXR6SJmcCcmTkee+U+9P34SAAAA+Qd1</_ord:ProtocolData>
+                    <_ord:Status>Success</_ord:Status>
+                </_ord:PaymentInstruction>
+                <_ord:FinancialTransaction>
+                    <_ord:FinancialTransactionIdentifier>
+                        <_ord:UniqueID>322010</_ord:UniqueID>
+                    </_ord:FinancialTransactionIdentifier>
+                    <_ord:TransactionType>Approve</_ord:TransactionType>
+                    <_ord:RequestAmount currency="${Currency}">54.63000</_ord:RequestAmount>
+                    <_ord:Status>Success</_ord:Status>
+                    <_ord:ReasonCode>0</_ord:ReasonCode>
+                    <_ord:ResponseCode>0</_ord:ResponseCode>
+                    <_ord:ReferenceNumber>5444369919916260704009</_ord:ReferenceNumber>
+                    <_ord:trackingID>a_${OrderNo}_313510</_ord:trackingID>
+                    <_ord:MerchantOrderNumber>313510</_ord:MerchantOrderNumber>
+                    <_ord:AvsCode>-1</_ord:AvsCode>
+                    <_ord:PaymentInstructionID>334010</_ord:PaymentInstructionID>
+                    <_ord:RequestTime>2018-12-10T05:16:31-05:00</_ord:RequestTime>
+                    <_ord:LastUpdate>2018-12-10T05:16:33-05:00</_ord:LastUpdate>
+                    <_ord:PaymentProtocolData name="expire_month">02</_ord:PaymentProtocolData>
+                    <_ord:PaymentProtocolData name="pay_type">VISA</_ord:PaymentProtocolData>
+                    <_ord:PaymentProtocolData name="authorization_code">831000</_ord:PaymentProtocolData>
+                    <_ord:PaymentProtocolData name="account_suffix">1111</_ord:PaymentProtocolData>
+                    <_ord:PaymentProtocolData name="session_id">8tXr/LKA1uIsk/lxNPwKgPV8O0M=</_ord:PaymentProtocolData>
+                    <_ord:PaymentProtocolData name="payment_method">VISA</_ord:PaymentProtocolData>
+                    <_ord:PaymentProtocolData name="billing_address_id">4000000000015487059</_ord:PaymentProtocolData>
+                    <_ord:PaymentProtocolData name="expire_year">2019</_ord:PaymentProtocolData>
+                    <_ord:PaymentProtocolData name="decisionParameter">MjAzLjkxLjIwMC45</_ord:PaymentProtocolData>
+                    <_ord:PaymentProtocolData name="subscription_id">9909000231757876</_ord:PaymentProtocolData>
+                    <_ord:TransactionExtensionData name="request_token">Ahj/7wSTJyPPfKfen78JGxkahLmUp7STNrs5yjT7Ss+QwFRp9pWfIekDaq8ExDJpJlXR6SJmcCcmTkee+U+9P34SAAAA+Qd1</_ord:TransactionExtensionData>
+                    <_ord:TransactionExtensionData name="reconciliation_id">FPKLRO4IMW3N</_ord:TransactionExtensionData>
+                </_ord:FinancialTransaction>
+            </_ord:OrderPaymentInfo>
+            <_ord:OrderStatus locked="false" prepareIndicator="true">
+                <_ord:Status>C</_ord:Status>
+            </_ord:OrderStatus>
+            <_ord:LastUpdateDate>2018-12-10T10:20:04.185Z</_ord:LastUpdateDate>
+            <_ord:PlacedDate>2018-12-10T10:16:33.281Z</_ord:PlacedDate>
+            <_ord:OrderItem>
+                <_ord:OrderItemIdentifier>
+                    <_wcf:UniqueID>6870029</_wcf:UniqueID>
+                </_ord:OrderItemIdentifier>
+                <_ord:CatalogEntryIdentifier>
+                    <_wcf:UniqueID>3534039</_wcf:UniqueID>
+                    <_wcf:ExternalIdentifier>
+                        <_wcf:PartNumber>${ItemId}</_wcf:PartNumber>
+                    </_wcf:ExternalIdentifier>
+                </_ord:CatalogEntryIdentifier>
+                <_ord:Quantity uom="C62">1.0</_ord:Quantity>
+                <_ord:ContractIdentifier>
+                    <_wcf:UniqueID>4000000000000000005</_wcf:UniqueID>
+                </_ord:ContractIdentifier>
+                <_ord:OfferID>4000000000001011099</_ord:OfferID>
+                <_ord:OrderItemAmount freeGift="false">
+                    <_wcf:UnitPrice>
+                        <_wcf:Price currency="${Currency}">35.00000</_wcf:Price>
+                        <_wcf:Quantity uom="C62">1.0</_wcf:Quantity>
+                    </_wcf:UnitPrice>
+                    <_wcf:OrderItemPrice currency="${Currency}">35.00000</_wcf:OrderItemPrice>
+                    <_wcf:TotalAdjustment currency="${Currency}">0.00000</_wcf:TotalAdjustment>
+                    <_wcf:ShippingCharge currency="${Currency}">14.95000</_wcf:ShippingCharge>
+                    <_wcf:SalesTax currency="${Currency}">3.28000</_wcf:SalesTax>
+                    <_wcf:ShippingTax currency="${Currency}">1.40000</_wcf:ShippingTax>
+                    <_wcf:TaxByTaxCategory currency="${Currency}" taxCategoryCode="City">0.48000</_wcf:TaxByTaxCategory>
+                    <_wcf:TaxByTaxCategory currency="${Currency}" taxCategoryCode="County">0.52000</_wcf:TaxByTaxCategory>
+                    <_wcf:TaxByTaxCategory currency="${Currency}" taxCategoryCode="District">0.00000</_wcf:TaxByTaxCategory>
+                    <_wcf:TaxByTaxCategory currency="${Currency}" taxCategoryCode="State">2.28000</_wcf:TaxByTaxCategory>
+                </_ord:OrderItemAmount>
+                <_ord:OrderItemShippingInfo expedite="false">
+                    <_ord:ShippingAddress>
+                        <_wcf:ContactInfoIdentifier>
+                            <_wcf:UniqueID>4000000000015483554</_wcf:UniqueID>
+                            <_wcf:ExternalIdentifier>
+                                <_wcf:ContactInfoNickName>1543819980496</_wcf:ContactInfoNickName>
+                            </_wcf:ExternalIdentifier>
+                        </_wcf:ContactInfoIdentifier>
+                        <_wcf:ContactName>
+                            <_wcf:PersonTitle/>
+                            <_wcf:LastName>b</_wcf:LastName>
+                            <_wcf:FirstName>vani</_wcf:FirstName>
+                            <_wcf:MiddleName/>
+                        </_wcf:ContactName>
+                        <_wcf:Address>
+                            <_wcf:AddressLine>12601 W 95th St</_wcf:AddressLine>
+                            <_wcf:AddressLine/>
+                            <_wcf:AddressLine/>
+                            <_wcf:City>Lenexa</_wcf:City>
+                            <_wcf:StateOrProvinceName>KS</_wcf:StateOrProvinceName>
+                            <_wcf:Country>US</_wcf:Country>
+                            <_wcf:PostalCode>66215-3810</_wcf:PostalCode>
+                            <_wcf:UserData>
+                                <_wcf:UserDataField name="orgName"/>
+                            </_wcf:UserData>
+                        </_wcf:Address>
+                        <_wcf:Telephone1 publish="true">
+                            <_wcf:Value>2345678910</_wcf:Value>
+                        </_wcf:Telephone1>
+                        <_wcf:Telephone2 publish="true">
+                            <_wcf:Value>2345678910</_wcf:Value>
+                        </_wcf:Telephone2>
+                        <_wcf:EmailAddress1>
+                            <_wcf:Value>vanitha.oms@gmail.com</_wcf:Value>
+                        </_wcf:EmailAddress1>
+                        <_wcf:EmailAddress2>
+                            <_wcf:Value/>
+                        </_wcf:EmailAddress2>
+                        <_wcf:Fax1>
+                            <_wcf:Value/>
+                        </_wcf:Fax1>
+                        <_wcf:Fax2>
+                            <_wcf:Value/>
+                        </_wcf:Fax2>
+                    </_ord:ShippingAddress>
+                    <_ord:ShippingMode>
+                        <_ord:ShippingModeIdentifier>
+                            <_ord:UniqueID>12209</_ord:UniqueID>
+                            <_ord:ExternalIdentifier>
+                                <_ord:ShipModeCode>FD40</_ord:ShipModeCode>
+                                <_ord:Carrier>FEDEX</_ord:Carrier>
+                            </_ord:ExternalIdentifier>
+                        </_ord:ShippingModeIdentifier>
+                        <_ord:Description language="-1">3 Day</_ord:Description>
+                    </_ord:ShippingMode>
+                    <_ord:PhysicalStoreIdentifier>
+                        <_wcf:UniqueID>10436</_wcf:UniqueID>
+                        <_wcf:ExternalIdentifier>VANSUS00502</_wcf:ExternalIdentifier>
+                    </_ord:PhysicalStoreIdentifier>
+                </_ord:OrderItemShippingInfo>
+                <_ord:OrderItemStatus>
+                    <_ord:Status>C</_ord:Status>
+                    <_ord:InventoryStatus>Allocated</_ord:InventoryStatus>
+                    <_ord:FulfillmentStatus>Unreleased</_ord:FulfillmentStatus>
+                </_ord:OrderItemStatus>
+                <_ord:OrderItemFulfillmentInfo>
+                    <_ord:AvailableDate>2018-12-10T00:00:00.067Z</_ord:AvailableDate>
+                    <_ord:ExpectedShipDate>2018-12-10T00:00:00.067Z</_ord:ExpectedShipDate>
+                </_ord:OrderItemFulfillmentInfo>
+                <_ord:FulfillmentCenter>
+                    <_ord:FulfillmentCenterIdentifier>
+                        <_wcf:UniqueID>16732</_wcf:UniqueID>
+                        <_wcf:Name>VANSUS00502</_wcf:Name>
+                    </_ord:FulfillmentCenterIdentifier>
+                </_ord:FulfillmentCenter>
+                <_ord:CorrelationGroup>6870029</_ord:CorrelationGroup>
+                <_ord:CreateDate>2018-12-10T09:45:46.095Z</_ord:CreateDate>
+                <_ord:LastUpdateDate>2018-12-10T10:16:33.281Z</_ord:LastUpdateDate>
+                <_ord:UsableShippingChargePolicy>
+                    <_wcf:UniqueID>-7001</_wcf:UniqueID>
+                    <_wcf:ExternalIdentifier>
+                        <_wcf:Name>StandardShippingChargeBySeller</_wcf:Name>
+                        <_wcf:Type>ShippingCharge</_wcf:Type>
+                    </_wcf:ExternalIdentifier>
+                </_ord:UsableShippingChargePolicy>
+                <_wcf:UserData>
+                    <_wcf:UserDataField name="isPersonalAddressesAllowedForShipping">true</_wcf:UserDataField>
+                    <_wcf:UserDataField name="ExternalOMSId">1</_wcf:UserDataField>
+                    <_wcf:UserDataField name="OrderType">STH|IN-STOCK</_wcf:UserDataField>
+                    <_wcf:UserDataField name="isExperticity">false</_wcf:UserDataField>
+                    <_wcf:UserDataField name="LineType">STK</_wcf:UserDataField>
+                    <_wcf:UserDataField name="FulfillmentType">STH</_wcf:UserDataField>
+                    <_wcf:UserDataField name="SHIPVIA">FD40</_wcf:UserDataField>
+                    <_wcf:UserDataField name="CommodityCode">PC040144</_wcf:UserDataField>
+                    <_wcf:UserDataField name="ShippingService">threeday</_wcf:UserDataField>
+                    <_wcf:UserDataField name="IsPOBoxAddress">false</_wcf:UserDataField>
+                </_wcf:UserData>
+            </_ord:OrderItem>
+            <_ord:OrderNotificationInfo/>
+            <_ord:OrderTypeCode>ORD</_ord:OrderTypeCode>
+            <_wcf:UserData>
+                <_wcf:UserDataField name="isPersonalAddressesAllowedForShipping">true</_wcf:UserDataField>
+                <_wcf:UserDataField name="isPurchaseOrderNumberRequired">false</_wcf:UserDataField>
+                <_wcf:UserDataField name="trackingIds"/>
+                <_wcf:UserDataField name="businessChannelId">-1</_wcf:UserDataField>
+                <_wcf:UserDataField name="requireReview">false</_wcf:UserDataField>
+                <_wcf:UserDataField name="OrderType">REGULAR</_wcf:UserDataField>
+                <_wcf:UserDataField name="isEmployeeOrder">false</_wcf:UserDataField>
+                <_wcf:UserDataField name="VAS01">VRE</_wcf:UserDataField>
+                <_wcf:UserDataField name="isBulkOrder">false</_wcf:UserDataField>
+            </_wcf:UserData>
+            <OMSManagedOrder>Y</OMSManagedOrder>
+        </_ord:Order>
+    </_ord:DataArea>
+</_ord:ProcessOrder>

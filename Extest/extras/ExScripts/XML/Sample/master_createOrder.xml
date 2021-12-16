@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--createOrder Input XML-->
+
+<Order CustomerEMailID="${EmailAddress}" EnterpriseCode="${EnterpriseCode}" OrderDate="${OrderDate}" CustomerFirstName="${FirstName}" CustomerLastName="${LastName}" CustomerPhoneNo="${PhoneNo}" CustomerZipCode="${ZipCode}" EnteredBy="${EnteredBy}" EntryType="${EntryType}" OrderNo="${OrderNo}" SellerOrganizationCode="${SellerOrganizationCode}" >
+
+<OrderLines>
+
+<OrderLine OrderedQty="${Quantity}" CarrierServiceCode="${CarrierServiceCode}" GiftFlag="N" PrimeLineNo="1" DeliveryMethod="${DeliveryMethod}">
+<Item ItemID="${ItemID}" UnitOfMeasure="EACH" ProductClass="GOOD" />
+
+<PersonInfoShipTo AddressLine1="${AddressLine1}" AddressLine2="${AddressLine2}" City="${City}" Company=""  Country="{Country}" DayPhone="${DayPhone}"
+EMailID="${EMailID}" FirstName="${FirstName}" LastName="${LastName}" State="${State}" ZipCode="${ZipCode}"/>
+
+<LinePriceInfo UnitPrice="${UnitPrice}" RetailPrice="${RetailPrice}" ListPrice="${ListPrice}" IsLinePriceForInformationOnly="${IsLinePriceForInformationOnly}" DiscountPercentage="${DiscountPercentage}"/>
+
+<LineCharges>
+<LineCharge ChargeCategory="${ChargeCategory}" ChargeName="${ChargeName}" ChargePerLine="${ChargePerLine}" ChargePerUnit="${ChargePerUnit}" IsBillable="${IsBillable}" IsDiscount="${IsDiscount}" IsShippingCharge="${IsShippingCharge}" />
+</LineCharges>
+
+<LineTaxes>
+<LineTax Tax="${Tax}" TaxName="${TaxName}">
+</LineTax>
+</LineTaxes>
+
+<OrderDates>
+  <OrderDate DateTypeId="${DateTypeId}" ActualDate="${ActualDate}"/>
+</OrderDates>
+
+<Promotions Reset="N">
+ <Promotion DenialReason="" Description="${Description}" PromotionApplied="${PromotionApplied}" PromotionId="${PromotionId}" PromotionType="${PromotionType}"/>
+</Promotions>
+
+<AdditionalAddresses>
+<AdditionalAddress AddressType="${AddressType}">
+<PersonInfo AddressLine1="${AddressLine1}" AddressLine2="${AddressLine2}" City="${City}" Company=""  Country="{Country}" DayPhone="${DayPhone}"
+EMailID="${EMailID}" FirstName="${FirstName}" LastName="${LastName}" State="${State}" ZipCode="${ZipCode}"/>
+</AdditionalAddress>
+</AdditionalAddresses>
+
+</OrderLine>
+
+
+<OrderLine OrderedQty="${Quantity_1}" CarrierServiceCode="${CarrierServiceCode_1}" GiftFlag="N" PrimeLineNo="2" DeliveryMethod="${DeliveryMethod_1}">
+<Item ItemID="${ItemID_1}" UnitOfMeasure="EACH" ProductClass="GOOD" />
+
+<PersonInfoShipTo AddressLine1="${AddressLine1_1}" AddressLine2="${AddressLine2_1}" City="${City_1}" Company=""  Country="{Country_1}" DayPhone="${DayPhone_1}"
+EMailID="${EMailID_1}" FirstName="${FirstName_1}" LastName="${LastName_1}" State="${State_1}" ZipCode="${ZipCode_1}"/>
+
+<LinePriceInfo UnitPrice="${UnitPrice_1}" RetailPrice="${RetailPrice_1}" ListPrice="${ListPrice_1}" IsLinePriceForInformationOnly="${IsLinePriceForInformationOnly_1}" DiscountPercentage="${DiscountPercentage_1}"/>
+
+<LineCharges>
+<LineCharge ChargeCategory="${ChargeCategory_1}" ChargeName="${ChargeName_1}" ChargePerLine="${ChargePerLine_1}" ChargePerUnit="${ChargePerUnit_1}" IsBillable="${IsBillable_1}" IsDiscount="${IsDiscount_1}" IsShippingCharge="${IsShippingCharge_1}" /></LineCharges>
+
+<LineTaxes>
+<LineTax Tax="${Tax_1}" TaxName="${TaxName_1}">
+</LineTax>
+</LineTaxes>
+
+<OrderDates>
+  <OrderDate DateTypeId="${DateTypeId_1}" ActualDate="${ActualDate_1}"/>
+</OrderDates>
+
+<Promotions Reset="N">
+ <Promotion DenialReason="" Description="${Description_1}" PromotionApplied="${PromotionApplied_1}" PromotionId="${PromotionId_1}" PromotionType="${PromotionType_1}"/>
+</Promotions>
+
+<AdditionalAddresses>
+<AdditionalAddress AddressType="${AddressType_1}">
+<PersonInfo AddressLine1="${AddressLine1_1}" AddressLine2="${AddressLine2_1}" City="${City_1}" Company=""  Country="{Country_1}" DayPhone="${DayPhone_1}"
+EMailID="${EMailID_1}" FirstName="${FirstName_1}" LastName="${LastName_1}" State="${State_1}" ZipCode="${ZipCode_1}"/>
+</AdditionalAddress>
+</AdditionalAddresses>
+
+</OrderLine>
+
+<OrderLine OrderedQty="${Quantity_2}" CarrierServiceCode="${CarrierServiceCode_2}" GiftFlag="N" PrimeLineNo="3" DeliveryMethod="${DeliveryMethod_2}">
+<Item ItemID="${ItemID_2}" UnitOfMeasure="EACH" ProductClass="GOOD" />
+
+<PersonInfoShipTo AddressLine1="${AddressLine1_2}" AddressLine2="${AddressLine2_2}" City="${City_2}" Company=""  Country="{Country_2}" DayPhone="${DayPhone_2}"
+EMailID="${EMailID_2}" FirstName="${FirstName_2}" LastName="${LastName_2}" State="${State_2}" ZipCode="${ZipCode_2}"/>
+
+<LinePriceInfo UnitPrice="${UnitPrice_2}" RetailPrice="${RetailPrice_2}" ListPrice="${ListPrice_2}" IsLinePriceForInformationOnly="${IsLinePriceForInformationOnly_2}" DiscountPercentage="${DiscountPercentage_2}"/>
+
+<LineCharges>
+<LineCharge ChargeCategory="${ChargeCategory_2}" ChargeName="${ChargeName_2}" ChargePerLine="${ChargePerLine_2}" ChargePerUnit="${ChargePerUnit_2}" IsBillable="${IsBillable_2}" IsDiscount="${IsDiscount_2}" IsShippingCharge="${IsShippingCharge_2}" />
+</LineCharges>
+
+<LineTaxes>
+<LineTax Tax="${Tax_2}" TaxName="${TaxName_2}">
+</LineTax>
+</LineTaxes>
+
+<OrderDates>
+  <OrderDate DateTypeId="${DateTypeId_2}" ActualDate="${ActualDate_2}"/>
+</OrderDates>
+
+<Promotions Reset="N">
+ <Promotion DenialReason="" Description="${Description_2}" PromotionApplied="${PromotionApplied_2}" PromotionId="${PromotionId_2}" PromotionType="${PromotionType_2}"/>
+</Promotions>
+
+<AdditionalAddresses>
+<AdditionalAddress AddressType="${AddressType_2}">
+<PersonInfo AddressLine1="${AddressLine1_2}" AddressLine2="${AddressLine2_2}" City="${City_2}" Company=""  Country="{Country_2}" DayPhone="${DayPhone_2}"
+EMailID="${EMailID_2}" FirstName="${FirstName_2}" LastName="${LastName_2}" State="${State_2}" ZipCode="${ZipCode_2}"/>
+</AdditionalAddress>
+</AdditionalAddresses>
+
+</OrderLine>
+
+</OrderLines>
+
+
+<OrderLineRelationships>
+<OrderLineRelationship RelationshipType="${RelationshipType}">
+<ParentLine TransactionalLineId="" SubLineNo="" PrimeLineNo="1" OrderLineKey=""/>
+<ChildLine TransactionalLineId="" SubLineNo="" PrimeLineNo="2" OrderLineKey=""/>
+</OrderLineRelationship>
+</OrderLineRelationships>
+
+
+<PersonInfoShipTo AddressLine1="${AddressLine1}" AddressLine2="${AddressLine2}" City="${City}" Company=""  Country="{Country}" DayPhone="${DayPhone}"
+EMailID="${EMailID}" FirstName="${FirstName}" LastName="${LastName}" State="${State}" ZipCode="${ZipCode}"/>
+
+<PersonInfoBillTo AddressLine1="${AddressLine1}" AddressLine2="${AddressLine2}" City="${City}" Company=""  Country="{Country}" DayPhone="${DayPhone}"
+EMailID="${EMailID}" FirstName="${FirstName}" LastName="${LastName}" State="${State}" ZipCode="${ZipCode}"/>
+
+<PriceInfo Currency="${Currency}" EnterpriseCurrency="${EnterpriseCurrency}" ReportingConversionDate="${ReportingConversionDate}" ReportingConversionRate="${ReportingConversionRate}"/>
+		
+<HeaderCharges>
+<HeaderCharge ChargeName="${ChargeName}" ChargeCategory="${ChargeCategory}" ChargeAmount="${ChargeAmount}"/>
+</HeaderCharges>
+
+
+<HeaderTaxes>
+<HeaderTax TaxableFlag="${TaxableFlag}" ChargeName="${ChargeName}" ChargeCategory="${ChargeCategory}" TaxPercentage="${TaxPercentage}" TaxName="${TaxName}" Tax="${Tax}" />
+</HeaderTaxes>
+
+<PaymentMethods>
+<PaymentMethod CreditCardExpDate="${CreditCardExpDate}" PaymentType="${PaymentType}" CreditCardNo="${CreditCardNo}" CreditCardType="${CreditCardType}" DisplayCreditCardNo="${DisplayCreditCardNo}" PaymentReference1="${PaymentReference1}" PaymentReference3="${PaymentReference3}" UnlimitedCharges="${UnlimitedCharges}" PaymentReference2="${PaymentReference2}">
+
+<PaymentDetails AuthAvs="${AuthAvs}" AuthCode="${AuthCode}" AuthReturnMessage="" ChargeType="${ChargeType}" AuthTime="${AuthTime}" AuthorizationExpirationDate="${AuthorizationExpirationDate}" RequestAmount="${RequestAmount}" AuthorizationID="${AuthorizationID}" AuthReturnFlag="${AuthReturnFlag}" CVVAuthCode="${CVVAuthCode}" ProcessedAmount="${ProcessedAmount}"/>
+
+<PersonInfoBillTo AddressLine1="${Address1}" City="${City}" Country="${Country}"  DayPhone="${PhoneNo}" FirstName="${FirstName}" LastName="${LastName}" 
+State="${State}" ZipCode="${ZipCode}"/>	
+</PaymentMethod>
+</PaymentMethods>
+
+
+<OrderDates>
+<OrderDate DateTypeId="${DateTypeId}" ActualDate="${ActualDate}"/>
+</OrderDates>
+
+<Promotions Reset="N">
+ <Promotion DenialReason="" Description="${Description}" PromotionApplied="${PromotionApplied}" PromotionId="${PromotionId}" PromotionType="${PromotionType}"/>
+</Promotions>
+
+</Order>

@@ -1,0 +1,14 @@
+<Container ASNFlag="" IsDropShipContainer="N" ContainerNo="${TrackingNo}" TrackingNo="${TrackingNo}"> 
+ <ContainerActivities> 
+  <ContainerActivity ActivityTimeStamp="${ActivityTimeStamp}" ActivityCode="SH">
+   <Extn ExtnPkMSStatusDesc="" ExtnLocationCode="ShipNode" ExtnRTSDEvent="SHIPPED" ExtnReasonDescription="" />
+  </ContainerActivity>
+ </ContainerActivities> 
+ <Order OrderNo="${OrderNo}" DocumentType="0001" EnterpriseCode="${EnterpriseCode}">
+ <OrderLines>
+  <OrderLine OrderedQty="${Quantity}" SubLineNo="1" PrimeLineNo="1">
+   <Item PackItemID="" ItemID="${ItemID}"/>
+  </OrderLine>
+ </OrderLines>
+ </Order>
+</Container>

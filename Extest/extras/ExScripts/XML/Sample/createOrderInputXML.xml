@@ -1,0 +1,10 @@
+<Order DocumentType="0001" EnterpriseCode="${EnterpriseCode}" OrderDate=""  CustomerEMailID="amrita.bhogal@expicient.com"  >
+<OrderLines>
+<OrderLine OrderedQty="2" PrimeLineNo="1" SubLineNo="1">
+   <LinePriceInfo IsPriceLocked="Y" UnitPrice="3"/>
+   <Item CostCurrency="USD" ItemID="Z1" ProductClass="GOOD" UnitCost="3" UnitOfMeasure="EACH"/>
+</OrderLine>
+</OrderLines>
+<PersonInfoShipTo AddressLine1="8100 Nations Way" AddressLine2="" City="JACKSONVILLE" Country="US" DayPhone="" EMailID="iarumugam@fanatics.com" FirstName="Smith" LastName="Smith" State="TX" ZipCode="32256"/>
+ <PersonInfoBillTo AddressLine1="8100 Nations Way" AddressLine2="" City="JACKSONVILLE" Country="US" DayPhone="" EMailID="Sanchit@expicient.com" FirstName="Smith" LastName="Smith" State="TX" ZipCode="32256"/>
+</Order>

@@ -1,0 +1,5 @@
+<Order DocumentType="0001" EnterpriseCode="MSH_NL" ModificationReasonCode="CSTWSH" OrderNo="${OrderNo}">
+<OrderLines>
+<OrderLine PrimeLineNo='1' SubLineNo='1' OrderedQty="${QtyToBeReserved}" Action="CANCEL" />
+</OrderLines>
+</Order>

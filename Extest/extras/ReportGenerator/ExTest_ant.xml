@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project basedir="." name="ExTest Ant Script" default="run-ExTest">
+	<property file="${basedir}/ExTest_ant.properties" />
+	<property name="ExTest.home" location="${ExTest.Home}" />
+	<property name="Mail.host" value="${Mail.Host}" />
+ 	<property name="Mail.port" value="${Mail.Port}" />
+ 	<property name="Mail.user" value="${Mail.User}" />
+ 	<property name="Mail.password" value="${Mail.Password}" />
+ 	<property name="Mail.from" value="${Mail.From}" />
+ 	<property name="Mail.to" value="${Mail.To}" />
+ 	<property name="Mail.replyto" value="${Mail.Replyto}" />
+ 	<property name="Mail.message" value="${Mail.Message}" />
+	<property name="Feature.detailedReport" value="${Feature.DetailedReport}" />
+	<property name="ExTest.reports" location="./Report" />
+	<property name="ExTest.TestCases.Directory1" location="${ExTest.TestCases.Directory1}" />
+	<!--<property name="ExTest.TestCases.Directory2" location="${ExTest.TestCases.Directory2}" />
+	<property name="ExTest.TestCases.Directory3" location="${ExTest.TestCases.Directory3}" />
+	<property name="ExTest.TestCases.Directory4" location="${ExTest.TestCases.Directory4}" />
+	<property name="ExTest.TestCases.Directory5" location="${ExTest.TestCases.Directory5}" /> -->
+	<path id="xslt.classpath">
+		<fileset dir="${ExTest.home}/lib" includes="xalan*.jar"/>
+		<fileset dir="${ExTest.home}/lib" includes="serializer*.jar"/>
+	</path>
+	
+	<!-- Should report include response data for failures? -->
+	<property name="show-data" value="y"/>
+
+	<property name="format" value="2.1"/>
+
+	<condition property="funcMode" value="true">
+		
+			<equals arg1="${show-data}" arg2="y"/>
+	
+	</condition>
+	
+	<!-- ExTEST TOOL FOR RUNNING TEST CASES -->
+
+	<target name="run-ExTest" >		
+		
+		<echo>******** Running ExTest TestCases *********</echo>
+		<!-- Delete .jtl file else it concatinates the existing report(.html) with the newly generated report -->
+		<delete file="${ExTest.reports}/ExTestResults.jtl"/>
+		<touch file="${ExTest.reports}/ExTestResults.jtl" />	
+		
+		<exec executable="reportGenerator.cmd">
+			<arg value="${ExTest.TestCases.Directory1}"/>
+			<arg value="${ExTest.home}"/>
+		</exec>		
+		
+		<!--
+		<exec executable="reportGenerator.cmd">
+			<arg value="${ExTest.TestCases.Directory2}"/>
+			<arg value="${ExTest.home}"/>
+		</exec>		
+
+		<exec executable="reportGenerator.cmd">
+			<arg value="${ExTest.TestCases.Directory3}"/>
+			<arg value="${ExTest.home}"/>
+		</exec>		
+
+		<exec executable="reportGenerator.cmd">
+			<arg value="${ExTest.TestCases.Directory4}"/>
+			<arg value="${ExTest.home}"/>
+		</exec>		
+
+		<exec executable="reportGenerator.cmd">
+			<arg value="${ExTest.TestCases.Directory5}"/>
+			<arg value="${ExTest.home}"/>
+		</exec>		-->
+
+		<tstamp>
+		<format property="timestamp" pattern="yyyy-MM-dd_HH-mm-ss"/>
+		</tstamp>
+		
+		
+		<!-- Generating Report -->
+		<xslt in="${ExTest.reports}/ExTestResults.jtl" out="${ExTest.reports}/ExTestResults_${timestamp}.html"	
+			style="${ExTest.reports}/exTest-results-report.xsl">
+			<param name="showData" expression="${show-data}"/>
+			<param name="titleReport" expression="${report.title}"/>
+			<param name="dateReport" expression="${report.datestamp}"/>
+			</xslt>
+	</target>
+		<!-- Mail Notification -->
+
+	<target description="Send the email" name="Mail" depends="run-ExTest">
+                                <mail mailhost="${Mail.host}" mailport="${Mail.port}" password="${Mail.password}" ssl="true" subject="ExTest Test Report Generated" user="${Mail.user}">
+                                                <from address="${Mail.from}"></from>
+                                                <replyto address="${Mail.replyto}"></replyto>
+                                <to address="${Mail.to}"></to>
+                                  <message>${Mail.message}</message>
+                   </mail>
+     </target>	
+</project>

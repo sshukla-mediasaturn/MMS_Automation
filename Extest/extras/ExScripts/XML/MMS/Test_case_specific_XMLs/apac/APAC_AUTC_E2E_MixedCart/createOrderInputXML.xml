@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Order AllocationRuleID="PAN_SCH" BillToID="SA00602888" BuyerUserId="smithag@yopmail.com" CustomerEMailID="smithag@yopmail.com" EnterpriseCode="AU" EntryType="WEB" BypassPricing="Y" OrderNo="PANAU${orderno}" OrderDate="2019-09-30T07:33:00.000Z" SellerOrganizationCode="AU" PaymentStatus="PAID">
+  <Extn ExtnOrderLang="en" ExtnCRMCustomerID="0b114821-7818-4b18-9851-84a7e26bf986" ExtnCRMGuestCheckout="false"/>
+  <OrderLines>
+    <OrderLine PrimeLineNo="1" OrderedQty="1.0" CarrierServiceCode="Standard" SubLineNo="1" LineType="REG">
+      <Extn ExtnFinalSale="N" ExtnLineNetPrice="101.10" ExtnImage="https://dev-au.pandora.net/dw/image/v2/AAWM_DEV/on/demandware.static/-/Sites-pandora-master-catalog/default/dwa894a7eb/images/productimages/767249-1.jpg?sw=120&amp;sh=120&amp;sm=fit" ExtnColor="No Colour" ExtnSize="one size"/>
+      <Item ItemID="${item1}" ItemShortDesc="PANDORA Shine Floating Locket Hanging Charm" UnitOfMeasure="EACH" ProductClass="GOOD"/>
+      <LinePriceInfo IsPriceLocked="Y" TaxableFlag="N" UnitPrice="129.00"/>
+      <LineCharges>
+        <LineCharge ChargeCategory="ITEM_DISCOUNT" ChargeName="itemlevelprmotion" ChargePerUnit="12.90" ChargePerLine="0.00" Reference="OMScampaign"/>
+        <LineCharge ChargeCategory="ORDER_DISCOUNT" ChargeName="orderlevelfixedpromotion" ChargePerUnit="15" ChargePerLine="0" Reference=""/>
+      </LineCharges>
+      <LineTaxes>
+        <LineTax ChargeName="" ChargeCategory="INFO_TAX" Tax="9.19" Reference1="9.19" Reference2="0.1" TaxName="GST"/>
+      </LineTaxes>
+       <PersonInfoShipTo AddressLine1="56 Sydney St" City="BAYVIEW HEIGHTS" State="QLD" Country="AU" DayPhone="8123938514" FirstName="Smitha" LastName="Gunjal" ZipCode="4868"/>
+    </OrderLine>
+    <OrderLine PrimeLineNo="2" OrderedQty="1.0" CarrierServiceCode="Standard" SubLineNo="1" LineType="GWP">
+      <Extn ExtnFinalSale="N" ExtnLineNetPrice="0.00" ExtnImage="https://dev-au.pandora.net/dw/image/v2/AAWM_DEV/on/demandware.static/-/Sites-pandora-master-catalog/default/dw71a042c6/images/productimages/167158CZ-1.jpg?sw=120&amp;sh=120&amp;sm=fit" ExtnColor="Clear" ExtnSize="5000"/>
+      <Item ItemID="${item2}" ItemShortDesc="PANDORA Shine My Princess Tiara Ring" UnitOfMeasure="EACH" ProductClass="GOOD"/>
+      <LinePriceInfo IsPriceLocked="Y" TaxableFlag="N" UnitPrice="129.00"/>
+      <LineCharges>
+        <LineCharge ChargeCategory="ITEM_DISCOUNT" ChargeName="freebonuspdt" ChargePerUnit="129.00" ChargePerLine="0.00" Reference="OMScampaign"/>
+      </LineCharges>
+      <LineTaxes>
+        <LineTax ChargeName="" ChargeCategory="INFO_TAX" Tax="0.00" Reference1="0.00" Reference2="0.1" TaxName="GST"/>
+      </LineTaxes>
+       <PersonInfoShipTo AddressLine1="56 Sydney St" City="BAYVIEW HEIGHTS" State="QLD" Country="AU" DayPhone="8123938514" FirstName="Smitha" LastName="Gunjal" ZipCode="4868"/>
+    </OrderLine>
+    <OrderLine PrimeLineNo="3" OrderedQty="1.0" CarrierServiceCode="Standard" SubLineNo="1" LineType="EGC">
+      <Extn ExtnFinalSale="N" ExtnLineNetPrice="500.00" ExtnImage="https://au.pandora.net/on/demandware.static/Sites-en-AU-Site/-/default/dwe5a88ea0/images/mail/PGC-1.jpg"/>
+      <Item ItemID="${item3}" ItemShortDesc="ECOM AU e" UnitOfMeasure="EACH" ProductClass="GOOD"/>
+      <LinePriceInfo IsPriceLocked="Y" TaxableFlag="N" UnitPrice="500.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeName="" ChargeCategory="INFO_TAX" Tax="0.00" Reference1="0.00" TaxName="GST"/>
+      </LineTaxes>
+      <Instructions>
+        <Instruction InstructionType="GIFTMSG" InstructionText="Happy Birthday Prasuna"/>
+        <Instruction InstructionType="GIFTSENDER" InstructionText="Smitha"/>
+        <Instruction InstructionType="GIFTREMAIL" InstructionText="smithag@yopmail.com"/>
+      </Instructions>
+      <PersonInfoShipTo EMailID="smithag@yopmail.com" FirstName="PRASUNA"/>
+    </OrderLine>
+  </OrderLines>
+  <PriceInfo Currency="AUD" EnterpriseCurrency="AUD"/>
+ <PersonInfoShipTo AddressLine1="56 Sydney St" City="BAYVIEW HEIGHTS" State="QLD" Country="AU" DayPhone="8123938514" FirstName="Smitha" LastName="Gunjal" ZipCode="4868"/>
+   <HeaderCharges>
+    <HeaderCharge ChargeAmount="8.95" ChargeCategory="SHIPPING" ChargeName="SHIPPING"/>
+    <HeaderCharge ChargeAmount="8.95" ChargeCategory="SHIPPING_DISCOUNT" ChargeName="FreeShipping"/>
+  </HeaderCharges>
+  <HeaderTaxes>
+    <HeaderTax Tax="0.00" TaxName="GST" Reference1="0.00" ChargeCategory="INFO_TAX" ChargeName="SHIPPING"/>
+  </HeaderTaxes>
+  <PersonInfoShipTo AddressLine1="56 Sydney St" City="BAYVIEW HEIGHTS" State="QLD" Country="AU" DayPhone="8123938514" FirstName="Smitha" LastName="Gunjal" ZipCode="4868"/>
+  <PaymentMethods>
+    <PaymentMethod PaymentType="CREDIT_CARD" UnlimitedCharges="N" CreditCardNo="XXXX-XXXX-XXXX-0005" CreditCardType="AMEX" CreditCardExpDate="10/2020" DisplayCreditCardNo="0005">
+      <PaymentDetailsList>
+        <PaymentDetails ChargeType="CHARGE" AuthCode="678999" RequestId="5659407836616386303008" AuthorizationID="5659407812596371503011" ProcessedAmount="601.10" RequestAmount="601.10"/>
+      </PaymentDetailsList>
+    </PaymentMethod>
+  </PaymentMethods>
+  <CustomAttributes ViiOrderNo="142432"/>
+</Order>

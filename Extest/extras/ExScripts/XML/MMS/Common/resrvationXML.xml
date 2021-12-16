@@ -1,0 +1,8 @@
+<Promise EnterpriseCode="MSH_NL" OrganizationCode="MM_NL"  OptimizationType="01">
+	<ReservationParameters  ReservationID="${OrderNo}f8-72eb-4272-9fd9-40bfb1d96beb" AllowPartialReservation="N"/>
+	<ShipToAddress AddressLine1="dsagfqe" AddressLine6="" City="Wien" Country="NL" ZipCode="112a0"/>
+	<PromiseLines>
+		<PromiseLine ItemID="${item1}" UnitOfMeasure="EACH" RequiredQty="${RequiredQty}" LevelOfService="MSH_HOME_DEL" 
+		FulfillmentType="MSH_HOMEDEL" DeliveryMethod="SHP" LineId="1" />
+	</PromiseLines>
+</Promise>

@@ -1,0 +1,8 @@
+<Shipment Action="" AssignedToUserId="${StoreUser}"
+    BackOrderRemovedQuantity="Y"
+    DisplayLocalizedFieldInLocale="en_US_EST" IgnoreOrdering="Y" ShipmentKey="${ShipmentKey}">
+    <ShipmentLines>
+        <ShipmentLine BackroomPickedQuantity="0" Quantity="0"
+            ShipmentLineKey="${ShipmentLineKey}" ShortageQty="${OrderedQty}"/>
+    </ShipmentLines>
+</Shipment>

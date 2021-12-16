@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Order AllocationRuleID="PAN_SCH" BillToID="00394504" BuyerUserId="monika123@yopmail.com" BypassPricing="Y" CustomerEMailID="monika123@yopmail.com" EnterpriseCode="NZ" EntryType="WEB" FulfillmentType="PandoraFT" IsPriceLocked="Y" OrderDate="${CurrenttimeStamp}" OrderNo="PANNZ${orderno}" PaymentStatus="PAID" SellerOrganizationCode="NZ">
+    <Extn ExtnCRMCustomerID="8df20dbe-4803-439b-aacd-58a66681d23c" ExtnCRMGuestCheckout="true" ExtnOrderLang="en" />
+    <OrderLines>
+        <OrderLine CarrierServiceCode="Standard" LineType="REG" OrderedQty="2.0" PrimeLineNo="1" SubLineNo="1">
+            <Extn ExtnColor="Clear" ExtnFinalSale="N" ExtnImage="https://dev-nz.pandora.net/dw/image/v2/AAWM_DEV/on/demandware.static/-/Sites-pandora-master-catalog/default/dwe716b85e/images/productimages/main/${item1}_RGB.JPG?sw=120&amp;sh=120&amp;sm=fit&amp;sfrm=png&amp;bgcolor=F5F5F5" ExtnLineNetPrice="69.00" ExtnSize="one size" />
+            <Item ItemID="${item1}" ItemShortDesc="Pandora Reflexions Crown Clip Charm" ProductClass="GOOD" UnitOfMeasure="EACH" />
+            <LinePriceInfo IsPriceLocked="Y" TaxableFlag="N" UnitPrice="69.00" />
+            <LineCharges />
+            <LineTaxes>
+                <LineTax ChargeCategory="INFO_TAX" ChargeName="" Reference1="18.00" Reference2="0.15" Tax="18.00" TaxName="GST" />
+            </LineTaxes>
+            <PersonInfoShipTo AddressLine1="21 Greens Road RD" City="Ruawai" Country="NZ" DayPhone="9845678934" FirstName="Monika" LastName="R" State="NTL" ZipCode="0592" />
+        </OrderLine>
+    </OrderLines>
+    <PriceInfo Currency="NZD" EnterpriseCurrency="NZD" />
+    <PersonInfoBillTo AddressLine1="21 Greens Road RD" City="Ruawai" Country="NZ" DayPhone="9845678934" EMailID="monika123@yopmail.com" FirstName="Monika" LastName="R" State="NTL" ZipCode="0592" />
+    <HeaderCharges>
+        <HeaderCharge ChargeAmount="15" ChargeCategory="SHIPPING" ChargeName="SHIPPING" />
+    </HeaderCharges>
+    <HeaderTaxes>
+        <HeaderTax ChargeCategory="INFO_TAX" ChargeName="SHIPPING" Reference1="1.96" Tax="1.96" TaxName="GST" />
+    </HeaderTaxes>
+    <PersonInfoShipTo AddressLine1="21 Greens Road RD" City="Ruawai" Country="NZ" DayPhone="9845678934" FirstName="Monika" LastName="R" State="NTL" ZipCode="0592" />
+    <PaymentMethods>
+        <PaymentMethod PaymentReference4="5286" PaymentType="GIFT_CARD" SvcNo="502904120000038149" UnlimitedCharges="N">
+            <PaymentDetailsList>
+                <PaymentDetails ChargeType="CHARGE" HoldAgainstBook="Y" ProcessedAmount="153.00" RequestAmount="153.00" />
+            </PaymentDetailsList>
+        </PaymentMethod>
+    </PaymentMethods>
+</Order>

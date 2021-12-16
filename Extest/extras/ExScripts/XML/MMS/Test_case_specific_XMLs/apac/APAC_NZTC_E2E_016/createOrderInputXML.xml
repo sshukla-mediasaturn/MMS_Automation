@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Order AllocationRuleID="PAN_SCH" BillToID="00376003" BuyerUserId="monika123@yopmail.com" BypassPricing="Y" CustomerEMailID="monika123@yopmail.com" EnterpriseCode="NZ" EntryType="WEB" FulfillmentType="PandoraFT" IsPriceLocked="Y" OrderDate="${CurrenttimeStamp}" OrderNo="PANNZ${orderno}" PaymentStatus="PAID" SellerOrganizationCode="NZ">
+    <Extn ExtnCRMCustomerID="b0cfeb4e-ea0c-40c9-aa88-b29787b5ec68" ExtnOrderLang="en" />
+    <OrderLines>
+        <OrderLine CarrierServiceCode="90000007" LineType="REG" OrderedQty="2.0" PrimeLineNo="1" SubLineNo="1">
+            <Extn ExtnColor="No Colour" ExtnFinalSale="N" ExtnImage="https://dev-nz.pandora.net/dw/image/v2/AAWM_DEV/on/demandware.static/-/Sites-pandora-master-catalog/default/dwa894a7eb/images/productimages/${item1}-1.jpg?sw=120&amp;sh=120&amp;sm=fit" ExtnLineNetPrice="259.00" ExtnSize="one size" />
+            <Item ItemID="${item1}" ItemShortDesc="PANDORA Shine Floating Locket Hanging Charm" ProductClass="GOOD" UnitOfMeasure="EACH" />
+            <LinePriceInfo IsPriceLocked="Y" TaxableFlag="N" UnitPrice="149.00" />
+            <LineCharges>
+                <LineCharge ChargeCategory="ITEM_DISCOUNT" ChargeName="itemlevelprmotion" ChargePerLine="0.00" ChargePerUnit="14.90" Reference="OMScampaign" />
+                <LineCharge ChargeCategory="ORDER_DISCOUNT" ChargeName="orderlevelfixedpromotion" ChargePerLine="0.00" ChargePerUnit="4.60" Reference="" />
+            </LineCharges>
+            <LineTaxes>
+                <LineTax ChargeCategory="INFO_TAX" ChargeName="" Reference1="33.78" Reference2="0.15" Tax="33.78" TaxName="GST" />
+            </LineTaxes>
+            <PersonInfoShipTo AddressLine1="445 Mount Eden Road" City="Mount Eden" Country="NZ" DayPhone="9663330092" FirstName="Monika" LastName="R" State="AUK" ZipCode="0600" />
+        </OrderLine>
+        <OrderLine CarrierServiceCode="90000007" LineType="REG" OrderedQty="1.0" PrimeLineNo="2" SubLineNo="1">
+            <Extn ExtnColor="Clear" ExtnFinalSale="N" ExtnImage="https://dev-nz.pandora.net/dw/image/v2/AAWM_DEV/on/demandware.static/-/Sites-pandora-master-catalog/default/dw7cdd998f/images/productimages/${item2}-1.jpg?sw=120&amp;sh=120&amp;sm=fit" ExtnLineNetPrice="163.20" ExtnSize="4800" />
+            <Item ItemID="${item2}" ItemShortDesc="PANDORA Shine Hearts of PANDORA Ring" ProductClass="GOOD" UnitOfMeasure="EACH" />
+            <LinePriceInfo IsPriceLocked="Y" TaxableFlag="N" UnitPrice="169.00" />
+            <LineCharges>
+                <LineCharge ChargeCategory="ORDER_DISCOUNT" ChargeName="orderlevelfixedpromotion" ChargePerLine="0.00" ChargePerUnit="5.80" Reference="" />
+            </LineCharges>
+            <LineTaxes>
+                <LineTax ChargeCategory="INFO_TAX" ChargeName="" Reference1="21.29" Reference2="0.15" Tax="21.29" TaxName="GST" />
+            </LineTaxes>
+            <PersonInfoShipTo AddressLine1="445 Mount Eden Road" City="Mount Eden" Country="NZ" DayPhone="9663330092" FirstName="Monika" LastName="R" State="AUK" ZipCode="0600" />
+        </OrderLine>
+    </OrderLines>
+    <PriceInfo Currency="NZD" EnterpriseCurrency="NZD" />
+    <PersonInfoBillTo AddressLine1="445 Mount Eden Road" City="Mount Eden" Country="NZ" DayPhone="9663330092" EMailID="monika123@yopmail.com" FirstName="Monika" LastName="R" State="AUK" ZipCode="0600" />
+    <HeaderCharges>
+        <HeaderCharge ChargeAmount="15" ChargeCategory="SHIPPING" ChargeName="SHIPPING" />
+    </HeaderCharges>
+    <HeaderTaxes>
+        <HeaderTax ChargeCategory="INFO_TAX" ChargeName="SHIPPING" Reference1="1.96" Tax="1.96" TaxName="GST" />
+    </HeaderTaxes>
+    <PersonInfoShipTo AddressLine1="445 Mount Eden Road" City="Mount Eden" Country="NZ" DayPhone="9663330092" FirstName="Monika" LastName="R" State="AUK" ZipCode="0600" />
+    <PaymentMethods>
+        <PaymentMethod CreditCardNo="5663557521066010203012" CreditCardType="PAYPAL" PaymentType="PAYPAL" UnlimitedCharges="N">
+            <PaymentDetailsList>
+                <PaymentDetails AuthAvs="3" AuthorizationID="5663557521066010203012" ChargeType="CHARGE" HoldAgainstBook="Y" InternalReturnMessage="AhjrrwSTMwWmRpiDcdOEClGn8UGTjKNP4oM5FiohVZEggvBpJlukB4jL6TMwWg76ca8wnCAAxwuc" ProcessedAmount="437.20" RequestAmount="437.20" />
+            </PaymentDetailsList>
+        </PaymentMethod>
+    </PaymentMethods>
+</Order>

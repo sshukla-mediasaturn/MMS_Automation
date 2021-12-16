@@ -1,0 +1,12 @@
+<Items ApplyDifferences="${ApplyDifferences}" CompleteInventoryFlag="${CompleteInventoryFlag}" ShipNode="${ShipNode}" ValidateItems="${ValidateItems}" YantraMessageGroupID="${groupID}">
+	<Item InventoryOrganizationCode="${InventoryOrganizationCode}" ItemID="${ItemID1}" ProductClass="" UnitOfMeasure="${UnitOfMeasure1}">
+		<Supplies>
+			<Supply AvailabilityType="TRACK" Quantity="${Quantity1}" ShipByDate="" SupplyType="ONHAND" />	
+		</Supplies>
+	</Item>
+	<Item InventoryOrganizationCode="${InventoryOrganizationCode}" ItemID="${ItemID2}" ProductClass="" UnitOfMeasure="${UnitOfMeasure2}">
+		<Supplies>
+			<Supply AvailabilityType="TRACK" Quantity="${Quantity2}" ShipByDate="" SupplyType="ONHAND" />	
+		</Supplies>
+	</Item>
+</Items>

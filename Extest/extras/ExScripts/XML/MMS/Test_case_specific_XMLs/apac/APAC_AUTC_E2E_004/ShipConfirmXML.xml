@@ -1,0 +1,22 @@
+<Shipment CarrierServiceCode="Standard" DocumentType="0001" EnterpriseCode="AU" ExpectedShipmentDate="2019-10-01T00:00:00-00:00" SCAC="AUSTRALIA POST" SellerOrganizationCode="AU" ShipNode="AUECOMDC" ShipmentNo="${orderno}11" TrackingNo="${orderno}9876">
+    <Containers>
+        <Container TrackingNo="${orderno}9876">
+            <ContainerDetails>
+                <ContainerDetail Quantity="1">
+                    <ShipmentLine DocumentType="0001" ItemID="${itm}" OrderNo="PANAU${orderno}" PrimeLineNo="1" ProductClass="GOOD" Quantity="1" ReleaseNo="${rel}" SubLineNo="1" UnitOfMeasure="EACH" />
+                </ContainerDetail>
+            </ContainerDetails>
+        </Container>
+  <Container TrackingNo="${orderno}9876">
+            <ContainerDetails>
+                <ContainerDetail Quantity="1">
+                    <ShipmentLine DocumentType="0001" ItemID="${itm1}" OrderNo="PANAU${orderno}" PrimeLineNo="2" ProductClass="GOOD" Quantity="1" ReleaseNo="${rel}" SubLineNo="1" UnitOfMeasure="EACH" />
+                </ContainerDetail>
+            </ContainerDetails>
+        </Container>
+       </Containers>
+    <ShipmentLines>
+    <ShipmentLine ItemID="${itm}" OrderNo="PANAU${orderno}" PrimeLineNo="1" ProductClass="GOOD" Quantity="1" ReleaseNo="${rel}" SubLineNo="1" UnitOfMeasure="EACH" />
+     <ShipmentLine ItemID="${itm1}" OrderNo="PANAU${orderno}" PrimeLineNo="2" ProductClass="GOOD" Quantity="1" ReleaseNo="${rel}" SubLineNo="1" UnitOfMeasure="EACH" />
+        </ShipmentLines>
+</Shipment>

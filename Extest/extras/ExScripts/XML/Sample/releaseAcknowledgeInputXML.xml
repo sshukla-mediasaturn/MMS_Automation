@@ -1,0 +1,3 @@
+<OrderRelease ConsolidatorAddressCode="${ConsolidatorAddressCode}" DocumentType="0001" EnterpriseCode="${EnterpriseCode}" 
+OrderNo="${OrderNo}" PKMSReceiptTimeStamp="${PKMSReceiptTimeStamp}" 
+ShipAdviceNo="${ShipAdviceNo}" ShipNode="${ShipNode}" TransactionType="ACKNOWLEDGEMENT"/>

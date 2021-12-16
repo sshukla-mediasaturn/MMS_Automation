@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Order AllocationRuleID="PAN_SCH" BillToID="SA00602890" BuyerUserId="smithag@yopmail.com" CustomerEMailID="smithag@yopmail.com" EnterpriseCode="AU" EntryType="WEB" BypassPricing="Y" OrderNo="PANAU${orderno}" OrderDate="2019-09-30T07:35:30.000Z" SellerOrganizationCode="AU" PaymentStatus="PAID">
+  <Extn ExtnOrderLang="en" ExtnCRMCustomerID="5187182d-b6cb-41a5-9fc6-7e4c12620db7" ExtnCRMGuestCheckout="false"/>
+  <OrderLines>
+    <OrderLine PrimeLineNo="1" OrderedQty="1.0" CarrierServiceCode="Express" SubLineNo="1" LineType="REG">
+      <Extn ExtnFinalSale="N" ExtnLineNetPrice="63.60" ExtnImage="https://dev-au.pandora.net/dw/image/v2/AAWM_DEV/on/demandware.static/-/Sites-pandora-master-catalog/default/dwe19c5ec3/images/productimages/167105-1.jpg?sw=120&amp;sh=120&amp;sm=fit" ExtnColor="No Colour" ExtnSize="4800"/>
+      <Item ItemID="${item1}" ItemShortDesc="PANDORA Shine Linked Love Ring" UnitOfMeasure="EACH" ProductClass="GOOD"/>
+      <LinePriceInfo IsPriceLocked="Y" TaxableFlag="N" UnitPrice="79.00"/>
+      <LineCharges>
+        <LineCharge ChargeCategory="ITEM_DISCOUNT" ChargeName="itemlevelprmotion" ChargePerUnit="7.90" ChargePerLine="0.00" Reference="OMScampaign"/>
+        <LineCharge ChargeCategory="ORDER_DISCOUNT" ChargeName="orderlevelfixedpromotion" ChargePerUnit="7.50" ChargePerLine="0" Reference=""/>
+      </LineCharges>
+      <LineTaxes>
+        <LineTax ChargeName="" ChargeCategory="INFO_TAX" Tax="5.78" Reference1="5.78" Reference2="0.1" TaxName="GST"/>
+      </LineTaxes>
+      <PersonInfoShipTo FirstName="Smitha" LastName="Gunjal" AddressLine1="Hillcrest Reserve Lower" City="Bayswater" State="WA" Country="AU" DayPhone="9663330092" ZipCode="6053"/>
+    </OrderLine>
+    <OrderLine PrimeLineNo="2" OrderedQty="1.0" CarrierServiceCode="Express" SubLineNo="1" LineType="REG">
+      <Extn ExtnFinalSale="N" ExtnLineNetPrice="63.60" ExtnImage="https://dev-au.pandora.net/dw/image/v2/AAWM_DEV/on/demandware.static/-/Sites-pandora-master-catalog/default/dwc6db2566/images/productimages/767160-1.jpg?sw=120&amp;sh=120&amp;sm=fit" ExtnColor="White" ExtnSize="one size"/>
+      <Item ItemID="${item2}" ItemShortDesc="PANDORA Shine White Waves Murano Glass Charm" UnitOfMeasure="EACH" ProductClass="GOOD"/>
+      <LinePriceInfo IsPriceLocked="Y" TaxableFlag="N" UnitPrice="79.00"/>
+      <LineCharges>
+        <LineCharge ChargeCategory="ITEM_DISCOUNT" ChargeName="itemlevelprmotion" ChargePerUnit="7.90" ChargePerLine="0.00" Reference="OMScampaign"/>
+        <LineCharge ChargeCategory="ORDER_DISCOUNT" ChargeName="orderlevelfixedpromotion" ChargePerUnit="7.50" ChargePerLine="0" Reference=""/>
+      </LineCharges>
+      <LineTaxes>
+        <LineTax ChargeName="" ChargeCategory="INFO_TAX" Tax="5.78" Reference1="5.78" Reference2="0.1" TaxName="GST"/>
+      </LineTaxes>
+      <PersonInfoShipTo FirstName="Smitha" LastName="Gunjal" AddressLine1="Hillcrest Reserve Lower" City="Bayswater" State="WA" Country="AU" DayPhone="9663330092" ZipCode="6053"/>
+    </OrderLine>
+    <OrderLine PrimeLineNo="3" OrderedQty="1.0" CarrierServiceCode="Express" SubLineNo="1" LineType="GWP">
+      <Extn ExtnFinalSale="N" ExtnLineNetPrice="0.00" ExtnImage="https://dev-au.pandora.net/dw/image/v2/AAWM_DEV/on/demandware.static/-/Sites-pandora-master-catalog/default/dw71a042c6/images/productimages/167158CZ-1.jpg?sw=120&amp;sh=120&amp;sm=fit" ExtnColor="Clear" ExtnSize="5000"/>
+      <Item ItemID="${item3}" ItemShortDesc="PANDORA Shine My Princess Tiara Ring" UnitOfMeasure="EACH" ProductClass="GOOD"/>
+      <LinePriceInfo IsPriceLocked="Y" TaxableFlag="N" UnitPrice="129.00"/>
+      <LineCharges>
+        <LineCharge ChargeCategory="ITEM_DISCOUNT" ChargeName="freebonuspdt" ChargePerUnit="129.00" ChargePerLine="0.00" Reference="OMScampaign"/>
+      </LineCharges>
+      <LineTaxes>
+        <LineTax ChargeName="" ChargeCategory="INFO_TAX" Tax="0.00" Reference1="0.00" Reference2="0.1" TaxName="GST"/>
+      </LineTaxes>
+      <PersonInfoShipTo FirstName="Smitha" LastName="Gunjal" AddressLine1="Hillcrest Reserve Lower" City="Bayswater" State="WA" Country="AU" DayPhone="9663330092" ZipCode="6053"/>
+    </OrderLine>
+  </OrderLines>
+  <PriceInfo Currency="AUD" EnterpriseCurrency="AUD"/>
+  <PersonInfoBillTo FirstName="Smitha" LastName="Gunjal" AddressLine1="Hillcrest Reserve Lower" ZipCode="6053" City="Bayswater" State="WA" Country="AU" DayPhone="9663330092" EMailID="smithag@yopmail.com"/>
+  <HeaderCharges>
+    <HeaderCharge ChargeAmount="12.95" ChargeCategory="SHIPPING" ChargeName="SHIPPING"/>
+    <HeaderCharge ChargeAmount="12.95" ChargeCategory="SHIPPING_DISCOUNT" ChargeName="FreeShipping"/>
+  </HeaderCharges>
+  <HeaderTaxes>
+    <HeaderTax Tax="0.00" TaxName="GST" Reference1="0.00" ChargeCategory="INFO_TAX" ChargeName="SHIPPING"/>
+  </HeaderTaxes>
+  <PersonInfoShipTo AddressLine1="Hillcrest Reserve Lower" City="Bayswater" State="WA" Country="AU" DayPhone="9663330092" FirstName="Smitha" LastName="Gunjal" ZipCode="6053"/>
+  <PaymentMethods>
+    <PaymentMethod PaymentType="PAYPAL" UnlimitedCharges="N" CreditCardNo="4A340728V5190815E" CreditCardType="PAYPAL">
+      <PaymentDetailsList>
+        <PaymentDetails AuthCode="9L718038VK997423F" AuthAvs="3" AuthorizationID="5659409362876419903011" ChargeType="CHARGE" RequestId="5659409454636229103012" InternalReturnMessage="AhjrrwSTMswVDrNAyY4jS1F5WyONfqLytkcu7CQdjYSBkMmkmW6QHa3hJMyzA/DKX4p4uEAANwVu" ProcessedAmount="127.20" HoldAgainstBook="Y" RequestAmount="127.20"/>
+      </PaymentDetailsList>
+    </PaymentMethod>
+  </PaymentMethods>
+</Order>

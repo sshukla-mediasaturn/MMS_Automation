@@ -1,0 +1,11 @@
+<Shipment  DocumentType="0001"  ReleaseNo="1" 
+OrderHeaderKey="${OrderHeaderKey}" EnterpriseCode="${EnterpriseCode}" 
+SellerOrganizationCode="${EnterpriseCode}"
+ ShipNode="${ShipNode}" >
+
+<ShipmentLines>
+	<ShipmentLine DocumentType="0001" 
+ReleaseNo="1" OrderHeaderKey="${OrderHeaderKey}"  
+Quantity="${OrderedQty}" PrimeLineNo="1" SubLineNo="1"/>
+</ShipmentLines>
+</Shipment>

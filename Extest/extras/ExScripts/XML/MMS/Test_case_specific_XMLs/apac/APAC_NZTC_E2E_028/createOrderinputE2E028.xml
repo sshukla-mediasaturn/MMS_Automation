@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Order AllocationRuleID="PAN_SCH" BillToID="SA00620887" BuyerUserId="ashwin@yopmail.com" CustomerEMailID="ashwin@yopmail.com" EnterpriseCode="AU" EntryType="WEB" BypassPricing="Y" OrderNo="PANNZ${orderno}" OrderDate="2019-09-30T05:04:59.033Z" SellerOrganizationCode="AU" PaymentStatus="PAID">
+  <Extn ExtnOrderLang="en" ExtnCRMCustomerID="b4fcaa7e-6bed-4c97-8300-f67c6165c09d" ExtnCRMGuestCheckout="true"/>
+  <OrderLines>
+    <OrderLine PrimeLineNo="1" OrderedQty="2.0" CarrierServiceCode="Standard" SubLineNo="1" LineType="REG">
+      <Extn ExtnFinalSale="N" ExtnLineNetPrice="59.00" ExtnImage="https://dev-au.pandora.net/dw/image/v2/AAWM_DEV/on/demandware.static/-/Sites-pandora-master-catalog/default/dwcca27320/images/productimages/main/${item1}_RGB.JPG?sw=120&amp;sh=120&amp;sm=fit&amp;sfrm=png&amp;bgcolor=F5F5F5" ExtnColor="No Colour" ExtnSize="one size"/>
+      <Item ItemID="${item1}" ItemShortDesc="Filigree &amp; Beaded Heart Charm" UnitOfMeasure="EACH" ProductClass="GOOD"/>
+      <LinePriceInfo IsPriceLocked="Y" TaxableFlag="N" UnitPrice="59.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeName="" ChargeCategory="INFO_TAX" Tax="16.09" Reference1="16.09" Reference2="0.1" TaxName="GST"/>
+      </LineTaxes>
+      <PersonInfoShipTo FirstName="Ashwin" LastName="Kumar" AddressLine1="14 Alexander Kelly Dr" City="NOARLUNGA CENTRE" State="SA" Country="AU" DayPhone="9008200944" ZipCode="5168"/>
+    </OrderLine>
+  </OrderLines>
+  <PriceInfo Currency="AUD" EnterpriseCurrency="AUD"/>
+  <PersonInfoBillTo FirstName="Ashwin" LastName="Kumar" AddressLine1="14 Alexander Kelly Dr" ZipCode="5168" City="NOARLUNGA CENTRE" State="SA" Country="AU" DayPhone="9008200944" EMailID="ashwin@yopmail.com"/>
+  <HeaderCharges>
+    <HeaderCharge ChargeAmount="8.95" ChargeCategory="SHIPPING" ChargeName="SHIPPING"/>
+  </HeaderCharges>
+  <HeaderTaxes>
+    <HeaderTax Tax="0.81" TaxName="GST" Reference1="0.81" ChargeCategory="INFO_TAX" ChargeName="SHIPPING"/>
+  </HeaderTaxes>
+  <PersonInfoShipTo AddressLine1="14 Alexander Kelly Dr" City="NOARLUNGA CENTRE" State="SA" Country="AU" DayPhone="9008200944" FirstName="Ashwin" LastName="Kumar" ZipCode="5168"/>
+  <PaymentMethods>
+    <PaymentMethod PaymentReference4="1153" PaymentType="GIFT_CARD" SvcNo="502904100000219527" UnlimitedCharges="N">
+      <PaymentDetailsList>
+        <PaymentDetails ChargeType="CHARGE" HoldAgainstBook="Y" ProcessedAmount="185.95" RequestAmount="185.95"/>
+      </PaymentDetailsList>
+    </PaymentMethod>
+  </PaymentMethods>
+</Order>

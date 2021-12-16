@@ -1,0 +1,1347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.9" jmeter="3.0 r2016">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="host" elementType="Argument">
+            <stringProp name="Argument.name">host</stringProp>
+            <stringProp name="Argument.value">fom-test-nl.media-saturn.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="baseDir" elementType="Argument">
+            <stringProp name="Argument.name">baseDir</stringProp>
+            <stringProp name="Argument.value">${__BeanShell(import org.apache.jmeter.services.FileServer; FileServer.getFileServer().getBaseDir();)}${__BeanShell(File.separator,)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <kg.apc.jmeter.config.VariablesFromCSV guiclass="kg.apc.jmeter.config.VariablesFromCSVGui" testclass="kg.apc.jmeter.config.VariablesFromCSV" testname="Fetch details from Global Config" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+        <stringProp name="filename">${baseDir}\..\..\MMS_Credentials_Properties.properties</stringProp>
+        <stringProp name="variablesPrefix"></stringProp>
+        <stringProp name="delimiter">=</stringProp>
+        <intProp name="skipLines">0</intProp>
+        <boolProp name="storeSysProp">false</boolProp>
+      </kg.apc.jmeter.config.VariablesFromCSV>
+      <hashTree/>
+      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Fetch details from Test Cases Input CSV" enabled="true">
+        <stringProp name="delimiter">,</stringProp>
+        <stringProp name="fileEncoding"></stringProp>
+        <stringProp name="filename">${baseDir}\..\..\MMS_TestData_MultiLine.csv</stringProp>
+        <boolProp name="quotedData">true</boolProp>
+        <boolProp name="recycle">false</boolProp>
+        <stringProp name="shareMode">shareMode.all</stringProp>
+        <boolProp name="stopThread">true</boolProp>
+        <stringProp name="variableNames"></stringProp>
+      </CSVDataSet>
+      <hashTree/>
+      <ConfigTestElement guiclass="expicient.extest.jmeter.config.ExpSterlingEnvDefaultsConfigGui" testclass="ConfigTestElement" testname="MMS Environment Defaults" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="expicient.extest.jmeter.config.ExpSterlingEnvDefaultsConfigGui" testclass="Arguments" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="YFSEnvironment.userId" elementType="HTTPArgument">
+              <boolProp name="HTTPArgument.always_encode">false</boolProp>
+              <stringProp name="Argument.name">YFSEnvironment.userId</stringProp>
+              <stringProp name="Argument.value">${username}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+              <boolProp name="HTTPArgument.use_equals">true</boolProp>
+            </elementProp>
+            <elementProp name="YFSEnvironment.password" elementType="HTTPArgument">
+              <boolProp name="HTTPArgument.always_encode">false</boolProp>
+              <stringProp name="Argument.name">YFSEnvironment.password</stringProp>
+              <stringProp name="Argument.value">Summer2021,</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+              <boolProp name="HTTPArgument.use_equals">true</boolProp>
+            </elementProp>
+          </collectionProp>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain">${host}</stringProp>
+        <stringProp name="HTTPSampler.port"></stringProp>
+        <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+        <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        <stringProp name="HTTPSampler.protocol">https</stringProp>
+        <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+        <stringProp name="HTTPSampler.path">/smcfs/interop/InteropHttpServlet</stringProp>
+        <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+        <stringProp name="HTTPSampler.concurrentPool">4</stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="Order No Generation" enabled="true">
+        <stringProp name="maximumValue">999999</stringProp>
+        <stringProp name="minimumValue">100000</stringProp>
+        <stringProp name="outputFormat"></stringProp>
+        <boolProp name="perThread">false</boolProp>
+        <stringProp name="randomSeed"></stringProp>
+        <stringProp name="variableName">OrderNo</stringProp>
+      </RandomVariableConfig>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Sales Order Flow without Fragment" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">stopthread</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1568008041000</longProp>
+        <longProp name="ThreadGroup.end_time">1568008041000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="expicient.extest.jmeter.sampler.ExpStrlngTstClientSamplerGUI" testclass="HTTPSamplerProxy" testname="DeliveryPromise" enabled="false">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="expicient.extest.jmeter.sampler.ExpStrlngTstClientSamplerGUI" testclass="Arguments" testname="DeliveryPromise" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="IsFlow" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">IsFlow</stringProp>
+                <stringProp name="Argument.value">Y</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="InteropApiName" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">InteropApiName</stringProp>
+                <stringProp name="Argument.value">mshGetDeliveryPromise</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="InteropApiData" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">InteropApiData</stringProp>
+                <stringProp name="Argument.value">&lt;Promise AllocationRuleID=&quot;&quot; EnterpriseCode=&quot;MSH_NL&quot; OrganizationCode=&quot;MSH_NL&quot;  OptimizationType=&quot;01&quot; &gt;
+	&lt;ShipToAddress AddressLine1=&quot;&quot; AddressLine6=&quot;&quot; City=&quot;Wein&quot; Country=&quot;NL&quot; ZipCode=&quot;1120&quot; /&gt;
+	&lt;PromiseLines&gt;
+		&lt;PromiseLine ItemID=&quot;${item1}&quot; UnitOfMeasure=&quot;EACH&quot; RequiredQty=&quot;1&quot; 
+		LevelOfService=&quot;MSH_HOME_DEL&quot; FulfillmentType=&quot;MSH_HOMEDEL&quot; DeliveryMethod=&quot;SHP&quot; LineId=&quot;1&quot; /&gt;
+		
+		&lt;PromiseLine ItemID=&quot;${item2}&quot; UnitOfMeasure=&quot;EACH&quot; RequiredQty=&quot;1&quot; 
+		LevelOfService=&quot;MSH_HOME_DEL&quot; FulfillmentType=&quot;MSH_HOMEDEL&quot; DeliveryMethod=&quot;SHP&quot; LineId=&quot;1&quot; /&gt;
+	&lt;/PromiseLines&gt;
+&lt;/Promise&gt;</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+            <stringProp name="TestPlan.comments">DeliveryPromise</stringProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="DelvDateValidation" enabled="true">
+            <stringProp name="XPathExtractor.default">0</stringProp>
+            <stringProp name="XPathExtractor.refname">DelvDate</stringProp>
+            <stringProp name="XPathExtractor.xpathQuery">//Assignment/@DeliveryDate</stringProp>
+            <boolProp name="XPathExtractor.validate">false</boolProp>
+            <boolProp name="XPathExtractor.tolerant">false</boolProp>
+            <boolProp name="XPathExtractor.namespace">false</boolProp>
+          </XPathExtractor>
+          <hashTree/>
+          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="ShipDateValidation" enabled="true">
+            <stringProp name="XPathExtractor.default">0</stringProp>
+            <stringProp name="XPathExtractor.refname">ShipDate</stringProp>
+            <stringProp name="XPathExtractor.xpathQuery">//Assignment/@ShipDate</stringProp>
+            <boolProp name="XPathExtractor.validate">false</boolProp>
+            <boolProp name="XPathExtractor.tolerant">false</boolProp>
+            <boolProp name="XPathExtractor.namespace">false</boolProp>
+          </XPathExtractor>
+          <hashTree/>
+          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="ShipNode" enabled="true">
+            <stringProp name="XPathExtractor.default"></stringProp>
+            <stringProp name="XPathExtractor.refname">DelvPromise_ShipNode</stringProp>
+            <stringProp name="XPathExtractor.xpathQuery">//Assignment/@ShipNode</stringProp>
+            <boolProp name="XPathExtractor.validate">false</boolProp>
+            <boolProp name="XPathExtractor.tolerant">false</boolProp>
+            <boolProp name="XPathExtractor.namespace">false</boolProp>
+          </XPathExtractor>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="67232232">Error</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">6</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="expicient.extest.jmeter.sampler.ExpStrlngTstClientSamplerGUI" testclass="HTTPSamplerProxy" testname="Create Order" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="expicient.extest.jmeter.sampler.ExpStrlngTstClientSamplerGUI" testclass="Arguments" testname="Create Order" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="IsFlow" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">IsFlow</stringProp>
+                <stringProp name="Argument.value">N</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="InteropApiName" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">InteropApiName</stringProp>
+                <stringProp name="Argument.value">createOrder</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="InteropApiData" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">InteropApiData</stringProp>
+                <stringProp name="Argument.value">&lt;Order BypassPricing=&quot;Y&quot; CustomerEMailID=&quot;TestingBBB001@gmail.com&quot; DocumentType=&quot;0001&quot; EnterpriseCode=&quot;${EnterpriseCode}&quot; EntryType=&quot;DESKTOP&quot; OrderDate=&quot;${CurrenttimeStamp}+01:00&quot; OrderNo=&quot;${OrderNo}${CurrentTimeStamp1}&quot; OrderType=&quot;B2C_SALE&quot; PaymentStatus=&quot;PAID&quot; SearchCriteria1=&quot;Y&quot; SellerOrganizationCode=&quot;${SellerOrganizationCode}&quot;&gt;
+&lt;PriceInfo Currency=&quot;EUR&quot; /&gt;
+&lt;PaymentMethods&gt;
+&lt;PaymentMethod
+PaymentReference1=&quot;aa644e2992244f3c8a5fe9ba79ccdf5a&quot;
+PaymentReference2=&quot;&quot; PaymentReference9=&quot;&quot; PaymentType=&quot;GICA&quot;&gt;
+&lt;PaymentDetailsList&gt;
+&lt;PaymentDetails ChargeType=&quot;CHARGE&quot;
+ProcessedAmount=&quot;32.40&quot; RequestAmount=&quot;32.40&quot;/&gt;
+&lt;/PaymentDetailsList&gt;
+&lt;/PaymentMethod&gt;
+
+&lt;PaymentMethod PaymentReference1=&quot;74220048004&quot;
+PaymentReference2=&quot;&quot; PaymentReference9=&quot;PAYPAL&quot; PaymentType=&quot;PAYPAL&quot;&gt;
+&lt;PaymentDetailsList&gt;
+&lt;PaymentDetails ChargeType=&quot;CHARGE&quot;
+ProcessedAmount=&quot;200.00&quot; RequestAmount=&quot;200.00&quot;/&gt;
+&lt;/PaymentDetailsList&gt;
+&lt;/PaymentMethod&gt;
+
+&lt;/PaymentMethods&gt;
+&lt;OrderLines&gt;
+&lt;OrderLine DeliveryMethod=&quot;SHP&quot; FulfillmentType=&quot;MSH_HOMEDEL&quot; ItemGroupCode=&quot;PROD&quot; LevelOfService=&quot;MSH_HOME_DEL&quot; LineType=&quot;STOCKED&quot; OrderedQty=&quot;${RequiredQty}&quot; PrimeLineNo=&quot;1&quot; ReqShipDate=&quot;${CurrenttimeStamp}+01:00&quot; SubLineNo=&quot;1&quot; SCAC=&quot;TNT&quot;&gt;
+&lt;Extn QtyFromUnplannedInventory=&quot;&quot; ShippingCostRefID=&quot;20001&quot; ReservationNodeShipDate=&quot;&quot; DeliveryTimeFrame=&quot;&quot; LogisticsClass=&quot;&quot; LineItemNumber=&quot;20001&quot; Brand=&quot;MM&quot; ReleaseDate=&quot;&quot; ReleaseText=&quot;&quot; SplitCriteria1=&quot;&quot; LocationProviderID=&quot;loc-nlj-93&quot; PUDOID=&quot;810028&quot; WDDFromDeliveryTime=&quot;${CurrenttimeStamp}-05:00&quot; WDDToDeliveryTime=&quot;${CurrenttimeStamp}&quot; DeliveryOrchestor=&quot;MP&quot; /&gt;
+&lt;Item CostCurrency=&quot;EUR&quot; ItemID=&quot;${item1}&quot; ItemShortDesc=&quot;LG ELECTRONICS 123456789 PG_19 LC_5 LT_0 FIEGE NON-URA&quot; ItemDesc=&quot;LG ELECTRONICS 123456789 PG_19 LC_5 LT_0 FIEGE NON-URALG ELECTRONICS 123456789 PG_19 LC_5 LT_0 FIEGE NON-URALG&quot; UPCCode=&quot; &quot; UnitCost=&quot;&quot; UnitOfMeasure=&quot;EACH&quot; /&gt;
+&lt;LineOverallTotals ExtendedPrice=&quot;19.99&quot; /&gt;
+&lt;LinePriceInfo ListPrice=&quot;11.62&quot; UnitPrice=&quot;11.62&quot; /&gt;
+&lt;LineTaxes&gt;
+&lt;LineTax ChargeCategory=&quot;LINE_TAX&quot; ChargeName=&quot;LineTax&quot; ChargeNameKey=&quot;&quot; InvoicedTax=&quot;0.0&quot; Reference1=&quot;1&quot; Reference2=&quot;1&quot; Reference3=&quot; &quot; RemainingTax=&quot;&quot; Tax=&quot;1&quot; TaxName=&quot;VAT&quot; TaxPercentage=&quot;5.0&quot; /&gt;
+&lt;TaxSummary&gt;
+&lt;TaxSummaryDetail InvoicedTax=&quot;0.0&quot; OverallTax=&quot;1&quot; RemainingTax=&quot;1&quot; TaxName=&quot;VAT&quot; /&gt;
+&lt;/TaxSummary&gt;
+&lt;/LineTaxes&gt;
+&lt;/OrderLine&gt;
+&lt;/OrderLines&gt;
+&lt;PersonInfoShipTo AddressID=&quot;2022412&quot; AddressLine1=&quot;${AddressLine1}&quot; City=&quot;${City}&quot; Country=&quot;${Country}&quot; DayPhone=&quot;42141241&quot; EMailID=&quot;nedlcu@media-saturn.com&quot; FirstName=&quot;Tester&quot; LastName=&quot;Kat&quot; MobilePhone=&quot;4214214141&quot; Title=&quot;UNKNOWN&quot; ZipCode=&quot;${Country}&quot; /&gt;
+&lt;PersonInfoBillTo AddressID=&quot;2022412&quot; AddressLine1=&quot;${AddressLine1}&quot; City=&quot;${City}&quot; Country=&quot;${Country}&quot; DayPhone=&quot;42141241&quot; EMailID=&quot;nelcu@media-saturn.com&quot; FirstName=&quot;Tester&quot; LastName=&quot;Kat&quot; MobilePhone=&quot;4214214141&quot; Title=&quot;UNKNOWN&quot; ZipCode=&quot;${ZipCode}&quot; /&gt;
+&lt;OrderLineRelationships /&gt;
+&lt;Notes&gt;
+&lt;Note NoteText=&quot;Order created successfully&quot; Priority=&quot;1&quot; ReasonCode=&quot;ORDER_CREATE&quot; /&gt;
+&lt;/Notes&gt;
+&lt;OrderHoldTypes /&gt;
+&lt;Extn OutletID=&quot;718&quot; RetailPriceInclDuties=&quot;N&quot; WCSUserID=&quot;3884966&quot;&gt;
+&lt;MSHLoyaltyDtlList /&gt;
+&lt;MSHLegalAgreementDtlList /&gt;
+&lt;MSHB2bCustomerDtlList&gt;
+&lt;MSHB2bCustomerDtl /&gt;
+&lt;/MSHB2bCustomerDtlList&gt;
+&lt;/Extn&gt;
+&lt;/Order&gt;</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+            <stringProp name="TestPlan.comments">Create Order</stringProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="Get current time" enabled="true">
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+
+Date date = new Date();
+
+		SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&apos;T&apos;HH:mm:ss&quot;);
+
+		String CurrenttimeStamp = sdf.format(date);
+
+		vars.put(&quot;CurrenttimeStamp&quot;,CurrenttimeStamp);</stringProp>
+          </BeanShellPreProcessor>
+          <hashTree/>
+          <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="CurrentTimeStamp1" enabled="true">
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+
+Date date = new Date();
+
+		SimpleDateFormat sdf = new SimpleDateFormat(&quot;HHmmss&quot;);
+
+		String CurrenttimeStamp = sdf.format(date);
+
+		vars.put(&quot;CurrentTimeStamp1&quot;,CurrenttimeStamp);</stringProp>
+          </BeanShellPreProcessor>
+          <hashTree/>
+          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="OrderHeaderKey" enabled="true">
+            <stringProp name="XPathExtractor.default">0</stringProp>
+            <stringProp name="XPathExtractor.refname">OrderHeaderKey</stringProp>
+            <stringProp name="XPathExtractor.xpathQuery">/Order/@OrderHeaderKey</stringProp>
+            <boolProp name="XPathExtractor.validate">false</boolProp>
+            <boolProp name="XPathExtractor.tolerant">false</boolProp>
+            <boolProp name="XPathExtractor.namespace">false</boolProp>
+          </XPathExtractor>
+          <hashTree/>
+          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="EnterpriseCode" enabled="true">
+            <stringProp name="XPathExtractor.default">0</stringProp>
+            <stringProp name="XPathExtractor.refname">EnterpriseCode</stringProp>
+            <stringProp name="XPathExtractor.xpathQuery">/Order/@EnterpriseCode</stringProp>
+            <boolProp name="XPathExtractor.validate">false</boolProp>
+            <boolProp name="XPathExtractor.tolerant">false</boolProp>
+            <boolProp name="XPathExtractor.namespace">false</boolProp>
+          </XPathExtractor>
+          <hashTree/>
+          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="OrderNo" enabled="true">
+            <stringProp name="XPathExtractor.default"></stringProp>
+            <stringProp name="XPathExtractor.refname">OrderNo</stringProp>
+            <stringProp name="XPathExtractor.xpathQuery">/Order/@OrderNo</stringProp>
+            <boolProp name="XPathExtractor.validate">false</boolProp>
+            <boolProp name="XPathExtractor.tolerant">false</boolProp>
+            <boolProp name="XPathExtractor.namespace">false</boolProp>
+          </XPathExtractor>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="67232232">Error</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">6</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResultAction guiclass="ResultActionGui" testclass="ResultAction" testname="Result Status Action Handler" enabled="true">
+            <intProp name="OnError.action">1</intProp>
+          </ResultAction>
+          <hashTree/>
+          <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="BeanShell Assertion" enabled="true">
+            <stringProp name="BeanShellAssertion.query">if (&quot;${EnterpriseCode}&quot; == &quot;MSH_NL&quot;){
+
+	SampleResult.setSuccessful(true);
+	SampleResult.setResponseMessage(&quot;Order created successfully : Order ID  &quot;  +   &quot;${OrderNo}&quot;);
+}
+
+else{
+
+	SampleResult.setSuccessful(false);
+	SampleResult.setResponseMessage(&quot;Order Failed :&quot; +&quot; ${ErrorMsg}&quot;);
+	SampleResult.setStopTestNow(true);
+}
+
+
+	/*SampleResult.setSuccessful(false);
+	vars.put(&quot;JSONResponse&quot;, prev.getResponseDataAsString());
+	SampleResult.setResponseMessage(&quot;ctx.getPreviousResult().getResponseData()&quot;);
+	SampleResult.setStopTestNow(true);*/
+
+	
+	
+
+</stringProp>
+            <stringProp name="BeanShellAssertion.filename"></stringProp>
+            <stringProp name="BeanShellAssertion.parameters"></stringProp>
+            <boolProp name="BeanShellAssertion.resetInterpreter">false</boolProp>
+          </BeanShellAssertion>
+          <hashTree/>
+          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="ErrorMsg" enabled="true">
+            <stringProp name="XPathExtractor.default">0</stringProp>
+            <stringProp name="XPathExtractor.refname">ErrorMsg</stringProp>
+            <stringProp name="XPathExtractor.xpathQuery">//Errors/*</stringProp>
+            <boolProp name="XPathExtractor.validate">false</boolProp>
+            <boolProp name="XPathExtractor.tolerant">false</boolProp>
+            <boolProp name="XPathExtractor.namespace">false</boolProp>
+          </XPathExtractor>
+          <hashTree/>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="false">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">response</stringProp>
+            <stringProp name="RegexExtractor.regex">(?s) (^.*)</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default"></stringProp>
+            <stringProp name="RegexExtractor.match_number"></stringProp>
+          </RegexExtractor>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell PostProcessor" enabled="false">
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="script">/*String code = prev.getResponseCode(); 
+String message = prev.getResponseMessage();
+log.info(prev.getResponseMessage());*/
+
+vars.put(&quot;response&quot;, new String(data));
+</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+          <DebugPostProcessor guiclass="TestBeanGUI" testclass="DebugPostProcessor" testname="Debug PostProcessor" enabled="false">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySamplerProperties">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugPostProcessor>
+          <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="false">
+            <stringProp name="cacheKey"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">vars.put(&quot;response&quot;, prev.getResponseDataAsString());</stringProp>
+            <stringProp name="scriptLanguage"></stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="expicient.extest.jmeter.sampler.ExpStrlngTstClientSamplerGUI" testclass="HTTPSamplerProxy" testname="GetOrderDetails" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="expicient.extest.jmeter.sampler.ExpStrlngTstClientSamplerGUI" testclass="Arguments" testname="GetOrderDetails" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="IsFlow" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">IsFlow</stringProp>
+                <stringProp name="Argument.value">N</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="InteropApiName" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">InteropApiName</stringProp>
+                <stringProp name="Argument.value">getOrderDetails</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="InteropApiData" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">InteropApiData</stringProp>
+                <stringProp name="Argument.value">&lt;Order OrderHeaderKey=&quot;${OrderHeaderKey}&quot;/&gt;</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+            <stringProp name="TestPlan.comments">GetOrderDetails</stringProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="OrderedQty" enabled="true">
+            <stringProp name="XPathExtractor.default">0</stringProp>
+            <stringProp name="XPathExtractor.refname">OrderedQty</stringProp>
+            <stringProp name="XPathExtractor.xpathQuery">//@OrderedQty</stringProp>
+            <boolProp name="XPathExtractor.validate">false</boolProp>
+            <boolProp name="XPathExtractor.tolerant">false</boolProp>
+            <boolProp name="XPathExtractor.namespace">false</boolProp>
+          </XPathExtractor>
+          <hashTree/>
+          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="ShipNode" enabled="true">
+            <stringProp name="XPathExtractor.default">0</stringProp>
+            <stringProp name="XPathExtractor.refname">ShipNode</stringProp>
+            <stringProp name="XPathExtractor.xpathQuery">//@ShipNode</stringProp>
+            <boolProp name="XPathExtractor.validate">false</boolProp>
+            <boolProp name="XPathExtractor.tolerant">false</boolProp>
+            <boolProp name="XPathExtractor.namespace">false</boolProp>
+          </XPathExtractor>
+          <hashTree/>
+          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="OrderLineKey" enabled="true">
+            <stringProp name="XPathExtractor.default">0</stringProp>
+            <stringProp name="XPathExtractor.refname">OrderLineKey</stringProp>
+            <stringProp name="XPathExtractor.xpathQuery">//@OrderLineKey</stringProp>
+            <boolProp name="XPathExtractor.validate">false</boolProp>
+            <boolProp name="XPathExtractor.tolerant">false</boolProp>
+            <boolProp name="XPathExtractor.namespace">false</boolProp>
+          </XPathExtractor>
+          <hashTree/>
+          <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="BeanShell Assertion" enabled="false">
+            <stringProp name="BeanShellAssertion.query">if (&quot;${OrdStatus}&quot; == &quot;Order Completed&quot;   &amp;&amp; &quot;${PaymentStatus}&quot; == &quot;PAID&quot;){
+
+	SampleResult.setSuccessful(true);
+	SampleResult.setResponseMessage(&quot;Order is successfull : &quot;  +   &quot;${OrderNo}&quot;);
+}
+
+else{
+
+	SampleResult.setSuccessful(false);
+	SampleResult.setResponseMessage(&quot;Order is Failed&quot;);
+	SampleResult.setStopTestNow(true);
+}
+</stringProp>
+            <stringProp name="BeanShellAssertion.filename"></stringProp>
+            <stringProp name="BeanShellAssertion.parameters"></stringProp>
+            <boolProp name="BeanShellAssertion.resetInterpreter">false</boolProp>
+          </BeanShellAssertion>
+          <hashTree/>
+          <DebugPostProcessor guiclass="TestBeanGUI" testclass="DebugPostProcessor" testname="Debug PostProcessor" enabled="true">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySamplerProperties">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugPostProcessor>
+          <hashTree/>
+          <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="Response" enabled="true">
+            <stringProp name="BeanShellAssertion.query">System.out.println(&quot;OrderLine Key&quot;);
+SampleResult.setResponseMessage(&quot;Order Line key for 1st item  : &quot; + &quot;${OrderLineKey}&quot; );
+
+</stringProp>
+            <stringProp name="BeanShellAssertion.filename"></stringProp>
+            <stringProp name="BeanShellAssertion.parameters"></stringProp>
+            <boolProp name="BeanShellAssertion.resetInterpreter">false</boolProp>
+          </BeanShellAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="expicient.extest.jmeter.sampler.ExpStrlngTstClientSamplerGUI" testclass="HTTPSamplerProxy" testname="VerifyItem" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="expicient.extest.jmeter.sampler.ExpStrlngTstClientSamplerGUI" testclass="Arguments" testname="VerifyItem" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="IsFlow" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">IsFlow</stringProp>
+                <stringProp name="Argument.value">Y</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="InteropApiName" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">InteropApiName</stringProp>
+                <stringProp name="Argument.value">verifyItemForReplacement</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="InteropApiData" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">InteropApiData</stringProp>
+                <stringProp name="Argument.value">&lt;Order CheckInventory=&quot;Y&quot; EnterpriseCode=&quot;${EnterpriseCode}&quot; Language=&quot;nl&quot; SellerOrganizationCode=&quot;${SellerOrganizationCode}&quot;&gt;
+&lt;NewItemDetail&gt;
+&lt;Item ItemID=&quot;${item2}&quot;/&gt;
+&lt;/NewItemDetail&gt;
+&lt;OrderLines&gt;
+&lt;OrderLine DeliveryMethod=&quot;SHP&quot; FulfillmentType=&quot;MSH_HOMEDEL&quot;
+LevelOfService=&quot;MSH_HOME_DEL&quot; OrderedQty=&quot;${OrderedQty}&quot; ShipNode=&quot;${ShipNode}&quot;/&gt;
+&lt;/OrderLines&gt;
+&lt;/Order&gt;</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+            <stringProp name="TestPlan.comments">VerifyItem</stringProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="ItemID" enabled="true">
+            <stringProp name="XPathExtractor.default"></stringProp>
+            <stringProp name="XPathExtractor.refname">ItemID</stringProp>
+            <stringProp name="XPathExtractor.xpathQuery">//@ItemID</stringProp>
+            <boolProp name="XPathExtractor.validate">false</boolProp>
+            <boolProp name="XPathExtractor.tolerant">false</boolProp>
+            <boolProp name="XPathExtractor.namespace">false</boolProp>
+          </XPathExtractor>
+          <hashTree/>
+          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="Status" enabled="true">
+            <stringProp name="XPathExtractor.default"></stringProp>
+            <stringProp name="XPathExtractor.refname">Status</stringProp>
+            <stringProp name="XPathExtractor.xpathQuery">//@Status</stringProp>
+            <boolProp name="XPathExtractor.validate">false</boolProp>
+            <boolProp name="XPathExtractor.tolerant">false</boolProp>
+            <boolProp name="XPathExtractor.namespace">false</boolProp>
+          </XPathExtractor>
+          <hashTree/>
+          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="ItemKey" enabled="true">
+            <stringProp name="XPathExtractor.default">0</stringProp>
+            <stringProp name="XPathExtractor.refname">ItemKey</stringProp>
+            <stringProp name="XPathExtractor.xpathQuery">//@ItemKey</stringProp>
+            <boolProp name="XPathExtractor.validate">false</boolProp>
+            <boolProp name="XPathExtractor.tolerant">false</boolProp>
+            <boolProp name="XPathExtractor.namespace">false</boolProp>
+          </XPathExtractor>
+          <hashTree/>
+          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="ReturnWindow" enabled="true">
+            <stringProp name="XPathExtractor.default">0</stringProp>
+            <stringProp name="XPathExtractor.refname">ReturnWindow-1</stringProp>
+            <stringProp name="XPathExtractor.xpathQuery">//@ReturnWindow</stringProp>
+            <boolProp name="XPathExtractor.validate">false</boolProp>
+            <boolProp name="XPathExtractor.tolerant">false</boolProp>
+            <boolProp name="XPathExtractor.namespace">false</boolProp>
+          </XPathExtractor>
+          <hashTree/>
+          <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="BeanShell Assertion" enabled="true">
+            <stringProp name="BeanShellAssertion.query">if (&quot;${ItemID}&quot; == &quot;${item2}&quot;){
+
+	SampleResult.setSuccessful(true);
+	SampleResult.setResponseMessage(&quot;Item Verified successfully  &quot;  +   &quot;${ItemID}&quot;);
+}
+
+else{
+
+	SampleResult.setSuccessful(false);
+	SampleResult.setResponseMessage(&quot;Item Verification failed &quot; +&quot; ${ErrorMsg}&quot;);
+	SampleResult.setStopTestNow(true);
+}
+
+
+	/*SampleResult.setSuccessful(false);
+	vars.put(&quot;JSONResponse&quot;, prev.getResponseDataAsString());
+	SampleResult.setResponseMessage(&quot;ctx.getPreviousResult().getResponseData()&quot;);
+	SampleResult.setStopTestNow(true);*/
+
+	
+	
+
+</stringProp>
+            <stringProp name="BeanShellAssertion.filename"></stringProp>
+            <stringProp name="BeanShellAssertion.parameters"></stringProp>
+            <boolProp name="BeanShellAssertion.resetInterpreter">false</boolProp>
+          </BeanShellAssertion>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="67232232">Error</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">6</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="ErrorMsg" enabled="true">
+            <stringProp name="XPathExtractor.default">0</stringProp>
+            <stringProp name="XPathExtractor.refname">ErrorMsg</stringProp>
+            <stringProp name="XPathExtractor.xpathQuery">//Errors/*</stringProp>
+            <boolProp name="XPathExtractor.validate">false</boolProp>
+            <boolProp name="XPathExtractor.tolerant">false</boolProp>
+            <boolProp name="XPathExtractor.namespace">false</boolProp>
+          </XPathExtractor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="expicient.extest.jmeter.sampler.ExpStrlngTstClientSamplerGUI" testclass="HTTPSamplerProxy" testname="replaceItem" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="expicient.extest.jmeter.sampler.ExpStrlngTstClientSamplerGUI" testclass="Arguments" testname="replaceItem" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="IsFlow" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">IsFlow</stringProp>
+                <stringProp name="Argument.value">Y</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="InteropApiName" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">InteropApiName</stringProp>
+                <stringProp name="Argument.value">replaceOrderLineDetails_Sync</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="InteropApiData" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">InteropApiData</stringProp>
+                <stringProp name="Argument.value">&lt;Order CancelService=&quot;Y&quot; CheckInventory=&quot;Y&quot; DocumentType=&quot;0001&quot;
+EnterpriseCode=&quot;${EnterpriseCode}&quot; IgnoreOrdering=&quot;Y&quot; Language=&quot;nl&quot;
+OrderHeaderKey=&quot;${OrderHeaderKey}&quot; OrderNo=&quot;${OrderNo}&quot; SellerOrganizationCode=&quot;${SellerOrganizationCode}&quot;&gt;
+&lt;NewItemDetail&gt;
+&lt;Item DisplayUnitOfMeasure=&quot;Each&quot; ItemGroupCode=&quot;PROD&quot;
+ItemID=&quot;${item2}&quot; ItemKey=&quot;${ItemKey}&quot;
+ItemSalesLine=&quot;MM_NL&quot; LocaleCode=&quot;nl_NL&quot;
+OrganizationCode=&quot;MSH_NL&quot; UOMDisplayFormat=&quot;formattedQty&quot; UnitOfMeasure=&quot;EACH&quot;&gt;
+&lt;InventoryParameters ATPRule=&quot;MSH_NL_ATP_RULE&quot;
+InventoryMonitorRule=&quot;MSH_NL_ATP_MONITOR_RULE&quot;
+LeadTime=&quot;0&quot;
+NodeLevelInventoryMonitorRule=&quot;MSH_NL_ATP_MONITOR_RULE&quot; UseUnplannedInventory=&quot;N&quot;/&gt;
+&lt;PrimaryInformation AllowGiftWrap=&quot;N&quot; CostCurrency=&quot;EUR&quot;
+Description=&quot;PHILIPS TEST DESCRIPTION UPBEAT SHE4205 ZWART ProdID: 1487896&quot;
+IsDeliveryAllowed=&quot;N&quot; IsPickupAllowed=&quot;Y&quot;
+IsReturnable=&quot;Y&quot; IsShippingAllowed=&quot;Y&quot; ItemType=&quot;&quot;
+ReturnWindow=&quot;28&quot;
+ShortDescription=&quot;PHILIPS TEST DESCRIPTION UPBEAT SHE4205 ZWART ProdID: 1487896&quot;
+Status=&quot;3000&quot; UnitCost=&quot;0.0&quot;/&gt;
+&lt;MSHOrderlineFeatureList&gt;
+&lt;MSHOrderlineFeature FeatureID=&quot;PROD_FEAT_00002&quot;
+FeatureValue=&quot;SHE4205BK&quot; Label=&quot;Manufacturer Part Number (MPN)&quot;/&gt;
+&lt;/MSHOrderlineFeatureList&gt;
+&lt;/Item&gt;
+&lt;/NewItemDetail&gt;
+&lt;OrderLines&gt;
+&lt;OrderLine DeliveryMethod=&quot;SHP&quot; DeliveryMethodName=&quot;Shipping&quot;
+DisplayStatus=&quot;Backordered&quot; FulfillmentType=&quot;MSH_HOMEDEL&quot;
+HoldFlag=&quot;Y&quot; ItemGroupCode=&quot;PROD&quot;
+LevelOfService=&quot;MSH_HOME_DEL&quot; LineType=&quot;STOCKED&quot;
+MaxLineStatus=&quot;1300&quot; MaxLineStatusDesc=&quot;Backordered&quot;
+MinLineStatus=&quot;1300&quot; MinLineStatusDesc=&quot;Backordered&quot;
+OrderHeaderKey=&quot;${OrderHeaderKey}&quot;
+OrderLineKey=&quot;${OrderLineKey}&quot; OrderedQty=&quot;${OrderedQty}&quot;
+PrimeLineNo=&quot;1&quot; ShipNode=&quot;${ShipNode}&quot;
+ShipnodeDescription=&quot;ID LOGISTICS BENELUX&quot;
+ShipnodeFullDescription=&quot;ID LOGISTICS BENELUX,ETTEN LEUR&quot;
+Status=&quot;Backordered&quot; SubLineNo=&quot;1&quot;&gt;
+&lt;Item DisplayUnitOfMeasure=&quot;Each&quot;
+ItemDesc=&quot;LG ELECTRONICS 123456789 PG_19 LC_5 LT_0 FIEGE NON-URA&quot;
+ItemID=&quot;${item1}&quot; UOMDisplayFormat=&quot;formattedQty&quot; UnitOfMeasure=&quot;EACH&quot;/&gt;
+&lt;LinePriceInfo IsPriceLocked=&quot;N&quot; ListPrice=&quot;232.40&quot; UnitPrice=&quot;232.40&quot;/&gt;
+&lt;ItemDetails DisplayItemId=&quot;${item1}&quot; ItemGroupCode=&quot;PROD&quot;
+ItemID=&quot;${item1}&quot; ItemKey=&quot;${ItemKey}&quot;
+Lockid=&quot;51&quot; OrganizationCode=&quot;${SellerOrganizationCode}&quot; UnitOfMeasure=&quot;EACH&quot;&gt;
+&lt;InventoryParameters UseUnplannedInventory=&quot;N&quot;/&gt;
+&lt;PrimaryInformation/&gt;
+&lt;/ItemDetails&gt;
+&lt;LineOverallTotals Charges=&quot;0.00&quot; Discount=&quot;0.00&quot;
+DisplayUnitPrice=&quot;232.40&quot; ExtendedPrice=&quot;4648.00&quot;
+LineAdjustments=&quot;0.00&quot; LineTotal=&quot;4648.00&quot;
+LineTotalWithoutTaxes=&quot;4648.00&quot; OptionPrice=&quot;0.00&quot;
+PricingQty=&quot;20.00&quot; Tax=&quot;0.00&quot; UnitPrice=&quot;232.40&quot;/&gt;
+&lt;Extn Brand=&quot;MM&quot; LineItemNumber=&quot;20001&quot;
+ShippingCostRefID=&quot;20001&quot;
+WDDFromDeliveryTime=&quot;${CurrenttimeStamp}-05:00&quot; WDDToDeliveryTime=&quot;${CurrenttimeStamp}&quot;&gt;
+&lt;MSHOrderlineFeatureList/&gt;
+&lt;/Extn&gt;
+&lt;/OrderLine&gt;
+&lt;/OrderLines&gt;
+&lt;/Order&gt;</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+            <stringProp name="TestPlan.comments">replaceItem</stringProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="ItemID1" enabled="false">
+            <stringProp name="XPathExtractor.default">0</stringProp>
+            <stringProp name="XPathExtractor.refname">ItemID1</stringProp>
+            <stringProp name="XPathExtractor.xpathQuery">//@ItemID</stringProp>
+            <boolProp name="XPathExtractor.validate">false</boolProp>
+            <boolProp name="XPathExtractor.tolerant">false</boolProp>
+            <boolProp name="XPathExtractor.namespace">false</boolProp>
+          </XPathExtractor>
+          <hashTree/>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="ItemID-2" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">ItemID-2</stringProp>
+            <stringProp name="RegexExtractor.regex">ItemID=&quot;(.+?)&quot;</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">NotFound</stringProp>
+            <stringProp name="RegexExtractor.match_number">2</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="XPath Extractor" enabled="false">
+            <stringProp name="XPathExtractor.default">0</stringProp>
+            <stringProp name="XPathExtractor.refname">PaymentStatus</stringProp>
+            <stringProp name="XPathExtractor.xpathQuery">/Order/@PaymentStatus</stringProp>
+            <boolProp name="XPathExtractor.validate">false</boolProp>
+            <boolProp name="XPathExtractor.tolerant">false</boolProp>
+            <boolProp name="XPathExtractor.namespace">false</boolProp>
+          </XPathExtractor>
+          <hashTree/>
+          <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="BeanShell Assertion" enabled="true">
+            <stringProp name="BeanShellAssertion.query">if (&quot;${ItemID-2}&quot; == &quot;${item1}&quot;){
+
+	SampleResult.setSuccessful(true);
+	SampleResult.setResponseMessage(&quot;Item1 replaced successfully with &quot;  +   &quot;${ItemID}&quot;);
+}
+
+else{
+
+	SampleResult.setSuccessful(false);
+	SampleResult.setResponseMessage(&quot;Item replacing failed &quot;);
+	SampleResult.setStopTestNow(true);
+}
+</stringProp>
+            <stringProp name="BeanShellAssertion.filename"></stringProp>
+            <stringProp name="BeanShellAssertion.parameters"></stringProp>
+            <boolProp name="BeanShellAssertion.resetInterpreter">false</boolProp>
+          </BeanShellAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="expicient.extest.jmeter.sampler.ExpStrlngTstClientSamplerGUI" testclass="HTTPSamplerProxy" testname="GetOrderDetails" enabled="false">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="expicient.extest.jmeter.sampler.ExpStrlngTstClientSamplerGUI" testclass="Arguments" testname="GetOrderDetails" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="IsFlow" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">IsFlow</stringProp>
+                <stringProp name="Argument.value">N</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="InteropApiName" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">InteropApiName</stringProp>
+                <stringProp name="Argument.value">getOrderDetails</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="InteropApiData" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">InteropApiData</stringProp>
+                <stringProp name="Argument.value">&lt;Order OrderHeaderKey=&quot;${OrderHeaderKey}&quot;/&gt;</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+            <stringProp name="TestPlan.comments">GetOrderDetails</stringProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="MaxOrderStatusDesc" enabled="true">
+            <stringProp name="XPathExtractor.default">0</stringProp>
+            <stringProp name="XPathExtractor.refname">MaxOrderStatusDesc</stringProp>
+            <stringProp name="XPathExtractor.xpathQuery">//@MaxOrderStatusDesc</stringProp>
+            <boolProp name="XPathExtractor.validate">false</boolProp>
+            <boolProp name="XPathExtractor.tolerant">false</boolProp>
+            <boolProp name="XPathExtractor.namespace">false</boolProp>
+          </XPathExtractor>
+          <hashTree/>
+          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="MaxLineStatusDesc" enabled="true">
+            <stringProp name="XPathExtractor.default">0</stringProp>
+            <stringProp name="XPathExtractor.refname">MaxLineStatusDesc</stringProp>
+            <stringProp name="XPathExtractor.xpathQuery">//@MaxLineStatusDesc</stringProp>
+            <boolProp name="XPathExtractor.validate">false</boolProp>
+            <boolProp name="XPathExtractor.tolerant">false</boolProp>
+            <boolProp name="XPathExtractor.namespace">false</boolProp>
+          </XPathExtractor>
+          <hashTree/>
+          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="OrderLineKey" enabled="false">
+            <stringProp name="XPathExtractor.default"></stringProp>
+            <stringProp name="XPathExtractor.refname">OrderLineKey</stringProp>
+            <stringProp name="XPathExtractor.xpathQuery">//@OrderLineKey</stringProp>
+            <boolProp name="XPathExtractor.validate">false</boolProp>
+            <boolProp name="XPathExtractor.tolerant">false</boolProp>
+            <boolProp name="XPathExtractor.namespace">false</boolProp>
+          </XPathExtractor>
+          <hashTree/>
+          <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="BeanShell Assertion" enabled="true">
+            <stringProp name="BeanShellAssertion.query">if (&quot;${MaxOrderStatusDesc}&quot; == &quot;Scheduled&quot;   &amp;&amp; &quot;${MaxLineStatusDesc}&quot; == &quot;Cancelled&quot;){
+
+	SampleResult.setSuccessful(true);
+	SampleResult.setResponseMessage(&quot;Order Line Number 1 cancelled successfully : &quot;  +   &quot;${item1}&quot;);
+}
+
+else{
+
+	SampleResult.setSuccessful(false);
+	SampleResult.setResponseMessage(&quot;Order cancellation  Failed&quot;);
+	SampleResult.setStopTestNow(true);
+}
+</stringProp>
+            <stringProp name="BeanShellAssertion.filename"></stringProp>
+            <stringProp name="BeanShellAssertion.parameters"></stringProp>
+            <boolProp name="BeanShellAssertion.resetInterpreter">false</boolProp>
+          </BeanShellAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="expicient.extest.jmeter.sampler.ExpStrlngTstClientSamplerGUI" testclass="HTTPSamplerProxy" testname="Release Order" enabled="false">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="expicient.extest.jmeter.sampler.ExpStrlngTstClientSamplerGUI" testclass="Arguments" testname="Release Order" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="IsFlow" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">IsFlow</stringProp>
+                <stringProp name="Argument.value">N</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="InteropApiName" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">InteropApiName</stringProp>
+                <stringProp name="Argument.value">releaseOrder</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="InteropApiData" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">InteropApiData</stringProp>
+                <stringProp name="Argument.value">&lt;ReleaseOrder DocumentType=&quot;0001&quot; EnterpriseCode=&quot;${EnterpriseCode}&quot; OrderNo=&quot;${OrderNo}&quot; IgnoreReleaseDate=&apos;Y&apos;/&gt;</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+            <stringProp name="TestPlan.comments">Release Order</stringProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="67232232">Error</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">6</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResultAction guiclass="ResultActionGui" testclass="ResultAction" testname="Result Status Action Handler" enabled="true">
+            <intProp name="OnError.action">2</intProp>
+          </ResultAction>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="67232232">Error</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">6</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="expicient.extest.jmeter.sampler.ExpStrlngTstClientSamplerGUI" testclass="HTTPSamplerProxy" testname="GMS Hold Resolve" enabled="false">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="expicient.extest.jmeter.sampler.ExpStrlngTstClientSamplerGUI" testclass="Arguments" testname="GMS Hold Resolve" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="IsFlow" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">IsFlow</stringProp>
+                <stringProp name="Argument.value">Y</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="InteropApiName" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">InteropApiName</stringProp>
+                <stringProp name="Argument.value">MSHGetGMSSalesDocUpdateSync</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="InteropApiData" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">InteropApiData</stringProp>
+                <stringProp name="Argument.value">&lt;OrderRelease xmlns=&quot;http://www.sterlingcommerce.com/documentation/YFS/CHANGE_ORDER&quot; Action=&quot;SUCCESS&quot; DocumentType=&quot;0001&quot; EnterpriseCode=&quot;${EnterpriseCode}&quot; OrderNo=&quot;${OrderNo}&quot; Override=&quot;Y&quot; ReleaseNo=&quot;1&quot;&gt;
+					&lt;Order&gt;
+						&lt;OrderLines&gt;
+							&lt;OrderLine PrimeLineNo=&quot;2&quot; SubLineNo=&quot;1&quot;&gt;
+								&lt;Extn WarrantyNumber=&quot;&quot;/&gt;
+							&lt;/OrderLine&gt;
+						&lt;/OrderLines&gt;
+					&lt;/Order&gt;
+					&lt;Extn SalesDocumentNo=&quot;40211141&quot;/&gt;
+				&lt;/OrderRelease&gt;</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+            <stringProp name="TestPlan.comments">GMS Hold Resolve</stringProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+            <stringProp name="ConstantTimer.delay">3000</stringProp>
+          </ConstantTimer>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="67232232">Error</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">6</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResultAction guiclass="ResultActionGui" testclass="ResultAction" testname="Result Status Action Handler" enabled="true">
+            <intProp name="OnError.action">2</intProp>
+          </ResultAction>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="67232232">Error</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">6</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="OrderRelease" enabled="true">
+            <stringProp name="XPathExtractor.default"></stringProp>
+            <stringProp name="XPathExtractor.refname">OrderRelease</stringProp>
+            <stringProp name="XPathExtractor.xpathQuery">/OrderRelease/@SalesOrderNo</stringProp>
+            <boolProp name="XPathExtractor.validate">false</boolProp>
+            <boolProp name="XPathExtractor.tolerant">false</boolProp>
+            <boolProp name="XPathExtractor.namespace">false</boolProp>
+          </XPathExtractor>
+          <hashTree/>
+          <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="BeanShell Assertion" enabled="true">
+            <stringProp name="BeanShellAssertion.query">if (&quot;${OrderNo}&quot; == &quot;${OrderRelease}&quot; ){
+
+	SampleResult.setSuccessful(true);
+	SampleResult.setResponseMessage(&quot;Order hold is resolved successfully :&quot;  +   &quot;${OrderRelease}&quot;);
+}
+
+else{
+
+	SampleResult.setSuccessful(false);
+	SampleResult.setResponseMessage(&quot;Order is Failed&quot;);
+	SampleResult.setStopTestNow(true);
+
+	
+}</stringProp>
+            <stringProp name="BeanShellAssertion.filename"></stringProp>
+            <stringProp name="BeanShellAssertion.parameters"></stringProp>
+            <boolProp name="BeanShellAssertion.resetInterpreter">false</boolProp>
+          </BeanShellAssertion>
+          <hashTree/>
+          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="PrimeLineNo" enabled="true">
+            <stringProp name="XPathExtractor.default"></stringProp>
+            <stringProp name="XPathExtractor.refname">PrimeLineNo</stringProp>
+            <stringProp name="XPathExtractor.xpathQuery">//@PrimeLineNo</stringProp>
+            <boolProp name="XPathExtractor.validate">false</boolProp>
+            <boolProp name="XPathExtractor.tolerant">false</boolProp>
+            <boolProp name="XPathExtractor.namespace">false</boolProp>
+          </XPathExtractor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="expicient.extest.jmeter.sampler.ExpStrlngTstClientSamplerGUI" testclass="HTTPSamplerProxy" testname="Confirm Shipment" enabled="false">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="expicient.extest.jmeter.sampler.ExpStrlngTstClientSamplerGUI" testclass="Arguments" testname="Confirm Shipment" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="IsFlow" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">IsFlow</stringProp>
+                <stringProp name="Argument.value">Y</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="InteropApiName" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">InteropApiName</stringProp>
+                <stringProp name="Argument.value">MSHProcessDespatchadvice</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="InteropApiData" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">InteropApiData</stringProp>
+                <stringProp name="Argument.value">&lt;Shipment ActualShipmentDate=&quot;${CurrenttimeStamp}&quot; DocumentType=&quot;0001&quot; EnterpriseCode=&quot;${EnterpriseCode}&quot; LevelOfService=&quot;MSH_HOME_DEL&quot; OrderNo=&quot;${OrderNo}&quot; ReleaseNo=&quot;1&quot; SellerOrganizationCode=&quot;${SellerOrganizationCode}&quot; ShipNode=&quot;${ShipNode}&quot; ShipmentNo=&quot;${OrderNo}_1&quot; xmlns=&quot;&quot;&gt;
+					&lt;Containers&gt;
+						&lt;Container SCAC=&quot;DHL&quot; TrackingNo=&quot;${orderno}_1&quot;&gt;
+							&lt;ContainerDetails&gt;
+								&lt;ContainerDetail&gt;
+									&lt;ShipmentLine ItemID=&quot;${item2}&quot; OrderNo=&quot;${OrderNo}&quot; PrimeLineNo=&quot;2&quot; Quantity=&quot;${OrderedQty}&quot; ReleaseNo=&quot;1&quot; SubLineNo=&quot;1&quot; UnitOfMeasure=&quot;EACH&quot;/&gt;
+								&lt;/ContainerDetail&gt;
+							&lt;/ContainerDetails&gt;
+						&lt;/Container&gt;
+					&lt;/Containers&gt;
+					&lt;ShipmentLines&gt;
+						&lt;ShipmentLine DeliveryStatus=&quot;SHP&quot; ItemID=&quot;${item2}&quot; OrderNo=&quot;${OrderNo}&quot; PrimeLineNo=&quot;2&quot; Quantity=&quot;${OrderedQty}&quot; ReleaseNo=&quot;1&quot; SubLineNo=&quot;1&quot; UnitOfMeasure=&quot;EACH&quot;/&gt;
+					&lt;/ShipmentLines&gt;
+				&lt;/Shipment&gt;</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+            <stringProp name="TestPlan.comments">Confirm Shipment</stringProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="Response" enabled="true">
+            <stringProp name="BeanShellAssertion.query">System.out.println(&quot;Ship Order&quot;);
+SampleResult.setResponseMessage(&quot;Order status moved to shipped : Shipment No is : &quot; + &quot;${ShipmentNo}&quot; );
+
+</stringProp>
+            <stringProp name="BeanShellAssertion.filename"></stringProp>
+            <stringProp name="BeanShellAssertion.parameters"></stringProp>
+            <boolProp name="BeanShellAssertion.resetInterpreter">false</boolProp>
+          </BeanShellAssertion>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="67232232">Error</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">6</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResultAction guiclass="ResultActionGui" testclass="ResultAction" testname="Result Status Action Handler" enabled="true">
+            <intProp name="OnError.action">2</intProp>
+          </ResultAction>
+          <hashTree/>
+          <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="Get current time" enabled="true">
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+
+Date date = new Date();
+
+		SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&apos;T&apos;HH:mm:ss&quot;);
+
+		String CurrenttimeStamp = sdf.format(date);
+
+		vars.put(&quot;CurrenttimeStamp&quot;,CurrenttimeStamp);</stringProp>
+          </BeanShellPreProcessor>
+          <hashTree/>
+          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="ShipmentNo" enabled="true">
+            <stringProp name="XPathExtractor.default"></stringProp>
+            <stringProp name="XPathExtractor.refname">ShipmentNo</stringProp>
+            <stringProp name="XPathExtractor.xpathQuery">/Shipment/@ShipmentNo</stringProp>
+            <boolProp name="XPathExtractor.validate">false</boolProp>
+            <boolProp name="XPathExtractor.tolerant">false</boolProp>
+            <boolProp name="XPathExtractor.namespace">false</boolProp>
+          </XPathExtractor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="expicient.extest.jmeter.sampler.ExpStrlngTstClientSamplerGUI" testclass="HTTPSamplerProxy" testname="Settle Order" enabled="false">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="expicient.extest.jmeter.sampler.ExpStrlngTstClientSamplerGUI" testclass="Arguments" testname="Settle Order" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="IsFlow" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">IsFlow</stringProp>
+                <stringProp name="Argument.value">Y</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="InteropApiName" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">InteropApiName</stringProp>
+                <stringProp name="Argument.value">MSHGetGMSSalesDocUpdateSync</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="InteropApiData" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">InteropApiData</stringProp>
+                <stringProp name="Argument.value">&lt;OrderRelease xmlns=&quot;http://www.sterlingcommerce.com/documentation/YFS/CHANGE_ORDER&quot; Action=&quot;COMPLETE&quot; DocumentType=&quot;0001&quot; EnterpriseCode=&quot;${EnterpriseCode}&quot; OrderNo=&quot;${OrderNo}&quot; Override=&quot;Y&quot; ReleaseNo=&quot;1&quot;&gt;
+					&lt;Order&gt;
+						&lt;OrderLines&gt;
+							&lt;OrderLine PrimeLineNo=&quot;2&quot; SubLineNo=&quot;1&quot;&gt;
+								&lt;Extn WarrantyNumber=&quot;&quot;/&gt;
+							&lt;/OrderLine&gt;
+						&lt;/OrderLines&gt;
+					&lt;/Order&gt;
+					&lt;Extn SalesDocumentNo=&quot;40211142&quot;/&gt;
+				&lt;/OrderRelease&gt;</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+            <stringProp name="TestPlan.comments">Settle Order</stringProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResultAction guiclass="ResultActionGui" testclass="ResultAction" testname="Result Status Action Handler" enabled="true">
+            <intProp name="OnError.action">2</intProp>
+          </ResultAction>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="67232232">Error</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">6</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+            <stringProp name="ConstantTimer.delay">5000</stringProp>
+          </ConstantTimer>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="expicient.extest.jmeter.sampler.ExpStrlngTstClientSamplerGUI" testclass="HTTPSamplerProxy" testname="Order Status and Payment validation" enabled="false">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="expicient.extest.jmeter.sampler.ExpStrlngTstClientSamplerGUI" testclass="Arguments" testname="Order Status and Payment validation" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="IsFlow" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">IsFlow</stringProp>
+                <stringProp name="Argument.value">N</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="InteropApiName" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">InteropApiName</stringProp>
+                <stringProp name="Argument.value">getOrderDetails</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="InteropApiData" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">InteropApiData</stringProp>
+                <stringProp name="Argument.value">&lt;Order OrderHeaderKey=&quot;${OrderHeaderKey}&quot;/&gt;</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="TemplateData" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">TemplateData</stringProp>
+                <stringProp name="Argument.value">&lt;Order OrderHeaderKey=&quot;&quot; PaymentStatus=&quot;&quot; MinOrderStatusDesc=&quot;&quot;&gt;
+	&lt;OverallTotals  GrandTotal=&quot;&quot;/&gt;
+	&lt;ChargeTransactionDetails&gt;
+		&lt;ChargeTransactionDetail&gt;
+			&lt;InvoiceCollectionDetails AmountCollected=&quot;&quot;/&gt;
+		&lt;/ChargeTransactionDetail&gt;
+	&lt;/ChargeTransactionDetails&gt;
+&lt;/Order&gt;</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+            <stringProp name="TestPlan.comments">Order Status and Payment validation</stringProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <XPathAssertion guiclass="XPathAssertionGui" testclass="XPathAssertion" testname="Status validation" enabled="true">
+            <boolProp name="XPath.negate">false</boolProp>
+            <stringProp name="XPath.xpath">Order/@PaymentStatus=&quot;PAID&quot; and
+Order/@MinOrderStatusDesc=&quot;Order Completed&quot;</stringProp>
+            <boolProp name="XPath.validate">false</boolProp>
+            <boolProp name="XPath.whitespace">false</boolProp>
+            <boolProp name="XPath.tolerant">false</boolProp>
+            <boolProp name="XPath.namespace">false</boolProp>
+          </XPathAssertion>
+          <hashTree/>
+          <ResultAction guiclass="ResultActionGui" testclass="ResultAction" testname="Result Status Action Handler" enabled="true">
+            <intProp name="OnError.action">2</intProp>
+          </ResultAction>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>false</time>
+              <latency>false</latency>
+              <timestamp>false</timestamp>
+              <success>false</success>
+              <label>false</label>
+              <code>false</code>
+              <message>false</message>
+              <threadName>false</threadName>
+              <dataType>false</dataType>
+              <encoding>false</encoding>
+              <assertions>false</assertions>
+              <subresults>false</subresults>
+              <responseData>true</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>true</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>2</assertionsResultsToSave>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
+          <boolProp name="displayJMeterProperties">false</boolProp>
+          <boolProp name="displayJMeterVariables">true</boolProp>
+          <boolProp name="displaySystemProperties">false</boolProp>
+        </DebugSampler>
+        <hashTree/>
+        <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>false</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>true</requestHeaders>
+              <responseDataOnError>true</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>2</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

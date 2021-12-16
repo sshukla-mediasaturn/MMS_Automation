@@ -1,0 +1,15 @@
+<Shipment ExpectedShipmentDate="2019-11-30T00:00:00-00:00" ShipmentNo="${orderno}55" SCAC="AUSTRALIA POST" TrackingNo="${orderno}567892" DocumentType="0001" EnterpriseCode="NZ" ShipNode="AUECOMDC" SellerOrganizationCode="NZ" CarrierServiceCode="Standard">
+    <Containers>
+        <Container TrackingNo="${orderno}56789876543">
+            <ContainerDetails>
+                <ContainerDetail Quantity="2">
+                    <ShipmentLine PrimeLineNo="1" ItemID="${item1}" SubLineNo="1" UnitOfMeasure="EACH" ProductClass="GOOD" ReleaseNo="1" DocumentType="0001" OrderNo="PANNZ${orderno}" Quantity="2" />
+                </ContainerDetail>
+            </ContainerDetails>
+        </Container>
+    </Containers>
+    <ShipmentLines>
+        <ShipmentLine PrimeLineNo="1" SubLineNo="1" UnitOfMeasure="EACH" ProductClass="GOOD" ReleaseNo="1" ItemID="${item1}" OrderNo="PANNZ${orderno}" Quantity="2" />
+        <ShipmentLine PrimeLineNo="2" SubLineNo="1" UnitOfMeasure="EACH" ProductClass="GOOD" ReleaseNo="1" ItemID="${item2}" OrderNo="PANNZ${orderno}" Quantity="0" />
+    </ShipmentLines>
+</Shipment>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Order AllocationRuleID="PAN_SCH" BillToID="SA00592887" BuyerUserId="smithag@yopmail.com" BypassPricing="Y" CustomerEMailID="smithag@yopmail.com" EnterpriseCode="AU" EntryType="WEB" FulfillmentType="PandoraFT" IsPriceLocked="Y" OrderDate="${CurrenttimeStamp}" OrderNo="AUTSG${orderno}" PaymentStatus="PAID" SellerOrganizationCode="AU">
+    <Extn ExtnCRMCustomerID="691de465-7226-4b86-8db4-b02a9d6b8ccb" ExtnCRMGuestCheckout="false" ExtnOrderLang="en" />
+    <OrderLines>
+        <OrderLine CarrierServiceCode="Express" LineType="REG" OrderedQty="1.0" PrimeLineNo="1" SubLineNo="1">
+            <Extn ExtnColor="No Colour" ExtnFinalSale="N" ExtnImage="https://dev-au.pandora.net/dw/image/v2/AAWM_DEV/on/demandware.static/-/Sites-pandora-master-catalog/default/dwa0b3d5ad/images/productimages/main/767236_RGB.JPG?sw=120&amp;sh=120&amp;sm=fit&amp;sfrm=png&amp;bgcolor=F5F5F5" ExtnLineNetPrice="69.00" ExtnSize="one size" />
+            <Item ItemID="${item1}" ItemShortDesc="Theodore Bear Charm" ProductClass="GOOD" UnitOfMeasure="EACH" />
+            <LinePriceInfo IsPriceLocked="Y" TaxableFlag="N" UnitPrice="69.00" />
+            <LineCharges />
+            <LineTaxes>
+                <LineTax ChargeCategory="INFO_TAX" ChargeName="" Reference1="6.27" Reference2="0.1" Tax="6.27" TaxName="GST" />
+            </LineTaxes>
+            <PersonInfoShipTo AddressLine1="250-290 Spring Street East" City="Melbourne" Country="AU" DayPhone="9900019000" FirstName="Smitha" LastName="Gunjal" State="VIC" ZipCode="3002" />
+        </OrderLine>
+    </OrderLines>
+    <PriceInfo Currency="AUD" EnterpriseCurrency="AUD" />
+   <PersonInfoShipTo AddressLine1="250-290 Spring Street East" City="Melbourne" Country="AU" DayPhone="9900019000" FirstName="Smitha" LastName="Gunjal" State="VIC" ZipCode="3002" />
+    <HeaderCharges>
+        <HeaderCharge ChargeAmount="12.95" ChargeCategory="SHIPPING" ChargeName="SHIPPING" />
+    </HeaderCharges>
+    <HeaderTaxes>
+        <HeaderTax ChargeCategory="INFO_TAX" ChargeName="SHIPPING" Reference1="1.18" Tax="1.18" TaxName="GST" />
+    </HeaderTaxes>
+    <PersonInfoShipTo AddressLine1="250-290 Spring Street East" City="Melbourne" Country="AU" DayPhone="9900019000" FirstName="Smitha" LastName="Gunjal" State="VIC" ZipCode="3002" />
+    <PaymentMethods>
+        <PaymentMethod CreditCardExpDate="10/2020" CreditCardNo="XXXX-XXXX-XXXX-1111" CreditCardType="VISA" DisplayCreditCardNo="1111" PaymentType="CREDIT_CARD" UnlimitedCharges="N">
+            <PaymentDetailsList>
+                <PaymentDetails AuthCode="831000" AuthorizationID="5695637036396547103011" ChargeType="CHARGE" ProcessedAmount="81.95" RequestAmount="81.95" RequestId="5695637047816402503012" />
+            </PaymentDetailsList>
+        </PaymentMethod>
+    </PaymentMethods>
+</Order>

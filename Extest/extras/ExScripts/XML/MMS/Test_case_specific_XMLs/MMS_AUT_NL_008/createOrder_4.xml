@@ -1,0 +1,158 @@
+<Order CustomerEMailID="TestingBBB001@gmail.com" DocumentType="0001" EnterpriseCode="MSH_NL" OrderDate="${CurrenttimeStamp}" OrderName="" SellerOrganizationCode="MM_NL" BypassPricing="Y" SearchCriteria1="Y" PaymentStatus="PAID" ConditionVariable1 ="N" OrderNo="${OrderNo}${CurrentTimeStamp1}" EntryType="DESKTOP" OrderType="B2C_SALE" OrderPurpose="">
+<Extn RetailPriceInclDuties="Y" AlternativeUserID="123" WCSUserId="76779" UCMUserID="ewewe" LoyaltyId="23323" OutletID="${ShipNode}" Language="en" >
+<MSHLoyaltyDtlList>
+<MSHLoyaltyDtl IsLoyaltyMember="Y" WinFlag="Y" WinType="String 20" WinAmount="14" />
+</MSHLoyaltyDtlList>
+<MSHLegalAgreementDtlList>
+<MSHLegalAgreementDtl AgreementType="Type" AgreementDate="20160222T00:00:00" AgreementVersion="String 255" AgreementVersionDate="20160222T00:00:00" Brand="SATURN" />
+</MSHLegalAgreementDtlList>
+<MSHB2bCustomerDtlList>
+<MSHB2bCustomerDtl BusinessScope="Global" CompanyName="" CompanyWebsite="www.google.com" ContactPerson="" Department="" JobTitle="Manager" LegalStructure="" TaxOffice=" " VATRegNo="" />
+</MSHB2bCustomerDtlList>
+</Extn>
+<HeaderCharges>
+<HeaderCharge ChargeAmount="20" ChargeCategory="HOMEDEL_SHIPPING_FEE" ChargeName="HOMEDEL_SHIPPING_FEE" IsManual="" Reference="20001" />
+</HeaderCharges>
+<HeaderTaxes>
+<!-- Charge Name in haeder tax is related to Charge name of Header Charge name field-->
+<HeaderTax ChargeCategory="HOMEDEL_SHIPPING_TAX" ChargeName="HOMEDEL_SHIPPING_TAX" Reference1="VATKEY=2" Reference2="20001" Tax="4" TaxName="VAT" TaxPercentage="20.00" TaxableFlag="N" />
+</HeaderTaxes>
+
+<OrderLines>
+<!-- 1 or more order line. Optional for Draft order -->
+<OrderLine DeliveryMethod="SHP" FulfillmentType="MSH_HOMEDEL" LevelOfService="MSH_HOME_DEL" ShipNode="${ShipNode}" OrderedQty="${QtyToBeReserved}" PrimeLineNo="1" SubLineNo="1" LineType="STOCKED">
+<Extn WDDFromDeliveryTime="${CurrenttimeStamp}" WDDToDeliveryTime="${CurrenttimeStamp}" QtyFromUnplannedInventory="" ShippingCostRefID="20001" ReservationNodeShipDate="" DeliveryTimeFrame="" LogisticsClass="" LineItemNumber="20001" Brand="MM" ReleaseDate="" ReleaseText="" SplitCriteria1="1">
+
+<MSHOrderlineFeatureList>
+<MSHOrderlineFeature FeatureID="Betriebssystem des Gerätes" Label="Betriebssystem des Gerätes" FeatureValue="MAC OS" />
+<MSHOrderlineFeature FeatureID="Größe je Platte (GB)" Label="Größe je Platte (GB)" FeatureValue="1000 GB SSD" />
+</MSHOrderlineFeatureList>
+
+<!-- Applicable when customer purchase warranty-->
+<MSHWarrantyExtensionList>
+<MSHWarrantyExtensions CertificateNumber="234.5566.66" ContractPeriod="" EANSetNumber="" GoodwillPeriod="" InsuranceTaxAmount="" InsuranceTaxId="" InsuranceTaxRate="" ContractPeriodEndDate="" ExternalFlag="" GeneralTermsAndConditions="" GoodwillPeriodEndDate="" />
+</MSHWarrantyExtensionList>
+</Extn>
+
+<Item ItemDesc="APPLE MacBook Pro Retina 15.4 Zoll (MJLQ2D/A)" ItemID="${item1}" ItemShortDesc="APPLE MacBook Pro Retina 15.4 Zoll (MJLQ2D/A)" TaxProductCode="" UPCCode="" UnitOfMeasure="EACH" />
+<LineCharges>
+<LineCharge ChargeCategory="PROMOTION" ChargeName="ID" ChargePerUnit="10" IsManual="" Reference="23213">
+<Extn ChargeDescription="´Festival promotion" DiscountType='ID' CostCenter="${ShipNode}"  DiscountQualifier='OrderTotal' />
+</LineCharge>
+</LineCharges>
+<LinePriceInfo IsPriceLocked="Y" ListPrice="20" UnitPrice="20"/>
+<LineTaxes>
+<LineTax ChargeCategory="LINE_TAX" ChargeName="" Reference1="0" Reference2="" Reference3="EUR" Tax="334" TaxName="VAT" TaxPercentage="20" TaxableFlag="Y"/>
+</LineTaxes>
+
+</OrderLine>
+
+
+
+<OrderLine DeliveryMethod="SHP" FulfillmentType="MSH_HOMEDEL" ItemGroupCode="PROD" LevelOfService="MSH_HOME_DEL" LineType="INTANGIBLE" ShipNode="${ShipNode}" OrderedQty="${QtyToBeReserved}" PrimeLineNo="2" ReqShipDate="${CurrenttimeStamp}" SubLineNo="1">
+<Item CostCurrency="EUR" ItemDesc="ALTCOM13" ItemID="${item2}" ItemShortDesc="Anschluss inkl. Altgerätabtransport JB SAT CAT hallo sat - (Test for Mladen) V6" UPCCode="2000011917319" UnitCost="39.9" UnitOfMeasure="EACH"/>
+<LinePriceInfo IsPriceLocked="Y" ListPrice="39.9" UnitPrice="39.9"/>
+
+
+<LineCharges/>
+<LineTaxes>
+<LineTax ChargeCategory="LINE_TAX" ChargeName="LineTax" Reference1="1" Reference2="6.65" Tax="6.65" TaxName="VAT" TaxPercentage="20" TaxableFlag="N"/>
+</LineTaxes>
+<Extn Brand="TECTRAXX" DeliveryOrchestor="metapackorder" LineItemNumber="34405011" LocationProviderID="locationproviderid" LogisticsClass="0" PUDOID="pudoid" SplitCriteria1="2PRS" WDDFromDeliveryTime="${CurrenttimeStamp}-05:00" WDDToDeliveryTime="${CurrenttimeStamp}">
+<MSHOrderlineFeatureList/>
+</Extn>
+</OrderLine>
+
+<OrderLine DeliveryMethod="SHP" FulfillmentType="MSH_HOMEDEL" LevelOfService="MSH_HOME_DEL" OrderedQty="${QtyToBeReserved}" ShipNode="${ShipNode}" PrimeLineNo="3" SubLineNo="1" LineType="STOCKED">
+<Extn WDDFromDeliveryTime="${CurrenttimeStamp}" WDDToDeliveryTime="${CurrenttimeStamp}" QtyFromUnplannedInventory="" ShippingCostRefID="20001" ReservationNodeShipDate="" DeliveryTimeFrame="" LogisticsClass="" LineItemNumber="20001" Brand="MM" ReleaseDate="" ReleaseText="" SplitCriteria1="1">
+<MSHOrderlineFeatureList>
+<MSHOrderlineFeature FeatureID="Betriebssystem des Gerätes" Label="Betriebssystem des Gerätes" FeatureValue="MAC OS" />
+<MSHOrderlineFeature FeatureID="Größe je Platte (GB)" Label="Größe je Platte (GB)" FeatureValue="1000 GB SSD" />
+</MSHOrderlineFeatureList>
+<!-- Applicable when customer purchase warranty-->
+<MSHWarrantyExtensionList>
+<MSHWarrantyExtensions CertificateNumber="234.5566.66" ContractPeriod="" EANSetNumber="" GoodwillPeriod="" InsuranceTaxAmount="" InsuranceTaxId="" InsuranceTaxRate="" ContractPeriodEndDate="" ExternalFlag="" GeneralTermsAndConditions="" GoodwillPeriodEndDate="" />
+</MSHWarrantyExtensionList>
+</Extn>
+<Item ItemDesc="APPLE MacBook Pro Retina 15.4 Zoll (MJLQ2D/A)" ItemID="${item3}" ItemShortDesc="APPLE MacBook Pro Retina 15.4 Zoll (MJLQ2D/A)" TaxProductCode="" UPCCode="" UnitOfMeasure="EACH" />
+<LineCharges>
+<LineCharge ChargeCategory="PROMOTION" ChargeName="ID" ChargePerUnit="10" IsManual="" Reference="23213">
+<Extn ChargeDescription="´Festival promotion" DiscountType='ID' CostCenter="${ShipNode}" DiscountQualifier='OrderTotal' />
+</LineCharge>
+</LineCharges>
+<LinePriceInfo IsPriceLocked="Y" ListPrice="20" UnitPrice="20"/>
+<LineTaxes>
+<LineTax ChargeCategory="LINE_TAX" ChargeName="" Reference1="0" Reference2="" Reference3="EUR" Tax="334" TaxName="VAT" TaxPercentage="20" TaxableFlag="Y"/>
+</LineTaxes>
+</OrderLine>
+
+
+
+<OrderLine DeliveryMethod="SHP" FulfillmentType="MSH_HOMEDEL" ShipNode="${ShipNode}" ItemGroupCode="PROD" LevelOfService="MSH_HOME_DEL" LineType="INTANGIBLE" OrderedQty="${QtyToBeReserved}" PrimeLineNo="4" ReqShipDate="${CurrenttimeStamp}" SubLineNo="1">
+<Item CostCurrency="EUR" ItemDesc="ALTCOM13" ItemID="${item4}" ItemShortDesc="Anschluss inkl. Altgerätabtransport JB SAT CAT hallo sat - (Test for Mladen) V6" UPCCode="2000011917319" UnitCost="39.9" UnitOfMeasure="EACH"/>
+<LinePriceInfo IsPriceLocked="Y" ListPrice="39.9" UnitPrice="39.9"/>
+<LineCharges/>
+<LineTaxes>
+<LineTax ChargeCategory="LINE_TAX" ChargeName="LineTax" Reference1="1" Reference2="6.65" Tax="6.65" TaxName="VAT" TaxPercentage="20" TaxableFlag="N"/>
+</LineTaxes>
+<Extn Brand="TECTRAXX" DeliveryOrchestor="metapackorder" LineItemNumber="34405011" LocationProviderID="locationproviderid" LogisticsClass="0" PUDOID="pudoid" SplitCriteria1="2PRS" WDDFromDeliveryTime="${CurrenttimeStamp}-05:00" WDDToDeliveryTime="${CurrenttimeStamp}">
+<MSHOrderlineFeatureList/>
+</Extn>
+</OrderLine>
+
+</OrderLines>
+<OrderLineRelationships>
+<OrderLineRelationship RelationshipType="SERVICE">
+<ParentLine PrimeLineNo="1" SubLineNo="1"/>
+<ChildLine PrimeLineNo="2" SubLineNo="1"/>
+</OrderLineRelationship>
+<OrderLineRelationship RelationshipType="SERVICE">
+<ParentLine PrimeLineNo="3" SubLineNo="1"/>
+<ChildLine PrimeLineNo="4" SubLineNo="1"/>
+</OrderLineRelationship>
+</OrderLineRelationships>
+<Notes>
+<Note NoteText="Order created successfully" ReasonCode="ORDER_CREATE" />
+</Notes>
+<PersonInfoBillTo AddressID=""
+AddressLine1="dsagfqe" AddressLine2=""
+City="Wien" Company="" Country="NL" DayPhone="422464214"
+EMailID="TestingBBB001@gmail.com" FirstName="hth"
+JobTitle="" LastName="yjr" MobilePhone="422464214" Title="" ZipCode="1120">
+<Extn Unknown=""/>
+</PersonInfoBillTo>
+<PersonInfoShipTo AddressID=""
+AddressLine1="dsagfqe" AddressLine2=""
+City="Wien" Company="" Country="NL" DayPhone="422464214"
+EMailID="TestingBBB001@gmail.com" FirstName="hth"
+JobTitle="" LastName="yjr" MobilePhone="422464214" Title="" ZipCode="1120">
+<Extn Unknown=""/>
+</PersonInfoShipTo> <PriceInfo Currency="EUR" />
+
+<PaymentMethods>
+<PaymentMethod
+PaymentReference1="aa644e2992244f3c8a5fe9ba79ccdf5a"
+PaymentReference2="" PaymentReference9="" PaymentType="GICA">
+<PaymentDetailsList>
+<PaymentDetails ChargeType="CHARGE"
+ProcessedAmount="19.60" RequestAmount="19.60"/>
+</PaymentDetailsList>
+</PaymentMethod>
+<PaymentMethod
+PaymentReference1="aa644e2992244f3c8a5fe9ba79ccdf5"
+PaymentReference2="" PaymentReference9="" PaymentType="GICA">
+<PaymentDetailsList>
+<PaymentDetails ChargeType="CHARGE"
+ProcessedAmount="10.00" RequestAmount="10.00"/>
+</PaymentDetailsList>
+</PaymentMethod>
+<PaymentMethod
+PaymentReference1="aa644e2992244f3c8a5fe9ba79ccdf5b"
+PaymentReference2="" PaymentReference9="" PaymentType="GICA">
+<PaymentDetailsList>
+<PaymentDetails ChargeType="CHARGE"
+ProcessedAmount="190.00" RequestAmount="190.00"/>
+</PaymentDetailsList>
+</PaymentMethod>
+</PaymentMethods>
+</Order>

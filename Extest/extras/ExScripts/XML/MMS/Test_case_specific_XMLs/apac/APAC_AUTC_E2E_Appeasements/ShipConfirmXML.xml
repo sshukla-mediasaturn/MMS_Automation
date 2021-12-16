@@ -1,0 +1,38 @@
+<Shipment CarrierServiceCode="Standard" DocumentType="0001" EnterpriseCode="AU" ExpectedShipmentDate="2019-11-20T00:00:00-00:00" SCAC="AUSTRALIA POST" SellerOrganizationCode="AU" ShipNode="AUECOMDC" ShipmentNo="${orderno}22" TrackingNo="${orderno}9576">
+    <Containers>
+        <Container TrackingNo="${orderno}9576">
+            <ContainerDetails>
+                <ContainerDetail Quantity="2">
+                    <ShipmentLine DocumentType="0001" ItemID="${item1}" OrderNo="PANAU${orderno}" PrimeLineNo="1" ProductClass="GOOD" Quantity="2" ReleaseNo="1" SubLineNo="1" UnitOfMeasure="EACH" />
+                </ContainerDetail>
+            </ContainerDetails>
+        </Container>
+        <Container TrackingNo="${orderno}9576">
+            <ContainerDetails>
+            <ContainerDetail Quantity="2">
+                    <ShipmentLine DocumentType="0001" ItemID="${item2}" OrderNo="PANAU${orderno}" PrimeLineNo="2" ProductClass="GOOD" Quantity="2" ReleaseNo="1" SubLineNo="1" UnitOfMeasure="EACH" />
+                </ContainerDetail>
+            </ContainerDetails>
+        </Container>
+  <Container TrackingNo="${orderno}9576">
+            <ContainerDetails>
+            <ContainerDetail Quantity="1">
+                    <ShipmentLine DocumentType="0001" ItemID="${item3}" OrderNo="PANAU${orderno}" PrimeLineNo="3" ProductClass="GOOD" Quantity="1" ReleaseNo="1" SubLineNo="1" UnitOfMeasure="EACH" />
+                </ContainerDetail>
+            </ContainerDetails>
+        </Container>
+   <Container TrackingNo="${orderno}9576">
+            <ContainerDetails>
+            <ContainerDetail Quantity="1">
+                    <ShipmentLine DocumentType="0001" ItemID="${item4}" OrderNo="PANAU${orderno}" PrimeLineNo="4" ProductClass="GOOD" Quantity="1" ReleaseNo="1" SubLineNo="1" UnitOfMeasure="EACH" />
+                </ContainerDetail>
+            </ContainerDetails>
+        </Container>
+	 </Containers>
+    <ShipmentLines>
+        <ShipmentLine ItemID="${item1}" OrderNo="PANAU${orderno}" PrimeLineNo="1" ProductClass="GOOD" Quantity="2" ReleaseNo="1" SubLineNo="1" UnitOfMeasure="EACH" />
+        <ShipmentLine ItemID="${item2}" OrderNo="PANAU${orderno}" PrimeLineNo="2" ProductClass="GOOD" Quantity="2" ReleaseNo="1" SubLineNo="1" UnitOfMeasure="EACH" />
+		<ShipmentLine ItemID="${item3}" OrderNo="PANAU${orderno}" PrimeLineNo="3" ProductClass="GOOD" Quantity="1" ReleaseNo="1" SubLineNo="1" UnitOfMeasure="EACH" />
+		<ShipmentLine ItemID="${item4}" OrderNo="PANAU${orderno}" PrimeLineNo="4" ProductClass="GOOD" Quantity="1" ReleaseNo="1" SubLineNo="1" UnitOfMeasure="EACH" />
+	</ShipmentLines>
+</Shipment>

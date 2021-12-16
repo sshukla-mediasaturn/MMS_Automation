@@ -1,0 +1,1 @@
+<InventorySupply CallingOrganizationCode="${CallingOrganizationCode}" ConsiderAllNodes="${ConsiderAllNodes}" ConsiderAllSegments="${ConsiderAllSegments}" ItemID="${ItemID}" OrganizationCode="${OrganizationCode}" ProductClass="${ProductClass}" ShipNode="${ShipNode}" SupplyType="ONHAND" UnitOfMeasure="${UnitOfMeasure}" ValidateItem="${ValidateItems}" />

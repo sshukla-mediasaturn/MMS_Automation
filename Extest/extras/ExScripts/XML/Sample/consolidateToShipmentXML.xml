@@ -1,0 +1,7 @@
+<OrderRelease  EnterpriseCode="${EnterpriseCode}" OrderHeaderKey="${OrderHeaderKey}"  OrderReleaseKey="${releaseKey}" >
+<OrderLines>
+<OrderLine OrderedQty="${OrderedQty1}" >
+<Item ItemID="${ItemID1}"  UnitOfMeasure="${UnitOfMeasure1}"/>
+</OrderLine>
+</OrderLines>
+</OrderRelease>

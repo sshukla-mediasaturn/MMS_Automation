@@ -1,0 +1,233 @@
+(malloc) failed to allocate 32756 bytes for ChunkPool::allocate
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:272), pid=29324, tid=0x00005300
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_221-b11) (build 1.8.0_221-b11)
+# Java VM: Java HotSpot(TM) Client VM (25.221-b11 mixed mode windows-x86 )
+# Failed to write core dump. Call to MiniDumpWriteDump() failed (Error 0x80070008: Not enough storage is available to process this command.
+)
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x24f56000):  JavaThread "C1 CompilerThread0" daemon [_thread_in_native, id=21248, stack(0x25370000,0x253c0000)]
+
+Stack: [0x25370000,0x253c0000],  sp=0x253bf0ec,  free space=316k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x1ae3ab]
+V  [jvm.dll+0x1a6898]
+V  [jvm.dll+0x8dbb1]
+V  [jvm.dll+0x8dd8d]
+V  [jvm.dll+0x8e207]
+V  [jvm.dll+0x2a4f38]
+V  [jvm.dll+0x2a861d]
+V  [jvm.dll+0x2a9b90]
+V  [jvm.dll+0x2a9fa9]
+V  [jvm.dll+0x28e669]
+V  [jvm.dll+0x28e73a]
+V  [jvm.dll+0x28e8a8]
+V  [jvm.dll+0x28eb22]
+V  [jvm.dll+0x7152a]
+V  [jvm.dll+0x71cdf]
+V  [jvm.dll+0x17f670]
+V  [jvm.dll+0x17feea]
+V  [jvm.dll+0x1c6b66]
+C  [msvcr100.dll+0x5c556]
+C  [msvcr100.dll+0x5c600]
+C  [KERNEL32.DLL+0x16a14]
+C  [ntdll.dll+0x5a9ef]
+C  [ntdll.dll+0x5a9ba]
+C  0x00000000
+
+
+Current CompileTask:
+C1:    574   39            
+[error occurred during error reporting (printing current compile task), id 0xe0000001]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x24f59000 JavaThread "Service Thread" daemon [_thread_blocked, id=25728, stack(0x25400000,0x25450000)]
+=>0x24f56000 JavaThread "C1 CompilerThread0" daemon [_thread_in_native, id=21248, stack(0x25370000,0x253c0000)]
+  0x24f54000 JavaThread "Attach Listener" daemon [_thread_blocked, id=26584, stack(0x252e0000,0x25330000)]
+  0x24f5f400 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=26068, stack(0x25250000,0x252a0000)]
+  0x24f46800 JavaThread "Finalizer" daemon [_thread_blocked, id=13868, stack(0x04980000,0x049d0000)]
+  0x0282ec00 JavaThread "Reference Handler" daemon [_thread_blocked, id=21964, stack(0x00f90000,0x00fe0000)]
+  0x00f4cc00 JavaThread "main" [_thread_in_native, id=16472, stack(0x00880000,0x008d0000)]
+
+Other Threads:
+  0x0282cc00 VMThread [stack: 0x00ef0000,0x00f40000] [id=8140]
+  0x24f5cc00 WatcherThread [stack: 0x25490000,0x254e0000] [id=7068]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ def new generation   total 118016K, used 4198K [0x04a00000, 0x0ca00000, 0x0ca00000)
+  eden space 104960K,   4% used [0x04a00000, 0x04e199c0, 0x0b080000)
+  from space 13056K,   0% used [0x0b080000, 0x0b080000, 0x0bd40000)
+  to   space 13056K,   0% used [0x0bd40000, 0x0bd40000, 0x0ca00000)
+ tenured generation   total 393216K, used 0K [0x0ca00000, 0x24a00000, 0x24a00000)
+   the space 393216K,   0% used [0x0ca00000, 0x0ca00000, 0x0ca00200, 0x24a00000)
+ Metaspace       used 1824K, capacity 2280K, committed 2368K, reserved 4480K
+
+Card table byte_map: [0x04830000,0x04940000] byte_map_base: 0x0480b000
+
+Polling page: 0x00850000
+
+CodeCache: size=32768Kb used=724Kb max_used=724Kb free=32043Kb
+ bounds [0x02830000, 0x028e8000, 0x04830000]
+ total_blobs=179 nmethods=38 adapters=73
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 0.493 Thread 0x24f56000 nmethod 34 0x028e1e48 code [0x028e1f80, 0x028e21e0]
+Event: 0.493 Thread 0x24f56000   35   !         java.io.BufferedReader::readLine (304 bytes)
+Event: 0.494 Thread 0x24f56000 nmethod 35 0x028e23c8 code [0x028e2580, 0x028e30e4]
+Event: 0.494 Thread 0x24f56000   36             java.lang.String::<init> (82 bytes)
+Event: 0.494 Thread 0x24f56000 nmethod 36 0x028e3b08 code [0x028e3c50, 0x028e3e60]
+Event: 0.494 Thread 0x24f56000   37             sun.nio.cs.UTF_8$Encoder::encode (359 bytes)
+Event: 0.495 Thread 0x24f56000 nmethod 37 0x028e4088 code [0x028e41d0, 0x028e4618]
+Event: 0.495 Thread 0x24f56000   38             java.util.jar.Manifest$FastInputStream::readLine (167 bytes)
+Event: 0.495 Thread 0x24f56000 nmethod 38 0x028e4b08 code [0x028e4c20, 0x028e4e68]
+Event: 0.495 Thread 0x24f56000   39             sun.nio.cs.UTF_8$Decoder::decode (779 bytes)
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 0.386 Thread 0x00f4cc00 Exception <a 'java/security/PrivilegedActionException'> (0x04b1e5b0) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u221\13320\hotspot\src\share\vm\prims\jvm.cpp, line 1502]
+Event: 0.386 Thread 0x00f4cc00 Exception <a 'java/security/PrivilegedActionException'> (0x04b1e7b0) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u221\13320\hotspot\src\share\vm\prims\jvm.cpp, line 1502]
+Event: 0.386 Thread 0x00f4cc00 Exception <a 'java/security/PrivilegedActionException'> (0x04b1f368) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u221\13320\hotspot\src\share\vm\prims\jvm.cpp, line 1502]
+Event: 0.386 Thread 0x00f4cc00 Exception <a 'java/security/PrivilegedActionException'> (0x04b1f568) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u221\13320\hotspot\src\share\vm\prims\jvm.cpp, line 1502]
+Event: 0.386 Thread 0x00f4cc00 Exception <a 'java/security/PrivilegedActionException'> (0x04b20120) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u221\13320\hotspot\src\share\vm\prims\jvm.cpp, line 1502]
+Event: 0.386 Thread 0x00f4cc00 Exception <a 'java/security/PrivilegedActionException'> (0x04b20320) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u221\13320\hotspot\src\share\vm\prims\jvm.cpp, line 1502]
+Event: 0.388 Thread 0x00f4cc00 Exception <a 'java/security/PrivilegedActionException'> (0x04b24f10) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u221\13320\hotspot\src\share\vm\prims\jvm.cpp, line 1502]
+Event: 0.388 Thread 0x00f4cc00 Exception <a 'java/security/PrivilegedActionException'> (0x04b25110) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u221\13320\hotspot\src\share\vm\prims\jvm.cpp, line 1502]
+Event: 0.388 Thread 0x00f4cc00 Exception <a 'java/security/PrivilegedActionException'> (0x04b25db8) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u221\13320\hotspot\src\share\vm\prims\jvm.cpp, line 1502]
+Event: 0.388 Thread 0x00f4cc00 Exception <a 'java/security/PrivilegedActionException'> (0x04b25fb8) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u221\13320\hotspot\src\share\vm\prims\jvm.cpp, line 1502]
+
+Events (10 events):
+Event: 0.326 loading class java/util/LinkedList$Node
+Event: 0.326 loading class java/util/LinkedList$Node done
+Event: 0.362 loading class org/apache/jmeter/NewDriver$2
+Event: 0.362 loading class org/apache/jmeter/NewDriver$2 done
+Event: 0.363 loading class org/apache/jmeter/JMeter
+Event: 0.363 loading class org/apache/jmeter/JMeter done
+Event: 0.380 loading class java/io/FileNotFoundException
+Event: 0.380 loading class java/io/FileNotFoundException done
+Event: 0.380 loading class java/security/PrivilegedActionException
+Event: 0.380 loading class java/security/PrivilegedActionException done
+
+
+Dynamic libraries:
+0x01010000 - 0x01043000 	C:\Program Files (x86)\Common Files\Oracle\Java\javapath\java.exe
+0x778d0000 - 0x77a3f000 	C:\Windows\SYSTEM32\ntdll.dll
+0x75130000 - 0x75270000 	C:\Windows\SYSTEM32\KERNEL32.DLL
+0x753a0000 - 0x75477000 	C:\Windows\SYSTEM32\KERNELBASE.dll
+0x733a0000 - 0x73440000 	C:\Windows\system32\apphelp.dll
+0x72ed0000 - 0x73132000 	C:\Windows\AppPatch\AcGenral.DLL
+0x75500000 - 0x755c3000 	C:\Windows\SYSTEM32\msvcrt.dll
+0x75d70000 - 0x75db1000 	C:\Windows\SYSTEM32\sechost.dll
+0x776d0000 - 0x776ee000 	C:\Windows\SYSTEM32\SspiCli.dll
+0x75350000 - 0x75395000 	C:\Windows\SYSTEM32\SHLWAPI.dll
+0x73140000 - 0x7322d000 	C:\Windows\SYSTEM32\UxTheme.dll
+0x77570000 - 0x776c4000 	C:\Windows\SYSTEM32\USER32.dll
+0x75970000 - 0x75a7d000 	C:\Windows\SYSTEM32\GDI32.dll
+0x73370000 - 0x73393000 	C:\Windows\SYSTEM32\WINMM.dll
+0x748a0000 - 0x748b3000 	C:\Windows\SYSTEM32\samcli.dll
+0x75a80000 - 0x75ba9000 	C:\Windows\SYSTEM32\ole32.dll
+0x75c10000 - 0x75ca7000 	C:\Windows\SYSTEM32\OLEAUT32.dll
+0x73350000 - 0x73367000 	C:\Windows\SYSTEM32\MSACM32.dll
+0x74fb0000 - 0x74fb8000 	C:\Windows\SYSTEM32\VERSION.dll
+0x76100000 - 0x773be000 	C:\Windows\SYSTEM32\SHELL32.dll
+0x73eb0000 - 0x73ecb000 	C:\Windows\SYSTEM32\USERENV.dll
+0x73330000 - 0x7334a000 	C:\Windows\SYSTEM32\dwmapi.dll
+0x72b00000 - 0x72c55000 	C:\Windows\SYSTEM32\urlmon.dll
+0x75480000 - 0x754fd000 	C:\Windows\SYSTEM32\ADVAPI32.dll
+0x748f0000 - 0x74956000 	C:\Windows\SYSTEM32\WINSPOOL.DRV
+0x73310000 - 0x73326000 	C:\Windows\SYSTEM32\MPR.dll
+0x75cb0000 - 0x75d6b000 	C:\Windows\SYSTEM32\RPCRT4.dll
+0x75040000 - 0x7504a000 	C:\Windows\SYSTEM32\CRYPTBASE.dll
+0x757f0000 - 0x7596d000 	C:\Windows\SYSTEM32\combase.dll
+0x732e0000 - 0x73303000 	C:\Windows\SYSTEM32\WINMMBASE.dll
+0x74570000 - 0x7457f000 	C:\Windows\SYSTEM32\profapi.dll
+0x74fc0000 - 0x74fd3000 	C:\Windows\SYSTEM32\NETAPI32.dll
+0x72c60000 - 0x72e99000 	C:\Windows\SYSTEM32\iertutil.dll
+0x71ab0000 - 0x71ee7000 	C:\Windows\SYSTEM32\WININET.dll
+0x74fe0000 - 0x75034000 	C:\Windows\SYSTEM32\bcryptPrimitives.dll
+0x760c0000 - 0x760fc000 	C:\Windows\SYSTEM32\cfgmgr32.dll
+0x732b0000 - 0x732d1000 	C:\Windows\SYSTEM32\DEVOBJ.dll
+0x74d60000 - 0x74d6a000 	C:\Windows\SYSTEM32\netutils.dll
+0x74d40000 - 0x74d5d000 	C:\Windows\SYSTEM32\srvcli.dll
+0x74d20000 - 0x74d31000 	C:\Windows\SYSTEM32\wkscli.dll
+0x74810000 - 0x7489c000 	C:\Windows\SYSTEM32\SHCORE.DLL
+0x773d0000 - 0x773f7000 	C:\Windows\system32\IMM32.DLL
+0x75f80000 - 0x76092000 	C:\Windows\SYSTEM32\MSCTF.dll
+0x71510000 - 0x71717000 	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.9600.19394_none_a9f59c4f01325ed5\COMCTL32.dll
+0x73240000 - 0x732ac000 	C:\Program Files (x86)\McAfee\Endpoint Security\Threat Prevention\Ips\EpMPApi.dll
+0x75270000 - 0x752ad000 	C:\Windows\SYSTEM32\WINTRUST.dll
+0x755f0000 - 0x757f0000 	C:\Windows\SYSTEM32\CRYPT32.dll
+0x773c0000 - 0x773ce000 	C:\Windows\SYSTEM32\MSASN1.dll
+0x73ea0000 - 0x73eab000 	C:\Program Files (x86)\McAfee\Endpoint Security\Threat Prevention\Ips\EpMPThe.dll
+0x72aa0000 - 0x72afd000 	C:\Program Files (x86)\McAfee\Endpoint Security\Threat Prevention\Ips\HIPHandlers.dll
+0x760a0000 - 0x760a6000 	C:\Windows\SYSTEM32\PSAPI.DLL
+0x74bd0000 - 0x74d11000 	C:\Windows\SYSTEM32\dbghelp.dll
+0x750e0000 - 0x7512f000 	C:\Windows\SYSTEM32\WS2_32.dll
+0x776f0000 - 0x776f7000 	C:\Windows\SYSTEM32\NSI.dll
+0x71450000 - 0x7150f000 	C:\Program Files (x86)\Java\jre1.8.0_221\bin\msvcr100.dll
+0x71070000 - 0x71445000 	C:\Program Files (x86)\Java\jre1.8.0_221\bin\client\jvm.dll
+0x73230000 - 0x73238000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x72ec0000 - 0x72ecc000 	C:\Program Files (x86)\Java\jre1.8.0_221\bin\verify.dll
+0x71040000 - 0x71061000 	C:\Program Files (x86)\Java\jre1.8.0_221\bin\java.dll
+0x72ea0000 - 0x72eb4000 	C:\Program Files (x86)\Java\jre1.8.0_221\bin\zip.dll
+
+VM Arguments:
+jvm_args: -XX:+HeapDumpOnOutOfMemoryError -Xms512m -Xmx512m -XX:NewSize=128m -XX:MaxNewSize=128m -XX:SurvivorRatio=8 -XX:TargetSurvivorRatio=50 -XX:MaxTenuringThreshold=2 -XX:+CMSClassUnloadingEnabled 
+java_command: C:\MMS_Automation\Extest\bin\ApacheJMeter.jar -n -t C:\MMS_Automation\Extest\extras\ExScripts\Functional\MMS_Updated\MMS_AUT_NL_008_Multi_Service_SO.jmx -l C:\MMS_Automation\Extest\extras\ReportGenerator\Report\ExTestResults.jtl
+java_class_path (initial): C:\MMS_Automation\Extest\bin\ApacheJMeter.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+USERNAME=ravalika
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 62 Stepping 7, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows Server 2012 R2 , 64 bit Build 9600 (6.3.9600.20172)
+
+CPU:total 2 (initial active 2) (1 cores per cpu, 1 threads per core) family 6 model 62 stepping 7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, clmul, erms, tsc, tscinvbit
+
+Memory: 4k page, physical 8388148k(1003580k free), swap 33553972k(4972k free)
+
+vm_info: Java HotSpot(TM) Client VM (25.221-b11) for windows-x86 JRE (1.8.0_221-b11), built on Jul  4 2019 19:25:56 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Fri Dec 03 08:13:15 2021
+timezone: W. Europe Standard Time
+elapsed time: 0 seconds (0d 0h 0m 0s)
+

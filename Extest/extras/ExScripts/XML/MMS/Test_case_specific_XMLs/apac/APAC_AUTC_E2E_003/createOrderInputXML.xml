@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Order AllocationRuleID="PAN_SCH" BillToID="SA00602888" BuyerUserId="prasuna.sagar@publicissapient.com" BypassPricing="Y" CustomerEMailID="prasuna.sagar@publicissapient.com" EnterpriseCode="AU" EntryType="WEB" FulfillmentType="PandoraFT" IsPriceLocked="Y" OrderDate="${CurrenttimeStamp}" OrderNo="PANAU${orderno}" PaymentStatus="PAID" SellerOrganizationCode="AU">
+    <Extn ExtnCRMCustomerID="0b114821-7818-4b18-9851-84a7e26bf986" ExtnCRMGuestCheckout="false" ExtnOrderLang="en" />
+    <OrderLines>
+        <OrderLine CarrierServiceCode="Express" LineType="REG" OrderedQty="1.0" PrimeLineNo="1" SubLineNo="1">
+            <Extn ExtnColor="No Colour" ExtnFinalSale="N" ExtnImage="https://dev-au.pandora.net/dw/image/v2/AAWM_DEV/on/demandware.static/-/Sites-pandora-master-catalog/default/dw463be135/images/productimages/main/${item1}_RGB.JPG?sw=120&amp;sh=120&amp;sm=fit&amp;sfrm=png&amp;bgcolor=F5F5F5" ExtnLineNetPrice="103.20" ExtnSize="one size" />
+            <Item ItemID="${item1}" ItemShortDesc="Pandora Lockets Logo Hanging Charm" ProductClass="GOOD" UnitOfMeasure="EACH" />
+            <LinePriceInfo IsPriceLocked="Y" TaxableFlag="N" UnitPrice="129.00" />
+            <LineCharges>
+                <LineCharge ChargeCategory="ITEM_DISCOUNT" ChargeName="20% off storewide. 3-4 April 2019. Price" ChargePerLine="0.00" ChargePerUnit="25.80" Reference="VOSN-3-4/4/2019-B" />
+            </LineCharges>
+            <LineTaxes>
+                <LineTax ChargeCategory="INFO_TAX" ChargeName="" Reference1="9.38" Reference2="0.1" Tax="9.38" TaxName="GST" />
+            </LineTaxes>
+            <PersonInfoShipTo AddressLine1="74-78 Sydney Rd" AddressLine2="Mount Albert EVE" City="BRUNSWICK" Country="AU" DayPhone="01478799789" EMailID="prasuna.sagar@publicissapient.com" FirstName="Ruhi" LastName="Naina" State="VIC" ZipCode="3056" />
+        </OrderLine>
+    </OrderLines>
+    <PriceInfo Currency="AUD" EnterpriseCurrency="AUD" />
+    <PersonInfoBillTo AddressLine1="74-78 Sydney Rd" AddressLine2="Mount Albert EVE" City="BRUNSWICK" Country="AU" DayPhone="01478799789" EMailID="prasuna.sagar@publicissapient.com" FirstName="Gowtham" LastName="Srinivasan" State="VIC" ZipCode="3056" />
+    <HeaderCharges>
+        <HeaderCharge ChargeAmount="12.95" ChargeCategory="SHIPPING" ChargeName="SHIPPING" />
+    </HeaderCharges>
+    <HeaderTaxes>
+        <HeaderTax ChargeCategory="INFO_TAX" ChargeName="SHIPPING" Reference1="1.18" Reference2="0.1" Tax="1.18" TaxName="GST" />
+    </HeaderTaxes>
+    <PersonInfoShipTo AddressLine1="74-78 Sydney Rd" AddressLine2="Mount Albert EVE" City="BRUNSWICK" Country="AU" DayPhone="01478799789" EMailID="prasuna.sagar@publicissapient.com" FirstName="Ruhi" LastName="Naina" State="VIC" ZipCode="3056" />
+    <PaymentMethods>
+        <PaymentMethod CreditCardExpDate="10/2020" CreditCardNo="XXXX-XXXX-XXXX-1111" CreditCardType="VISA" DisplayCreditCardNo="1111" PaymentType="CREDIT_CARD" UnlimitedCharges="N">
+            <PaymentDetailsList>
+                <PaymentDetails AuthCode="${AuthCode}" AuthorizationID="${RequestId}" ChargeType="CHARGE" ProcessedAmount="${TotalAmount}" RequestAmount="${TotalAmount}" RequestId="5743452867186830303011" />
+            </PaymentDetailsList>
+        </PaymentMethod>
+    </PaymentMethods>
+</Order>

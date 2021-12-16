@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="1423" it="0" lt="1423" ts="1639141013556" s="true" lb="reservationsingle" rc="200" rm="Reservation is successfull : reservation id 384944f8-72eb-4272-9fd9-40bfb1d96beb" tn="MMS_01_ReservationSingle 1-1" dt="text" by="1532" ng="1" na="1">
+  <assertionResult>
+    <name>Response Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <assertionResult>
+    <name>BeanShell Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 855
+Host: fom-test-nl.media-saturn.com
+User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_221)
+</requestHeader>
+  <responseData class="java.lang.String">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;PromiseHeader EnterpriseCode=&quot;MSH_NL&quot; OptimizationType=&quot;01&quot; OrganizationCode=&quot;MM_NL&quot; ResultCode=&quot;00&quot;&gt;&lt;PromiseLines TotalNumberOfRecords=&quot;1&quot;&gt;&lt;PromiseLine AutoReplacedByPreferredSubstitute=&quot;N&quot; BundleParentLineId=&quot;&quot; CarrierServiceCode=&quot;MSH_NL_HOMEDEL&quot; DeliveryMethod=&quot;SHP&quot; DistributionRuleId=&quot;&quot; FulfillmentType=&quot;MSH_HOMEDEL&quot; IsBundleParent=&quot;N&quot; IsSubOnOrderAllowed=&quot;N&quot; ItemGroupCode=&quot;PROD&quot; ItemID=&quot;1775438&quot; KitQty=&quot;1.00&quot; LevelOfService=&quot;MSH_HOME_DEL&quot; LineId=&quot;1&quot; NewItemID=&quot;&quot; ProductClass=&quot;&quot; ReceivingNode=&quot;&quot; RequiredQty=&quot;1&quot; SCAC=&quot;&quot; Segment=&quot;&quot; SegmentType=&quot;&quot; ShipNode=&quot;&quot; UnitOfMeasure=&quot;EACH&quot;&gt;&lt;Reservations AvailableQty=&quot;1.00&quot; QtyToBeReserved=&quot;1.00&quot; TotalReservedQty=&quot;1.00&quot;&gt;&lt;Reservation ExpirationDate=&quot;2021-12-10T17:56:54+01:00&quot; ExternalNode=&quot;Y&quot; IsProcured=&quot;N&quot; IsSubstituted=&quot;N&quot; ItemID=&quot;1775438&quot; MergeNode=&quot;&quot; ProcureToNode=&quot;&quot; ProductAvailabilityDate=&quot;2021-12-10&quot; ProductClass=&quot;&quot; QuantityFromUnplannedInventory=&quot;0.00&quot; ReservationID=&quot;384944f8-72eb-4272-9fd9-40bfb1d96beb&quot; ReservationNodeShipDate=&quot;2021-12-13&quot; ReservedQty=&quot;1.00&quot; ShipDate=&quot;2021-12-13&quot; ShipNode=&quot;1948&quot; UnitOfMeasure=&quot;EACH&quot;/&gt;&lt;/Reservations&gt;&lt;/PromiseLine&gt;&lt;/PromiseLines&gt;&lt;/PromiseHeader&gt;</responseData>
+  <java.net.URL>https://fom-test-nl.media-saturn.com/smcfs/interop/InteropHttpServlet</java.net.URL>
+</httpSample>
+
+<httpSample t="1067" it="0" lt="1067" ts="1639141018282" s="false" lb="reservationMultiple" rc="200" rm="Reservation is Failed : Invalid ItemID 1230" tn="MMS_02_Reservation_MultiQty 1-1" dt="text" by="1634" ng="1" na="1">
+  <assertionResult>
+    <name>Response Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <assertionResult>
+    <name>BeanShell Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 1105
+Host: fom-test-nl.media-saturn.com
+User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_221)
+</requestHeader>
+  <responseData class="java.lang.String">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;PromiseHeader EnterpriseCode=&quot;MSH_NL&quot; OptimizationType=&quot;01&quot; OrganizationCode=&quot;MM_NL&quot; ResultCode=&quot;40&quot;&gt;&lt;PromiseLines TotalNumberOfRecords=&quot;2&quot;&gt;&lt;PromiseLine AutoReplacedByPreferredSubstitute=&quot;N&quot; BundleParentLineId=&quot;&quot; CarrierServiceCode=&quot;MSH_NL_HOMEDEL&quot; DeliveryMethod=&quot;SHP&quot; DistributionRuleId=&quot;&quot; FulfillmentType=&quot;MSH_HOMEDEL&quot; IsBundleParent=&quot;N&quot; IsSubOnOrderAllowed=&quot;N&quot; ItemGroupCode=&quot;PROD&quot; ItemID=&quot;123&quot; KitQty=&quot;1.00&quot; LevelOfService=&quot;MSH_HOME_DEL&quot; LineId=&quot;1&quot; NewItemID=&quot;&quot; ProductClass=&quot;&quot; ReceivingNode=&quot;&quot; RequiredQty=&quot;2&quot; SCAC=&quot;&quot; Segment=&quot;&quot; SegmentType=&quot;&quot; ShipNode=&quot;&quot; UnitOfMeasure=&quot;EACH&quot;&gt;&lt;Reservations AvailableQty=&quot;0.00&quot; QtyToBeReserved=&quot;2.00&quot; TotalReservedQty=&quot;0&quot;/&gt;&lt;/PromiseLine&gt;&lt;PromiseLine AutoReplacedByPreferredSubstitute=&quot;N&quot; BundleParentLineId=&quot;&quot; CarrierServiceCode=&quot;MSH_NL_HOMEDEL&quot; DeliveryMethod=&quot;SHP&quot; DistributionRuleId=&quot;&quot; FulfillmentType=&quot;MSH_HOMEDEL&quot; IsBundleParent=&quot;N&quot; IsSubOnOrderAllowed=&quot;N&quot; ItemGroupCode=&quot;PROD&quot; ItemID=&quot;456&quot; KitQty=&quot;1.00&quot; LevelOfService=&quot;MSH_HOME_DEL&quot; LineId=&quot;2&quot; NewItemID=&quot;&quot; ProductClass=&quot;&quot; ReceivingNode=&quot;&quot; RequiredQty=&quot;2&quot; SCAC=&quot;&quot; Segment=&quot;&quot; SegmentType=&quot;&quot; ShipNode=&quot;&quot; UnitOfMeasure=&quot;EACH&quot;&gt;&lt;Reservations AvailableQty=&quot;0.00&quot; QtyToBeReserved=&quot;2.00&quot; TotalReservedQty=&quot;0&quot;/&gt;&lt;/PromiseLine&gt;&lt;/PromiseLines&gt;&lt;/PromiseHeader&gt;</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">IsFlow=Y&amp;InteropApiName=MSHReserveAvailableInventory&amp;InteropApiData=%3CPromise+EnterpriseCode%3D%22MSH_NL%22+OrganizationCode%3D%22MM_NL%22++OptimizationType%3D%2201%22+%3E%0D%0A%09%3CReservationParameters++ReservationID%3D%22221191f8-72eb-4272-9fd9-40bfb1d96beb%22+AllowPartialReservation%3D%22N%22+%2F%3E%0D%0A%09%3CShipToAddress+AddressLine1%3D%22Kardinaal+van+Rossumplein+75%22+AddressLine6%3D%22%22+City%3D%22Maastricht%22+Country%3D%22NL%22+ZipCode%3D%22112a0%22+%2F%3E%0D%0A%09%3CPromiseLines%3E%0D%0A%09%09%3CPromiseLine+ItemID%3D%22123%22+UnitOfMeasure%3D%22EACH%22+RequiredQty%3D%222%22+LevelOfService%3D%22MSH_HOME_DEL%22+%0D%0A%09%09FulfillmentType%3D%22MSH_HOMEDEL%22+DeliveryMethod%3D%22SHP%22+LineId%3D%221%22+%2F%3E%0D%0A%09%09%0D%0A%09%09%3CPromiseLine+ItemID%3D%22456%22+UnitOfMeasure%3D%22EACH%22+RequiredQty%3D%222%22+LevelOfService%3D%22MSH_HOME_DEL%22+%0D%0A%09%09FulfillmentType%3D%22MSH_HOMEDEL%22+DeliveryMethod%3D%22SHP%22+LineId%3D%222%22+%2F%3E%0D%0A%09%09%0D%0A%09%3C%2FPromiseLines%3E%0D%0A%3C%2FPromise%3E&amp;YFSEnvironment.userId=ravalika&amp;YFSEnvironment.password=Summer2021%2C</queryString>
+  <java.net.URL>https://fom-test-nl.media-saturn.com/smcfs/interop/InteropHttpServlet</java.net.URL>
+</httpSample>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</testResults>
